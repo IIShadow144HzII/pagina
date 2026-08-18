@@ -9,276 +9,161 @@ const NUMERO_WHATSAPP = "34686606704";
    PRODUCTOS
 ===================================================== */
 
-const productos = [
+const categorias = [
 
-    {
-        id: "producto-01",
-        nombre: "Producto 1",
-        descripcion: "Descripción del producto 1.",
-        imagen: "fotos/producto01.png",
-        categoria: "ramos"
-    },
-
-    {
-        id: "producto-02",
-        nombre: "Producto 2",
-        descripcion: "Descripción del producto 2.",
-        imagen: "fotos/producto02.png",
-        categoria: "ramos"
-    },
-
-    {
-        id: "producto-03",
-        nombre: "Producto 3",
-        descripcion: "Descripción del producto 3.",
-        imagen: "fotos/producto03.png",
-        categoria: "decoracion"
-    },
-
-    {
-        id: "producto-04",
-        nombre: "Producto 4",
-        descripcion: "Descripción del producto 4.",
-        imagen: "fotos/producto04.png",
-        categoria: "eventos"
-    },
-
-    {
-        id: "producto-05",
-        nombre: "Producto 5",
-        descripcion: "Descripción del producto 5.",
-        imagen: "fotos/producto05.png",
-        categoria: "ramos"
-    },
-
-    {
-        id: "producto-06",
-        nombre: "Producto 6",
-        descripcion: "Descripción del producto 6.",
-        imagen: "fotos/producto06.png",
-        categoria: "decoracion"
-    },
-
-    {
-        id: "producto-07",
-        nombre: "Producto 7",
-        descripcion: "Descripción del producto 7.",
-        imagen: "fotos/producto07.png",
-        categoria: "eventos"
-    },
-
-    {
-        id: "producto-08",
-        nombre: "Producto 8",
-        descripcion: "Descripción del producto 8.",
-        imagen: "fotos/producto08.png",
-        categoria: "ramos"
-    },
-
-    {
-        id: "producto-09",
-        nombre: "Producto 9",
-        descripcion: "Descripción del producto 9.",
-        imagen: "fotos/producto09.png",
-        categoria: "decoracion"
-    },
-
-    {
-        id: "producto-10",
-        nombre: "Producto 10",
-        descripcion: "Descripción del producto 10.",
-        imagen: "fotos/producto10.png",
-        categoria: "eventos"
-    },
-
-    {
-        id: "producto-11",
-        nombre: "Producto 11",
-        descripcion: "Descripción del producto 11.",
-        imagen: "fotos/producto11.png",
-        categoria: "ramos"
-    },
-
-    {
-        id: "producto-12",
-        nombre: "Producto 12",
-        descripcion: "Descripción del producto 12.",
-        imagen: "fotos/producto12.png",
-        categoria: "decoracion"
-    },
-
-    {
-        id: "producto-13",
-        nombre: "Producto 13",
-        descripcion: "Descripción del producto 13.",
-        imagen: "fotos/producto13.png",
-        categoria: "eventos"
-    },
-
-    {
-        id: "producto-14",
-        nombre: "Producto 14",
-        descripcion: "Descripción del producto 14.",
-        imagen: "fotos/producto14.png",
-        categoria: "ramos"
-    },
-
-    {
-        id: "producto-15",
-        nombre: "Producto 15",
-        descripcion: "Descripción del producto 15.",
-        imagen: "fotos/producto15.png",
-        categoria: "decoracion"
-    },
-
-    {
-        id: "producto-16",
-        nombre: "Producto 16",
-        descripcion: "Descripción del producto 16.",
-        imagen: "fotos/producto16.png",
-        categoria: "eventos"
-    },
-
-    {
-        id: "producto-17",
-        nombre: "Producto 17",
-        descripcion: "Descripción del producto 17.",
-        imagen: "fotos/producto17.png",
-        categoria: "ramos"
-    },
-
-    {
-        id: "producto-18",
-        nombre: "Producto 18",
-        descripcion: "Descripción del producto 18.",
-        imagen: "fotos/producto18.png",
-        categoria: "decoracion"
-    },
-
-    {
-        id: "producto-19",
-        nombre: "Producto 19",
-        descripcion: "Descripción del producto 19.",
-        imagen: "fotos/producto19.png",
-        categoria: "eventos"
-    },
-
-    {
-        id: "producto-20",
-        nombre: "Producto 20",
-        descripcion: "Descripción del producto 20.",
-        imagen: "fotos/producto20.png",
-        categoria: "ramos"
-    },
-
-    {
-        id: "producto-21",
-        nombre: "Producto 21",
-        descripcion: "Descripción del producto 21.",
-        imagen: "fotos/producto21.png",
-        categoria: "decoracion"
-    },
-
-    {
-        id: "producto-22",
-        nombre: "Producto 22",
-        descripcion: "Descripción del producto 22.",
-        imagen: "fotos/producto22.png",
-        categoria: "eventos"
-    },
-
-    {
-        id: "producto-23",
-        nombre: "Producto 23",
-        descripcion: "Descripción del producto 23.",
-        imagen: "fotos/producto23.png",
-        categoria: "ramos"
-    },
-
-    {
-        id: "producto-24",
-        nombre: "Producto 24",
-        descripcion: "Descripción del producto 24.",
-        imagen: "fotos/producto24.png",
-        categoria: "decoracion"
-    },
-
-    {
-        id: "producto-25",
-        nombre: "Producto 25",
-        descripcion: "Descripción del producto 25.",
-        imagen: "fotos/producto25.png",
-        categoria: "eventos"
-    },
-
-    {
-        id: "producto-26",
-        nombre: "Producto 26",
-        descripcion: "Descripción del producto 26.",
-        imagen: "fotos/producto26.png",
-        categoria: "ramos"
-    },
-
-    {
-        id: "producto-27",
-        nombre: "Producto 27",
-        descripcion: "Descripción del producto 27.",
-        imagen: "fotos/producto27.png",
-        categoria: "decoracion"
-    },
-
-    {
-        id: "producto-28",
-        nombre: "Producto 28",
-        descripcion: "Descripción del producto 28.",
-        imagen: "fotos/producto28.png",
-        categoria: "eventos"
-    },
-
-    {
-        id: "producto-29",
-        nombre: "Producto 29",
-        descripcion: "Descripción del producto 29.",
-        imagen: "fotos/producto29.png",
-        categoria: "ramos"
-    },
-
-    {
-        id: "producto-30",
-        nombre: "Producto 30",
-        descripcion: "Descripción del producto 30.",
-        imagen: "fotos/producto30.png",
-        categoria: "decoracion"
-    },
-
-    {
-        id: "producto-31",
-        nombre: "Producto 31",
-        descripcion: "Descripción del producto 31.",
-        imagen: "fotos/producto31.png",
-        categoria: "eventos"
-    },
-
-    {
-        id: "producto-32",
-        nombre: "Producto 32",
-        descripcion: "Descripción del producto 32.",
-        imagen: "fotos/producto32.png",
-        categoria: "ramos"
-    }
+    "ramos",
+    "decoracion",
+    "eventos"
 
 ];
 
 
+/*
+   Estaciones asignadas a los ramos.
+
+   Los ramos son:
+
+   01 → invierno
+   02 → primavera
+   05 → verano
+   08 → otono
+   11 → invierno
+   14 → primavera
+   17 → verano
+   20 → otono
+   23 → invierno
+   26 → primavera
+   29 → verano
+   32 → otono
+*/
+
+const estacionesRamos = {
+
+    1: "invierno",
+    2: "primavera",
+    5: "verano",
+    8: "otono",
+    11: "invierno",
+    14: "primavera",
+    17: "verano",
+    20: "otono",
+    23: "invierno",
+    26: "primavera",
+    29: "verano",
+    32: "otono"
+
+};
+
+
 /* =====================================================
-   ELEMENTOS
+   CREAR PRODUCTOS
+===================================================== */
+
+const productos = [];
+
+
+for (let numero = 1; numero <= 32; numero++) {
+
+    let categoria;
+
+
+    /*
+       Distribución actual:
+
+       1  → ramos
+       2  → ramos
+       3  → decoracion
+       4  → eventos
+       5  → ramos
+       etc.
+    */
+
+    if (numero === 1 || numero === 2) {
+
+        categoria = "ramos";
+
+    } else if (numero % 3 === 0) {
+
+        categoria = "decoracion";
+
+    } else if (numero % 3 === 1) {
+
+        categoria = "eventos";
+
+    } else {
+
+        categoria = "ramos";
+
+    }
+
+
+    /*
+       Los productos 1, 2, 5, 8, 11...
+       son los ramos.
+    */
+
+    if (estacionesRamos[numero]) {
+
+        categoria = "ramos";
+    }
+
+
+    const producto = {
+
+        id:
+            `producto-${String(numero).padStart(2, "0")}`,
+
+        nombre:
+            `Producto ${numero}`,
+
+        descripcion:
+            `Descripción del producto ${numero}.`,
+
+        imagen:
+            `fotos/producto${String(numero).padStart(2, "0")}.png`,
+
+        categoria:
+            categoria
+
+    };
+
+
+    /*
+       Añadimos estación únicamente
+       a los productos de Ramos.
+    */
+
+    if (categoria === "ramos") {
+
+        producto.estacion =
+            estacionesRamos[numero];
+
+    }
+
+
+    productos.push(producto);
+
+}
+
+
+/* =====================================================
+   ELEMENTOS DEL DOM
 ===================================================== */
 
 const productosGrid =
     document.getElementById("productosGrid");
 
+
 const filtros =
     document.querySelectorAll(".filtro");
+
+
+const subfiltrosRamos =
+    document.getElementById("subfiltrosRamos");
+
+
+const subfiltros =
+    document.querySelectorAll(".subfiltro");
 
 
 /* =====================================================
@@ -293,7 +178,10 @@ function crearEnlaceWhatsApp(producto) {
         `de su disponibilidad? 😊`;
 
 
-    return `https://wa.me/${NUMERO_WHATSAPP}?text=${encodeURIComponent(mensaje)}`;
+    return (
+        `https://wa.me/${NUMERO_WHATSAPP}` +
+        `?text=${encodeURIComponent(mensaje)}`
+    );
 
 }
 
@@ -307,7 +195,35 @@ function mostrarProductos(lista) {
     productosGrid.innerHTML = "";
 
 
+    /*
+       Si no hay resultados
+    */
+
+    if (lista.length === 0) {
+
+        productosGrid.innerHTML = `
+
+            <div class="sin-productos">
+
+                <p>
+                    No hay composiciones disponibles
+                    para esta selección.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+    }
+
+
     lista.forEach((producto) => {
+
+
+        /* =============================================
+           TARJETA
+        ============================================= */
 
         const tarjeta =
             document.createElement("article");
@@ -316,9 +232,17 @@ function mostrarProductos(lista) {
         tarjeta.classList.add("producto");
 
 
+        /* =============================================
+           WHATSAPP
+        ============================================= */
+
         const enlaceWhatsApp =
             crearEnlaceWhatsApp(producto);
 
+
+        /* =============================================
+           HTML TARJETA
+        ============================================= */
 
         tarjeta.innerHTML = `
 
@@ -371,15 +295,107 @@ function mostrarProductos(lista) {
 
 
 /* =====================================================
-   FILTROS
+   MOSTRAR / OCULTAR SUBFILTROS
+===================================================== */
+
+function actualizarSubfiltros(categoria) {
+
+
+    /*
+       SI ES RAMOS
+    */
+
+    if (categoria === "ramos") {
+
+        subfiltrosRamos.classList.add("visible");
+
+        subfiltrosRamos.setAttribute(
+            "aria-hidden",
+            "false"
+        );
+
+
+        /*
+           Al entrar en Ramos,
+           seleccionamos Todos los ramos.
+        */
+
+        subfiltros.forEach((boton) => {
+
+            boton.classList.remove("activo");
+
+        });
+
+
+        const todosLosRamos =
+            document.querySelector(
+                '.subfiltro[data-estacion="todos"]'
+            );
+
+
+        todosLosRamos.classList.add("activo");
+
+
+        return;
+    }
+
+
+    /*
+       SI NO ES RAMOS
+    */
+
+    subfiltrosRamos.classList.remove("visible");
+
+    subfiltrosRamos.setAttribute(
+        "aria-hidden",
+        "true"
+    );
+
+
+    /*
+       Quitamos el estado activo
+       de todos los subfiltros.
+    */
+
+    subfiltros.forEach((boton) => {
+
+        boton.classList.remove("activo");
+
+    });
+
+
+    /*
+       Volvemos a dejar "Todos los ramos"
+       preparado para la próxima vez.
+    */
+
+    const todosLosRamos =
+        document.querySelector(
+            '.subfiltro[data-estacion="todos"]'
+        );
+
+
+    todosLosRamos.classList.add("activo");
+
+}
+
+
+/* =====================================================
+   FILTROS PRINCIPALES
 ===================================================== */
 
 filtros.forEach((filtro) => {
+
 
     filtro.addEventListener(
         "click",
         () => {
 
+
+            /*
+               Quitamos activo
+               de todos los filtros.
+            */
 
             filtros.forEach((boton) => {
 
@@ -388,30 +404,130 @@ filtros.forEach((filtro) => {
             });
 
 
+            /*
+               Activamos el pulsado.
+            */
+
             filtro.classList.add("activo");
 
+
+            /*
+               Obtenemos categoría.
+            */
 
             const categoria =
                 filtro.dataset.categoria;
 
+
+            /*
+               Mostrar / ocultar subfiltros.
+            */
+
+            actualizarSubfiltros(categoria);
+
+
+            /*
+               TODOS
+            */
 
             if (categoria === "todos") {
 
                 mostrarProductos(productos);
 
                 return;
-
             }
 
 
+            /*
+               Filtrado normal.
+            */
+
             const productosFiltrados =
                 productos.filter(
-                    producto =>
+                    (producto) =>
                         producto.categoria === categoria
                 );
 
 
             mostrarProductos(productosFiltrados);
+
+        }
+    );
+
+});
+
+
+/* =====================================================
+   SUBFILTROS DE RAMOS
+===================================================== */
+
+subfiltros.forEach((subfiltro) => {
+
+
+    subfiltro.addEventListener(
+        "click",
+        () => {
+
+
+            /*
+               Quitamos activo
+               de los demás subfiltros.
+            */
+
+            subfiltros.forEach((boton) => {
+
+                boton.classList.remove("activo");
+
+            });
+
+
+            /*
+               Activamos el seleccionado.
+            */
+
+            subfiltro.classList.add("activo");
+
+
+            /*
+               Obtenemos estación.
+            */
+
+            const estacion =
+                subfiltro.dataset.estacion;
+
+
+            /*
+               TODOS LOS RAMOS
+            */
+
+            if (estacion === "todos") {
+
+                const todosLosRamos =
+                    productos.filter(
+                        (producto) =>
+                            producto.categoria === "ramos"
+                    );
+
+
+                mostrarProductos(todosLosRamos);
+
+                return;
+            }
+
+
+            /*
+               RAMOS DE UNA ESTACIÓN
+            */
+
+            const ramosFiltrados =
+                productos.filter(
+                    (producto) =>
+                        producto.categoria === "ramos" &&
+                        producto.estacion === estacion
+                );
+
+
+            mostrarProductos(ramosFiltrados);
 
         }
     );
@@ -426,6 +542,7 @@ filtros.forEach((filtro) => {
 const botonMenu =
     document.getElementById("menuBtn");
 
+
 const menuDesplegable =
     document.getElementById("menuDesplegable");
 
@@ -434,15 +551,30 @@ botonMenu.addEventListener(
     "click",
     () => {
 
-        const abierto =
-            menuDesplegable.classList.toggle("abierto");
 
+        /*
+           Abrir / cerrar.
+        */
+
+        const abierto =
+            menuDesplegable.classList.toggle(
+                "abierto"
+            );
+
+
+        /*
+           Actualizar accesibilidad.
+        */
 
         botonMenu.setAttribute(
             "aria-expanded",
             abierto
         );
 
+
+        /*
+           Cambiar icono.
+        */
 
         if (abierto) {
 
@@ -470,9 +602,11 @@ const enlacesMenu =
 
 enlacesMenu.forEach((enlace) => {
 
+
     enlace.addEventListener(
         "click",
         () => {
+
 
             menuDesplegable.classList.remove(
                 "abierto"
