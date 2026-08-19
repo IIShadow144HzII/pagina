@@ -2940,7 +2940,7 @@ nav {
 
         width: min(92vw, 390px);
 
-        aspect-ratio: 4 / 3;
+        aspect-ratio: 3 / 2.40;
 
         height: auto;
     }
