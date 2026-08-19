@@ -1290,6 +1290,7 @@ nav {
 
 /* =====================================================
    FOTO LOURDES
+   PROPORCIÓN FIJA 4:5 EN TODOS LOS DISPOSITIVOS
 ===================================================== */
 
 .lourdes-decoration {
@@ -1307,9 +1308,11 @@ nav {
 
     position: relative;
 
-    width: 400px;
+    width: min(400px, 100%);
 
-    height: 500px;
+    aspect-ratio: 4 / 5;
+
+    height: auto;
 
     flex-shrink: 0;
 }
@@ -1320,9 +1323,9 @@ nav {
 
     position: absolute;
 
-    right: -12px;
+    right: clamp(-12px, -1.2vw, -9px);
 
-    bottom: -12px;
+    bottom: clamp(-12px, -1.2vw, -9px);
 
     width: 100%;
 
@@ -1663,7 +1666,7 @@ nav {
 
 
 /* =====================================================
-   TABLET
+   TABLET GRANDE / PORTÁTIL
 ===================================================== */
 
 @media (max-width: 1100px) {
@@ -1690,6 +1693,140 @@ nav {
 
         border-top:
             1px solid rgba(110,65,72,.15);
+    }
+
+}
+
+
+/* =====================================================
+   PORTÁTILES PEQUEÑOS / TABLETS HORIZONTALES
+   769px — 900px
+===================================================== */
+
+@media (min-width: 769px) and (max-width: 900px) {
+
+    nav {
+
+        height: 115px;
+
+        padding:
+            15px 25px;
+    }
+
+    .logo {
+
+        width: 140px;
+
+        height: 85px;
+    }
+
+    .menu {
+
+        left: 25px;
+    }
+
+    .menu-d {
+
+        gap: 14px;
+    }
+
+    .menu-d a {
+
+        font-size: 14px;
+    }
+
+    .redes {
+
+        right: 25px;
+
+        gap: 12px;
+    }
+
+    .redes a {
+
+        font-size: 17px;
+    }
+
+    .about-hero {
+
+        min-height: 460px;
+    }
+
+    .about-hero h1 {
+
+        font-size: 43px;
+    }
+
+    .story-section,
+    .lourdes-section {
+
+        padding:
+            80px 30px;
+    }
+
+    .story-container {
+
+        gap: 45px;
+    }
+
+    .story-image img {
+
+        height: 500px;
+    }
+
+    .story-content h2 {
+
+        font-size: 36px;
+    }
+
+    .lourdes-container {
+
+        grid-template-columns:
+            minmax(0, 1fr)
+            minmax(260px, .75fr);
+
+        gap: 45px;
+    }
+
+    .lourdes-content h2 {
+
+        font-size: 40px;
+    }
+
+    .lourdes-photo-wrapper {
+
+        width: min(34vw, 340px);
+    }
+
+    .values-section {
+
+        padding:
+            45px 30px;
+    }
+
+    .value-card {
+
+        min-height: 300px;
+
+        padding:
+            30px 20px;
+    }
+
+    .visual-section {
+
+        padding:
+            0 25px 80px;
+    }
+
+    .visual-content h2 {
+
+        font-size: 45px;
+    }
+
+    .footer {
+
+        padding-left: 30px;
+        padding-right: 30px;
     }
 
 }
@@ -1829,7 +1966,7 @@ nav {
 
 
     /* =================================================
-       HERO MÓVIL
+       HERO
     ================================================= */
 
     .about-hero {
@@ -1934,7 +2071,7 @@ nav {
 
 
     /* =================================================
-       STORY MÓVIL
+       STORY
     ================================================= */
 
     .story-section {
@@ -1972,6 +2109,7 @@ nav {
     .story-image::after {
 
         width: 92%;
+
         height: 92%;
     }
 
@@ -1996,9 +2134,9 @@ nav {
 
         top: 30px;
 
-        left: auto;
-
         left: 16px;
+
+        right: auto;
 
         bottom: auto;
 
@@ -2116,7 +2254,7 @@ nav {
     .values-section {
 
         padding:
-            0px 20px 0;
+            0 20px 0;
     }
 
     .values-header {
@@ -2131,7 +2269,7 @@ nav {
 
         margin-bottom: 8px;
 
-        font-size: 31px;
+        font-size: 30px;
 
         line-height: 1.18;
     }
@@ -2266,7 +2404,7 @@ nav {
 
 
     /* =================================================
-       LOURDES MÓVIL
+       LOURDES
     ================================================= */
 
     .lourdes-section {
@@ -2331,18 +2469,27 @@ nav {
         font-size: 13px;
     }
 
+    /*
+       La foto conserva 4:5.
+       Nunca se convierte en cuadrado.
+    */
+
     .lourdes-photo-wrapper {
 
-        width: 300px;
+        width: min(78vw, 320px);
 
-        height: 400px;
+        aspect-ratio: 4 / 5;
+
+        height: auto;
     }
 
     .lourdes-photo-wrapper::after {
 
-        right: -9px;
+        right:
+            clamp(-10px, -2.2vw, -8px);
 
-        bottom: -9px;
+        bottom:
+            clamp(-10px, -2.2vw, -8px);
     }
 
 
@@ -2492,10 +2639,42 @@ nav {
 
 
 /* =====================================================
+   MÓVILES MEDIANOS
+   481px — 600px
+===================================================== */
+
+@media (min-width: 481px) and (max-width: 600px) {
+
+    .lourdes-photo-wrapper {
+
+        width: min(70vw, 310px);
+
+        aspect-ratio: 4 / 5;
+    }
+
+    .about-hero {
+
+        height: 520px;
+    }
+
+    .about-hero h1 {
+
+        font-size: 32px;
+    }
+
+    .visual-image {
+
+        height: 450px;
+    }
+
+}
+
+
+/* =====================================================
    MÓVIL PEQUEÑO
 ===================================================== */
 
-@media (max-width: 390px) {
+@media (max-width: 480px) {
 
     nav {
 
@@ -2581,7 +2760,7 @@ nav {
     .story-section {
 
         padding:
-            60px 17px 65px;
+            50px 17px;
     }
 
     .story-container {
@@ -2616,6 +2795,8 @@ nav {
         top: 17px;
 
         right: 13px;
+
+        left: auto;
 
         font-size: 7px;
 
@@ -2659,7 +2840,7 @@ nav {
     .values-section {
 
         padding:
-            0px 17px 0;
+            0 17px 0;
     }
 
     .values-header {
@@ -2754,9 +2935,11 @@ nav {
 
     .lourdes-photo-wrapper {
 
-        width: 205px;
+        width: min(78vw, 300px);
 
-        height: 205px;
+        aspect-ratio: 4 / 5;
+
+        height: auto;
     }
 
 
@@ -2796,6 +2979,304 @@ nav {
 
         gap:
             30px 18px;
+    }
+
+}
+
+
+/* =====================================================
+   MÓVIL MUY PEQUEÑO
+   360px O MENOS
+===================================================== */
+
+@media (max-width: 360px) {
+
+    nav {
+
+        height: 74px;
+    }
+
+    .logo {
+
+        width: 115px;
+
+        height: 54px;
+    }
+
+    .menu button {
+
+        left: 6px;
+
+        top: 17px;
+    }
+
+    .menu-d {
+
+        top: 74px;
+
+        height:
+            calc(100vh - 74px);
+
+        padding:
+            18px;
+    }
+
+    .redes {
+
+        right: 7px;
+
+        gap: 5px;
+    }
+
+    .redes a {
+
+        font-size: 13px;
+    }
+
+
+    /* HERO */
+
+    .about-hero {
+
+        height: 455px;
+    }
+
+    .about-hero-content {
+
+        padding:
+            20px 14px;
+    }
+
+    .hero-label {
+
+        font-size: 12px;
+
+        letter-spacing: 2px;
+    }
+
+    .about-hero h1 {
+
+        font-size: 25px;
+
+        padding:
+            12px 3px;
+    }
+
+    .about-hero-content p {
+
+        max-width: 290px;
+
+        font-size: 13px;
+    }
+
+
+    /* STORY */
+
+    .story-section {
+
+        padding:
+            55px 15px 60px;
+    }
+
+    .story-container {
+
+        gap: 38px;
+    }
+
+    .story-image {
+
+        padding:
+            0 9px 9px 0;
+    }
+
+    .story-image img {
+
+        height: 360px;
+    }
+
+    .story-image-caption .dos,
+    .story-image-caption .uno {
+
+        font-size: 6.5px;
+
+        letter-spacing: .8px;
+    }
+
+    .story-content h2 {
+
+        font-size: 27px;
+    }
+
+    .story-content .story-intro {
+
+        font-size: 16px;
+    }
+
+    .story-content p {
+
+        font-size: 12.5px;
+    }
+
+
+    /* VALUES */
+
+    .values-section {
+
+        padding:
+            0 15px 0;
+    }
+
+    .values-grid {
+
+        width: calc(100% + 30px);
+
+        margin-left: -15px;
+    }
+
+    .values-header h2 {
+
+        font-size: 26px;
+    }
+
+    .value-card {
+
+        padding:
+            25px 18px 28px;
+    }
+
+
+    /* VISUAL */
+
+    .visual-section {
+
+        padding:
+            50px 15px 60px;
+    }
+
+    .visual-image {
+
+        height: 370px;
+    }
+
+    .visual-content {
+
+        left: 19px;
+
+        right: 19px;
+
+        bottom: 25px;
+    }
+
+    .visual-content h2 {
+
+        font-size: 28px;
+    }
+
+
+    /* LOURDES */
+
+    .lourdes-section {
+
+        padding:
+            60px 15px 65px;
+    }
+
+    .lourdes-container {
+
+        gap: 38px;
+    }
+
+    .lourdes-content h2 {
+
+        font-size: 29px;
+    }
+
+    .lourdes-content .lourdes-lead {
+
+        font-size: 17px;
+    }
+
+    .lourdes-content p {
+
+        font-size: 12.5px;
+
+        line-height: 1.7;
+    }
+
+    .lourdes-photo-wrapper {
+
+        width: min(76vw, 270px);
+
+        aspect-ratio: 4 / 5;
+
+        height: auto;
+    }
+
+    .lourdes-photo-wrapper::after {
+
+        right: -8px;
+
+        bottom: -8px;
+    }
+
+
+    /* CTA */
+
+    .final-cta {
+
+        padding:
+            65px 15px;
+    }
+
+    .final-cta h2 {
+
+        font-size: 29px;
+    }
+
+    .final-cta p {
+
+        font-size: 11.5px;
+    }
+
+
+    /* FOOTER */
+
+    .footer {
+
+        padding:
+            45px 15px 18px;
+    }
+
+    .footer-container {
+
+        gap:
+            28px 15px;
+    }
+
+}
+
+
+/* =====================================================
+   PANTALLAS GRANDES
+===================================================== */
+
+@media (min-width: 1400px) {
+
+    .lourdes-photo-wrapper {
+
+        width: 400px;
+
+        aspect-ratio: 4 / 5;
+    }
+
+    .story-container {
+
+        max-width: 1250px;
+    }
+
+    .lourdes-container {
+
+        max-width: 1100px;
     }
 
 }
