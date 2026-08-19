@@ -1971,15 +1971,19 @@ nav {
 
     .about-hero {
 
-        height: 500px;
+        height: 410px;
 
         min-height: 0;
     }
 
     .about-hero-image {
 
+        background-size: cover;
+
         background-position:
-            center center;
+            center 42%;
+
+        transform: scale(1.01);
     }
 
     .about-hero-overlay {
@@ -2723,7 +2727,7 @@ nav {
 
     .about-hero {
 
-        height: 475px;
+        height: 390px;
     }
 
     .about-hero-content {
@@ -3037,7 +3041,7 @@ nav {
 
     .about-hero {
 
-        height: 455px;
+        height: 375px;
     }
 
     .about-hero-content {
