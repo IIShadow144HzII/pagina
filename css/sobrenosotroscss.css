@@ -2432,12 +2432,12 @@ nav {
 
         width: 100%;
 
-        order: 1;
+        order: 0;
     }
 
     .lourdes-decoration {
 
-        order: 0;
+        order: 1;
 
         width: 100%;
     }
