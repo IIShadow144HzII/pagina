@@ -1290,7 +1290,7 @@ nav {
 
 /* =====================================================
    FOTO LOURDES
-   PROPORCIÓN FIJA 4:5 EN TODOS LOS DISPOSITIVOS
+   PROPORCIÓN HORIZONTAL 16:9 EN MÓVIL
 ===================================================== */
 
 .lourdes-decoration {
@@ -2474,15 +2474,15 @@ nav {
     }
 
     /*
-       La foto conserva 4:5.
-       Nunca se convierte en cuadrado.
+       La foto conserva formato horizontal 16:9.
+       Nunca se convierte en cuadrada ni vertical.
     */
 
     .lourdes-photo-wrapper {
 
-        width: min(78vw, 320px);
+        width: min(92vw, 420px);
 
-        aspect-ratio: 4 / 5;
+        aspect-ratio: 4 / 3;
 
         height: auto;
     }
@@ -2651,9 +2651,9 @@ nav {
 
     .lourdes-photo-wrapper {
 
-        width: min(70vw, 310px);
+        width: min(92vw, 400px);
 
-        aspect-ratio: 4 / 5;
+        aspect-ratio: 4 / 3;
     }
 
     .about-hero {
@@ -2938,9 +2938,9 @@ nav {
 
     .lourdes-photo-wrapper {
 
-        width: min(78vw, 300px);
+        width: min(92vw, 390px);
 
-        aspect-ratio: 4 / 5;
+        aspect-ratio: 4 / 3;
 
         height: auto;
     }
@@ -3208,9 +3208,9 @@ nav {
 
     .lourdes-photo-wrapper {
 
-        width: min(76vw, 270px);
+        width: min(92vw, 350px);
 
-        aspect-ratio: 4 / 5;
+        aspect-ratio: 4 / 3;
 
         height: auto;
     }
