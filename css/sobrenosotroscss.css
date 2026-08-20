@@ -545,7 +545,34 @@ nav {
     letter-spacing: 2px;
 }
 
+.section-label-dos{
+
+    display: block;
+
+    margin-bottom: 10px;
+
+    color: var(--rosa);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
 .decorative-line {
+
+    width: 55px;
+
+    height: 1px;
+
+    margin:
+        20px 0 25px;
+
+    background: var(--champagne);
+}
+
+.decorative-line-dos {
 
     width: 55px;
 
@@ -2192,6 +2219,8 @@ nav {
         letter-spacing: 2px;
     }
 
+   
+
     .story-content h2 {
 
         margin-bottom: 12px;
@@ -2208,6 +2237,14 @@ nav {
         margin:
             17px 0 23px;
         margin-left:22px;
+    }
+
+    .decorative-line-dos {
+
+        width: 48px;
+
+        margin:
+            17px 0 23px;
     }
 
     .story-content .story-intro {
