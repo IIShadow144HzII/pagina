@@ -729,7 +729,7 @@ nav {
 
     font-family: Arial, sans-serif;
 
-    font-size: 14px;
+    font-size: 15px;
 
     line-height: 1.7;
 }
@@ -2186,7 +2186,7 @@ nav {
 
         margin-bottom: 9px;
 
-        font-size: 10px;
+        font-size: 13px;
         margin-left:25px;
 
         letter-spacing: 2px;
@@ -2843,7 +2843,7 @@ nav {
 
     .story-content p {
 
-        font-size: 13px;
+        font-size: 15px;
 
         line-height: 1.7;
     }
@@ -2868,7 +2868,7 @@ nav {
     .values-section {
 
         padding:
-            0 17px 0;
+            20px 20px 20px;
     }
 
     .values-header {
