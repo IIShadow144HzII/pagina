@@ -2105,3 +2105,412 @@ nav {
         display: none !important;
     }
 }
+
+
+/* =====================================================
+   FLORS I PASSIÓ — REFINAMIENTO PROFESIONAL / CONVERSIÓN
+   Mantiene la estructura y la identidad visual existentes.
+===================================================== */
+
+/* ---------- Base visual ---------- */
+
+:root {
+    --sombra-suave: 0 10px 30px rgba(36, 32, 31, .08);
+    --sombra-hover: 0 18px 42px rgba(110, 65, 72, .15);
+    --radio-suave: 2px;
+}
+
+::selection {
+    color: var(--marfil);
+    background: var(--borgona);
+}
+
+a,
+button {
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:focus-visible,
+a:focus-visible {
+    outline: 2px solid var(--champagne);
+    outline-offset: 4px;
+}
+
+
+/* ---------- Navegación ---------- */
+
+nav {
+    box-shadow: 0 1px 0 rgba(110, 65, 72, .04);
+}
+
+.menu-d a {
+    letter-spacing: .15px;
+    transition:
+        color .25s ease,
+        opacity .25s ease;
+}
+
+.menu-d a:hover {
+    opacity: .82;
+}
+
+.redes a {
+    transition:
+        color .25s ease,
+        opacity .25s ease,
+        transform .25s ease;
+}
+
+
+/* ---------- Hero: más claridad y jerarquía ---------- */
+
+.hero::after {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(36, 32, 31, .43) 0%,
+            rgba(36, 32, 31, .20) 40%,
+            rgba(36, 32, 31, .06) 70%,
+            rgba(36, 32, 31, .15) 100%
+        ),
+        linear-gradient(
+            180deg,
+            rgba(36, 32, 31, .03) 0%,
+            rgba(36, 32, 31, .10) 52%,
+            rgba(36, 32, 31, .42) 100%
+        );
+}
+
+.hero h1 .frase-izquierda,
+.hero h1 .frase-derecha {
+    letter-spacing: -.25px;
+}
+
+.hero h1 em {
+    color: #F5D9D5;
+}
+
+.hero-subtitulo {
+    text-wrap: balance;
+}
+
+.hero-cta {
+    min-height: 46px;
+    padding: 12px 22px;
+    border: 1px solid rgba(250, 248, 244, .55);
+    background: rgba(93, 56, 63, .88);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    box-shadow: 0 8px 22px rgba(36, 32, 31, .18);
+    transition:
+        background-color .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease,
+        transform .25s ease;
+}
+
+.hero-cta:hover {
+    color: var(--marfil);
+    background: var(--borgona);
+    border-color: rgba(250, 248, 244, .8);
+    box-shadow: 0 12px 28px rgba(36, 32, 31, .24);
+    transform: translateX(-50%) translateY(-2px);
+}
+
+
+/* ---------- Beneficios: si se utilizan en la estructura ---------- */
+
+.beneficios {
+    box-shadow: inset 0 -1px 0 rgba(110, 65, 72, .05);
+}
+
+.beneficio {
+    transition: background-color .25s ease;
+}
+
+.beneficio:hover {
+    background: rgba(250, 248, 244, .22);
+}
+
+
+/* ---------- Catálogo ---------- */
+
+.productos {
+    padding-top: clamp(55px, 6vw, 82px);
+}
+
+.productos-cabecera {
+    max-width: 760px;
+}
+
+.seccion-etiqueta {
+    font-weight: 600;
+}
+
+.productos-cabecera h2 {
+    font-size: clamp(32px, 3.1vw, 42px);
+    letter-spacing: -.3px;
+}
+
+.productos-cabecera p {
+    max-width: 620px;
+    font-size: 13px;
+    text-wrap: balance;
+}
+
+
+/* Señales de confianza: discretas para no romper la estética */
+
+.catalogo-confianza {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 9px 22px;
+    margin-top: 24px;
+    color: var(--borgona);
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: .2px;
+}
+
+.catalogo-confianza span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.catalogo-confianza i {
+    color: var(--rosa);
+    font-size: 12px;
+}
+
+
+/* ---------- Filtros ---------- */
+
+.filtros {
+    gap: 9px;
+}
+
+.filtro {
+    min-height: 38px;
+    border-radius: 999px;
+    padding-inline: 18px;
+    transition:
+        color .2s ease,
+        background-color .2s ease,
+        border-color .2s ease,
+        transform .2s ease;
+}
+
+.filtro:hover {
+    transform: translateY(-1px);
+}
+
+.filtro.activo {
+    box-shadow: 0 5px 14px rgba(110, 65, 72, .12);
+}
+
+.subfiltro {
+    border-radius: 999px;
+}
+
+.subfiltro:hover {
+    transform: translateY(-1px);
+}
+
+
+/* ---------- Tarjetas de producto ---------- */
+
+.productos-grid {
+    align-items: start;
+}
+
+.producto {
+    border-radius: var(--radio-suave);
+    overflow: hidden;
+    box-shadow: 0 1px 0 rgba(110, 65, 72, .02);
+    transition:
+        transform .3s cubic-bezier(.22,.61,.36,1),
+        box-shadow .3s ease,
+        border-color .3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-6px);
+    border-color: rgba(110, 65, 72, .18);
+    box-shadow: var(--sombra-hover);
+}
+
+.producto-imagen {
+    position: relative;
+    background: #F0E3E0;
+}
+
+.producto-imagen::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: linear-gradient(
+        180deg,
+        transparent 70%,
+        rgba(36, 32, 31, .06) 100%
+    );
+}
+
+.producto-info {
+    padding: 19px;
+}
+
+.producto-info h3 {
+    letter-spacing: -.1px;
+}
+
+.producto-info p {
+    text-wrap: balance;
+}
+
+.contactar-whatsapp {
+    min-height: 45px;
+    border-radius: 1px;
+    font-weight: 500;
+    letter-spacing: .15px;
+    box-shadow: 0 5px 15px rgba(110, 65, 72, .08);
+    transition:
+        background-color .2s ease,
+        color .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.contactar-whatsapp:hover {
+    color: var(--marfil);
+    background: var(--borgona-oscuro);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 20px rgba(110, 65, 72, .16);
+}
+
+
+/* ---------- CTA final ---------- */
+
+.cta-final {
+    padding: clamp(82px, 9vw, 120px) 30px;
+}
+
+.cta-final h2 {
+    letter-spacing: -.4px;
+}
+
+.cta-final p {
+    text-wrap: balance;
+}
+
+.cta-final-boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    min-height: 49px;
+    margin-top: 2px;
+    padding: 13px 24px;
+    color: var(--borgona);
+    background: var(--marfil);
+    border: 1px solid rgba(250, 248, 244, .65);
+    font-size: 13px;
+    box-shadow: 0 8px 22px rgba(36, 32, 31, .12);
+    transition:
+        background-color .25s ease,
+        color .25s ease,
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.cta-final-boton:hover {
+    color: var(--borgona);
+    background: var(--blanco);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(36, 32, 31, .18);
+}
+
+.cta-final-boton i {
+    transition: transform .25s ease;
+}
+
+.cta-final-boton:hover i {
+    transform: translateX(3px);
+}
+
+
+/* ---------- Footer ---------- */
+
+.footer-column a {
+    transition:
+        color .2s ease,
+        transform .2s ease;
+}
+
+.footer-column a:hover {
+    transform: translateX(2px);
+}
+
+
+/* =====================================================
+   RESPONSIVE DEL REFINAMIENTO
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .catalogo-confianza {
+        gap: 8px 14px;
+        margin-top: 20px;
+        font-size: 9px;
+    }
+
+    .catalogo-confianza span {
+        white-space: normal;
+        justify-content: center;
+    }
+
+    .producto:hover {
+        transform: none;
+        box-shadow: none;
+    }
+
+    .cta-final-boton {
+        width: 100%;
+        max-width: 300px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .catalogo-confianza {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .catalogo-confianza span {
+        justify-content: center;
+    }
+
+}
+
+
+/* ---------- Accesibilidad / rendimiento visual ---------- */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+    }
+
+}
