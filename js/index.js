@@ -74,7 +74,6 @@ for (let numero = 1; numero <= 32; numero++) {
        2  → ramos
        3  → decoracion
        4  → eventos
-       5  → ramos
        etc.
     */
 
@@ -105,6 +104,7 @@ for (let numero = 1; numero <= 32; numero++) {
     if (estacionesRamos[numero]) {
 
         categoria = "ramos";
+
     }
 
 
@@ -547,86 +547,314 @@ const menuDesplegable =
     document.getElementById("menuDesplegable");
 
 
-botonMenu.addEventListener(
-    "click",
-    () => {
+if (botonMenu && menuDesplegable) {
 
 
-        /*
-           Abrir / cerrar.
-        */
+    /* =================================================
+       ABRIR MENÚ
+    ================================================= */
 
-        const abierto =
-            menuDesplegable.classList.toggle(
-                "abierto"
-            );
+    function abrirMenu() {
 
-
-        /*
-           Actualizar accesibilidad.
-        */
+        menuDesplegable.classList.add("abierto");
 
         botonMenu.setAttribute(
             "aria-expanded",
-            abierto
+            "true"
         );
+
+        botonMenu.setAttribute(
+            "aria-label",
+            "Cerrar menú"
+        );
+
+        botonMenu.innerHTML =
+            '<i class="bi bi-x-lg"></i>';
 
 
         /*
-           Cambiar icono.
+           Bloquear completamente el scroll
+           mientras el menú está abierto.
         */
 
-        if (abierto) {
+        document.documentElement.style.overflow =
+            "hidden";
 
-            botonMenu.innerHTML =
-                '<i class="bi bi-x-lg"></i>';
+        document.body.style.overflow =
+            "hidden";
+
+
+        /*
+           Evitar rebote del scroll en iOS.
+        */
+
+        document.documentElement.style.overscrollBehavior =
+            "none";
+
+        document.body.style.overscrollBehavior =
+            "none";
+
+    }
+
+
+    /* =================================================
+       CERRAR MENÚ
+    ================================================= */
+
+    function cerrarMenu() {
+
+        menuDesplegable.classList.remove(
+            "abierto"
+        );
+
+        botonMenu.setAttribute(
+            "aria-expanded",
+            "false"
+        );
+
+        botonMenu.setAttribute(
+            "aria-label",
+            "Abrir menú"
+        );
+
+        botonMenu.innerHTML =
+            '<i class="bi bi-list"></i>';
+
+
+        /*
+           Restaurar scroll.
+        */
+
+        document.documentElement.style.overflow =
+            "";
+
+        document.body.style.overflow =
+            "";
+
+        document.documentElement.style.overscrollBehavior =
+            "";
+
+        document.body.style.overscrollBehavior =
+            "";
+
+    }
+
+
+    /* =================================================
+       ALTERNAR MENÚ
+    ================================================= */
+
+    function alternarMenu() {
+
+        if (
+            menuDesplegable.classList.contains(
+                "abierto"
+            )
+        ) {
+
+            cerrarMenu();
 
         } else {
 
-            botonMenu.innerHTML =
-                '<i class="bi bi-list"></i>';
+            abrirMenu();
 
         }
 
     }
-);
 
 
-/* =====================================================
-   CERRAR MENÚ AL PULSAR ENLACE
-===================================================== */
+    /* =================================================
+       BOTÓN DEL MENÚ
+    ================================================= */
 
-const enlacesMenu =
-    document.querySelectorAll(".menu-d a");
-
-
-enlacesMenu.forEach((enlace) => {
-
-
-    enlace.addEventListener(
+    botonMenu.addEventListener(
         "click",
-        () => {
+        (evento) => {
 
+            evento.stopPropagation();
 
-            menuDesplegable.classList.remove(
-                "abierto"
-            );
-
-
-            botonMenu.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-
-            botonMenu.innerHTML =
-                '<i class="bi bi-list"></i>';
+            alternarMenu();
 
         }
     );
 
-});
 
+    /* =================================================
+       CERRAR AL PULSAR UN ENLACE
+    ================================================= */
+
+    const enlacesMenu =
+        menuDesplegable.querySelectorAll("a");
+
+
+    enlacesMenu.forEach((enlace) => {
+
+        enlace.addEventListener(
+            "click",
+            () => {
+
+                cerrarMenu();
+
+            }
+        );
+
+    });
+
+
+    /* =================================================
+       CERRAR AL PULSAR FUERA
+    ================================================= */
+
+    document.addEventListener(
+        "click",
+        (evento) => {
+
+            if (
+                !menuDesplegable.classList.contains(
+                    "abierto"
+                )
+            ) {
+
+                return;
+
+            }
+
+
+            const dentroMenu =
+                menuDesplegable.contains(
+                    evento.target
+                );
+
+
+            const dentroBoton =
+                botonMenu.contains(
+                    evento.target
+                );
+
+
+            if (
+                !dentroMenu &&
+                !dentroBoton
+            ) {
+
+                cerrarMenu();
+
+            }
+
+        }
+    );
+
+
+    /* =================================================
+       CERRAR CON ESC
+    ================================================= */
+
+    document.addEventListener(
+        "keydown",
+        (evento) => {
+
+            if (
+                evento.key === "Escape" &&
+                menuDesplegable.classList.contains(
+                    "abierto"
+                )
+            ) {
+
+                cerrarMenu();
+
+                botonMenu.focus();
+
+            }
+
+        }
+    );
+
+
+    /* =================================================
+       CERRAR AL PASAR A ESCRITORIO
+    ================================================= */
+
+    window.addEventListener(
+        "resize",
+        () => {
+
+            if (
+                window.innerWidth > 768 &&
+                menuDesplegable.classList.contains(
+                    "abierto"
+                )
+            ) {
+
+                cerrarMenu();
+
+            }
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   NAVBAR STICKY
+===================================================== */
+
+const navbar = document.querySelector("nav");
+
+if (navbar) {
+
+    let navbarFijado = false;
+    let ticking = false;
+
+
+    function actualizarNavbar() {
+
+        const scrollActual = window.scrollY;
+
+
+        if (scrollActual > 80 && !navbarFijado) {
+
+            navbar.classList.add("navbar-scroll");
+
+            navbarFijado = true;
+
+        }
+
+
+        if (scrollActual <= 80 && navbarFijado) {
+
+            navbar.classList.remove("navbar-scroll");
+
+            navbarFijado = false;
+
+        }
+
+
+        ticking = false;
+    }
+
+
+    window.addEventListener(
+        "scroll",
+        () => {
+
+            if (!ticking) {
+
+                window.requestAnimationFrame(
+                    actualizarNavbar
+                );
+
+                ticking = true;
+
+            }
+
+        },
+        {
+            passive: true
+        }
+    );
+
+}
 
 /* =====================================================
    INICIALIZAR

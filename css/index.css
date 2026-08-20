@@ -2735,3 +2735,72 @@ nav {
     }
 
 }
+
+
+/* =====================================================
+   NAVBAR STICKY
+===================================================== */
+
+nav {
+    transition:
+        transform .35s ease,
+        background-color .35s ease,
+        box-shadow .35s ease;
+}
+
+
+/* Cuando hacemos scroll */
+
+nav.navbar-scroll {
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    width: 100%;
+
+    z-index: 9999;
+
+    background: rgba(250, 248, 244, .97);
+
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow:
+        0 6px 25px rgba(36, 32, 31, .10);
+
+    animation: navbarEntrada .35s ease forwards;
+}
+
+
+/* Animación de entrada */
+
+@keyframes navbarEntrada {
+
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Móvil */
+
+@media (max-width: 768px) {
+
+    nav.navbar-scroll {
+
+        background: rgba(250, 248, 244, .98);
+
+        box-shadow:
+            0 5px 22px rgba(36, 32, 31, .12);
+
+    }
+
+}
