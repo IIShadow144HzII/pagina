@@ -2514,3 +2514,117 @@ nav {
     }
 
 }
+
+@media(max-width:430px){
+    .catalogo-confianza{
+        display: none;
+    }
+}
+
+
+/* =====================================================
+   HERO MÓVIL — LEGIBILIDAD PREMIUM
+   Más contraste y presencia sin oscurecer demasiado
+   la fotografía.
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .hero::after {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(36, 32, 31, .18) 0%,
+                rgba(36, 32, 31, .24) 42%,
+                rgba(36, 32, 31, .50) 100%
+            ),
+            linear-gradient(
+                90deg,
+                rgba(36, 32, 31, .20) 0%,
+                rgba(36, 32, 31, .08) 50%,
+                rgba(36, 32, 31, .20) 100%
+            );
+    }
+
+    .hero-overlay {
+        background:
+            radial-gradient(
+                ellipse at center,
+                rgba(36, 32, 31, .03) 0%,
+                rgba(36, 32, 31, .08) 62%,
+                rgba(36, 32, 31, .18) 100%
+            );
+    }
+
+    .hero-etiqueta {
+        color: #FFF9F2;
+        font-weight: 500;
+        text-shadow:
+            0 2px 4px rgba(36, 32, 31, .80),
+            0 4px 12px rgba(36, 32, 31, .55);
+    }
+
+    .hero h1 .frase-izquierda,
+    .hero h1 .frase-derecha {
+        color: #FFF9F2;
+        font-weight: 500;
+        text-shadow:
+            0 2px 3px rgba(36, 32, 31, .92),
+            0 4px 12px rgba(36, 32, 31, .72),
+            0 7px 22px rgba(36, 32, 31, .42);
+    }
+
+    .hero h1 em {
+        color: #F6D8D5;
+        text-shadow:
+            0 2px 3px rgba(110, 65, 72, .95),
+            0 4px 12px rgba(36, 32, 31, .70);
+    }
+
+    .hero-cita {
+        color: #F7DCD8;
+        font-weight: 500;
+        text-shadow:
+            0 2px 5px rgba(36, 32, 31, .90),
+            0 4px 12px rgba(36, 32, 31, .55);
+    }
+
+    .hero-subtitulo {
+        color: #FFF8F3;
+        font-weight: 500;
+        text-shadow:
+            0 2px 5px rgba(36, 32, 31, .92),
+            0 4px 13px rgba(36, 32, 31, .60);
+    }
+
+}
+
+/* Móviles pequeños: un poco más de contraste, manteniendo
+   la fotografía visible. */
+@media (max-width: 480px) {
+
+    .hero::after {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(36, 32, 31, .20) 0%,
+                rgba(36, 32, 31, .27) 48%,
+                rgba(36, 32, 31, .53) 100%
+            ),
+            linear-gradient(
+                90deg,
+                rgba(36, 32, 31, .18) 0%,
+                rgba(36, 32, 31, .07) 50%,
+                rgba(36, 32, 31, .18) 100%
+            );
+    }
+
+    .hero h1 .frase-izquierda,
+    .hero h1 .frase-derecha {
+        text-shadow:
+            0 2px 3px rgba(36, 32, 31, .95),
+            0 4px 11px rgba(36, 32, 31, .78),
+            0 7px 18px rgba(36, 32, 31, .48);
+    }
+
+}
