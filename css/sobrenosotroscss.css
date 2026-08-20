@@ -2219,7 +2219,14 @@ nav {
         letter-spacing: 2px;
     }
 
-   
+    .section-label-dos{
+
+        margin-bottom: 9px;
+
+        font-size: 13px;
+
+        letter-spacing: 2px;
+    }
 
     .story-content h2 {
 
@@ -2848,7 +2855,7 @@ nav {
 
         top: 17px;
 
-        left: 13px;
+        left: 14px;
 
         font-size: 7px;
 
