@@ -1,34 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
-
 /* =====================================================
-   VARIABLES
+   FLORS I PASSIÓ — MAIN PAGE
+   MISMA IDENTIDAD VISUAL QUE "SOBRE NOSOTROS"
 ===================================================== */
 
 :root {
-
     --marfil: #FAF8F4;
-
     --rosa-claro: #E8D3D0;
-
     --rosa: #B98282;
-
     --borgona: #6E4148;
-
+    --borgona-oscuro: #5D383F;
     --negro: #24201F;
-
     --gris: #756B68;
-
     --champagne: #C7A77B;
-
     --blanco: #FFFFFF;
-
+    --linea: rgba(110, 65, 72, .15);
+    --sombra: 0 14px 35px rgba(110, 65, 72, .10);
 }
-
-
-/* =====================================================
-   GENERAL
-===================================================== */
 
 * {
     box-sizing: border-box;
@@ -40,22 +29,22 @@ html {
 
 html,
 body {
-
     margin: 0;
     padding: 0;
-
     width: 100%;
-
     overflow-x: hidden;
 }
 
 body {
-
     font-family: "Lora", serif;
-
     color: var(--negro);
-
     background: var(--marfil);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+img {
+    max-width: 100%;
 }
 
 a {
@@ -63,10 +52,8 @@ a {
 }
 
 button {
-
-    -webkit-tap-highlight-color: transparent;
-
     font-family: inherit;
+    -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -75,206 +62,115 @@ button {
 ===================================================== */
 
 nav {
-
     position: relative;
-
     width: 100%;
     height: 140px;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     padding: 20px 40px;
-
     background: var(--marfil);
-
-    border-bottom:
-        1px solid rgba(110, 65, 72, .18);
-
+    border-bottom: 1px solid var(--linea);
     z-index: 3000;
 }
 
-
-/* =====================================================
-   LOGO
-===================================================== */
-
 .logo-link {
-
     display: flex;
-
     align-items: center;
     justify-content: center;
 }
 
 .logo {
-
     width: 160px;
     height: 100px;
-
     object-fit: contain;
 }
 
-
-/* =====================================================
-   MENÚ
-===================================================== */
-
 .menu {
-
     position: absolute;
-
     left: 40px;
     top: 50%;
-
-    transform:
-        translateY(-50%);
-
+    transform: translateY(-50%);
     z-index: 3500;
 }
 
-
-/* =====================================================
-   BOTÓN MENÚ
-===================================================== */
-
 .menu button {
-
     display: none;
-
     padding: 0;
-
     color: var(--borgona);
-
     background: transparent;
-
-    border: none;
-
-    outline: none;
-
+    border: 0;
+    outline: 0;
     cursor: pointer;
-
     font-size: 26px;
-
     line-height: 1;
 }
 
 .menu button:focus,
 .menu button:focus-visible,
 .menu button:active {
-
     outline: none !important;
-
     border: none !important;
-
     box-shadow: none !important;
 }
 
-
-/* =====================================================
-   MENÚ PC
-===================================================== */
-
 .menu-d {
-
     display: flex;
-
     align-items: center;
-
     gap: 22px;
-
     background: var(--marfil);
 }
 
 .menu-d a {
-
     position: relative;
-
     padding: 10px 0;
-
     color: var(--negro);
-
-    font-size: 17px;
-
-    text-decoration: none;
+    font-size: 16px;
 }
 
 .menu-d a::after {
-
     content: "";
-
     position: absolute;
-
     left: 0;
     bottom: 4px;
-
     width: 0;
     height: 1px;
-
     background: var(--borgona);
-
-    transition:
-        width .25s ease;
+    transition: width .25s ease;
 }
 
-.menu-d a:hover {
-
+.menu-d a:hover,
+.menu-d a.activo {
     color: var(--borgona);
 }
 
-.menu-d a:hover::after {
-
+.menu-d a:hover::after,
+.menu-d a.activo::after {
     width: 100%;
 }
 
-
-/* =====================================================
-   REDES
-===================================================== */
-
 .redes {
-
     position: absolute;
-
     right: 40px;
     top: 50%;
-
-    transform:
-        translateY(-50%);
-
+    transform: translateY(-50%);
     display: flex;
-
     align-items: center;
-
     gap: 17px;
 }
 
 .redes a {
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     color: var(--borgona);
-
-    font-size: 19px;
-
-    text-decoration: none;
-
-    transition:
-        opacity .2s ease,
-        transform .2s ease;
+    font-size: 18px;
+    transition: opacity .2s ease, transform .2s ease;
 }
 
 .redes a:hover {
-
-    opacity: .6;
-
-    transform:
-        translateY(-2px);
+    opacity: .65;
+    transform: translateY(-2px);
 }
 
 
@@ -283,243 +179,138 @@ nav {
 ===================================================== */
 
 .hero {
-
     position: relative;
-
     width: 100%;
-
     height: 65vh;
-
     min-height: 500px;
-
     display: flex;
-
     align-items: center;
     justify-content: center;
-
-    background-image:
-        url("../fotos/ChatGPT\ Image\ 16\ ago\ 2026\,\ 00_26_15.png");
-
+    background-image: url("../fotos/ChatGPT\ Image\ 16\ ago\ 2026\,\ 00_26_15.png");
     background-size: cover;
-
     background-position: center;
-
     background-repeat: no-repeat;
-
     overflow: hidden;
 }
 
-
-/* =====================================================
-   HERO OVERLAY
-===================================================== */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        180deg,
+        rgba(36, 32, 31, .10) 0%,
+        rgba(36, 32, 31, .16) 45%,
+        rgba(36, 32, 31, .52) 100%
+    );
+    z-index: 0;
+}
 
 .hero-overlay {
-
     position: absolute;
-
     inset: 0;
-
     background:
         radial-gradient(
             ellipse at center,
-            rgba(36, 32, 31, .42) 0%,
-            rgba(36, 32, 31, .18) 45%,
-            rgba(36, 32, 31, .05) 75%
+            rgba(36, 32, 31, .34) 0%,
+            rgba(36, 32, 31, .12) 52%,
+            rgba(36, 32, 31, .03) 100%
         );
+    z-index: 1;
 }
 
-
-/* =====================================================
-   HERO CONTENIDO
-===================================================== */
-
 .hero-contenido {
-
     position: relative;
-
     z-index: 2;
-
-    width: 90%;
-
-    max-width: 950px;
-
+    width: min(90%, 950px);
     display: flex;
-
     flex-direction: column;
-
     align-items: center;
-
     text-align: center;
-
     padding: 40px 20px;
 }
 
-
-/* =====================================================
-   HERO ETIQUETA
-===================================================== */
-
 .hero-etiqueta {
-
-    margin:
-        0 0 20px;
-
+    margin: 0 0 16px;
     color: var(--marfil);
-
-    font-size: 30px;
-
-    letter-spacing: 4px;
-
-    text-shadow:
-        0 2px 8px rgba(36, 32, 31, .75);
+    font-size: 24px;
+    letter-spacing: 3.5px;
+    text-shadow: 0 2px 8px rgba(36, 32, 31, .75);
 }
 
-
-/* =====================================================
-   HERO TÍTULO
-===================================================== */
-
 .hero h1 {
-
     position: relative;
-
-    max-width: 1000px;
-
+    max-width: 950px;
     margin: 0;
-
-    padding:
-        25px 35px;
-
+    padding: 22px 30px;
     color: var(--marfil);
-
-    background: transparent;
-
-    font-family: "Lora", serif;
-
-    font-size: 50px;
-
-    line-height: 1.2;
-
+    font-size: 44px;
+    line-height: 1.16;
     font-weight: 500;
-
     text-align: center;
-
     text-shadow:
         0 2px 8px rgba(36, 32, 31, .8),
         0 4px 20px rgba(36, 32, 31, .45);
-
-    animation:
-        aparecerTitulo 1.5s ease-out .2s both;
+    animation: aparecerTitulo 1.5s ease-out .2s both;
 }
 
 
-/* =====================================================
-   LÍNEAS DECORATIVAS
-===================================================== */
+.hero h1 em {
+    display: block;
+    color: var(--rosa-claro);
+    font-style: italic;
+}
 
 .hero h1::before,
 .hero h1::after {
-
     content: "";
-
     display: block;
-
     width: 55px;
-
     height: 1px;
-
     margin-left: auto;
     margin-right: auto;
-
-    background:
-        rgba(250, 248, 244, .85);
+    background: rgba(250, 248, 244, .85);
 }
 
 .hero h1::before {
-
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 .hero h1::after {
-
-    margin-top: 20px;
+    margin-top: 18px;
 }
-
-
-/* =====================================================
-   ANIMACIÓN
-===================================================== */
 
 @keyframes aparecerTitulo {
-
     from {
-
         opacity: 0;
-
-        transform:
-            translateY(15px);
+        transform: translateY(15px);
     }
-
     to {
-
         opacity: 1;
-
-        transform:
-            translateY(0);
+        transform: translateY(0);
     }
 }
-
-
-/* =====================================================
-   SUBTÍTULO
-===================================================== */
 
 .hero-subtitulo {
-
-    margin:
-        1px 0 24px;
-
-    padding:
-        7px 12px;
-
+    max-width: 620px;
+    margin: 2px 0 25px;
     color: var(--marfil);
-
-    background: transparent;
-
-    font-size: 23px;
-
-    text-shadow:
-        0 2px 7px rgba(36, 32, 31, .8);
+    font-size: 19px;
+    line-height: 1.55;
+    text-shadow: 0 2px 7px rgba(36, 32, 31, .8);
 }
 
-
-/* =====================================================
-   CTA HERO
-===================================================== */
-
 .hero-cta {
-
     display: inline-flex;
-
     align-items: center;
-
+    justify-content: center;
     gap: 10px;
-
-    padding:
-        13px 22px;
-
+    min-height: 48px;
+    padding: 13px 23px;
     color: var(--marfil);
-
     background: var(--borgona);
-
-    border:
-        1px solid var(--borgona);
-
-    text-decoration: none;
-
-    font-size: 15px;
-
+    border: 1px solid var(--borgona);
+    font-size: 14px;
     transition:
         background-color .25s ease,
         color .25s ease,
@@ -527,13 +318,66 @@ nav {
 }
 
 .hero-cta:hover {
-
     color: var(--borgona);
-
     background: var(--marfil);
+    transform: translateY(-2px);
+}
 
-    transform:
-        translateY(-2px);
+
+
+/* =====================================================
+   CITA DEL HERO
+   MISMO LENGUAJE VISUAL QUE "SOBRE NOSOTROS"
+===================================================== */
+
+.hero-cita {
+    display: block;
+
+    margin:
+        -2px 0 18px;
+
+    color: var(--rosa-claro);
+
+    font-family: "Lora", serif;
+    font-size: 13px;
+    font-style: italic;
+    font-weight: 400;
+    letter-spacing: 1.2px;
+
+    text-shadow:
+        0 2px 7px rgba(36, 32, 31, .75);
+
+    opacity: .95;
+}
+
+@media (min-width: 769px) {
+
+    .hero-cita {
+        font-size: 14px;
+        letter-spacing: 1.4px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .hero-cita {
+        margin:
+            -2px 0 15px;
+
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+}
+
+@media (max-width: 390px) {
+
+    .hero-cita {
+        font-size: 11px;
+        margin-bottom: 13px;
+    }
+
 }
 
 
@@ -542,82 +386,52 @@ nav {
 ===================================================== */
 
 .beneficios {
-
     width: 100%;
-
     display: grid;
-
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     background: var(--rosa-claro);
-
-    border-bottom:
-        1px solid rgba(110, 65, 72, .12);
+    border-bottom: 1px solid var(--linea);
 }
 
 .beneficio {
-
     min-width: 0;
-
-    min-height: 95px;
-
+    min-height: 105px;
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     gap: 14px;
-
-    padding: 18px;
-
-    border-right:
-        1px solid rgba(110, 65, 72, .14);
+    padding: 20px;
+    border-right: 1px solid rgba(110, 65, 72, .14);
 }
 
 .beneficio:last-child {
-
-    border-right: none;
+    border-right: 0;
 }
 
 .beneficio i {
-
     flex-shrink: 0;
-
     color: var(--rosa);
-
-    font-size: 22px;
+    font-size: 23px;
 }
 
 .beneficio div {
-
     display: flex;
-
     flex-direction: column;
-
-    gap: 3px;
-
+    gap: 4px;
     min-width: 0;
 }
 
 .beneficio strong {
-
     color: var(--borgona);
-
     font-size: 14px;
-
     line-height: 1.2;
 }
 
 .beneficio span {
-
     color: var(--gris);
-
     font-family: Arial, sans-serif;
-
     font-size: 11px;
-
-    line-height: 1.3;
+    line-height: 1.35;
 }
 
 
@@ -626,113 +440,80 @@ nav {
 ===================================================== */
 
 .productos {
-
     width: 100%;
-
-    padding:
-        50px 40px 100px;
-
+    padding: 90px 40px 110px;
     background: var(--marfil);
 }
 
 .productos-contenido {
-
     width: 100%;
-
-    max-width: 1400px;
-
+    max-width: 1250px;
     margin: 0 auto;
 }
 
-
-/* =====================================================
-   CABECERA PRODUCTOS
-===================================================== */
-
 .productos-cabecera {
-
-    margin-bottom: 35px;
+    max-width: 720px;
+    margin: 0 auto 38px;
+    text-align: center;
 }
 
 .seccion-etiqueta {
-
     display: block;
-
     margin-bottom: 10px;
-
     color: var(--rosa);
-
     font-family: Arial, sans-serif;
-
-    font-size: 11px;
-
-    letter-spacing: 2px;
+    font-size: 10px;
+    letter-spacing: 2.5px;
 }
 
 .productos-cabecera h2 {
-
-    margin:
-        0 0 10px;
-
+    margin: 0 0 13px;
     color: var(--borgona);
-
-    font-size: 38px;
-
+    font-size: 42px;
+    line-height: 1.15;
     font-weight: 500;
 }
 
+.productos-cabecera h2::after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 1px;
+    margin: 20px auto 0;
+    background: var(--champagne);
+}
+
 .productos-cabecera p {
-
-    max-width: 600px;
-
-    margin: 0;
-
+    max-width: 610px;
+    margin: 20px auto 0;
     color: var(--gris);
-
     font-family: Arial, sans-serif;
-
-    font-size: 14px;
-
-    line-height: 1.6;
+    font-size: 13px;
+    line-height: 1.7;
 }
 
 
 /* =====================================================
-   FILTROS PRINCIPALES
+   FILTROS
 ===================================================== */
 
 .filtros {
-
     display: flex;
-
     flex-wrap: wrap;
-
+    justify-content: center;
     gap: 8px;
-
-    margin-bottom: 30px;
-
-    padding-bottom: 15px;
-
-    border-bottom:
-        1px solid rgba(110, 65, 72, .15);
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--linea);
 }
 
 .filtro {
-
-    padding:
-        9px 17px;
-
+    padding: 9px 17px;
     color: var(--gris);
-
     background: transparent;
-
-    border:
-        1px solid rgba(110, 65, 72, .22);
-
+    border: 1px solid rgba(110, 65, 72, .22);
     cursor: pointer;
-
-    font-size: 13px;
-
+    font-size: 12px;
     transition:
         color .2s ease,
         background-color .2s ease,
@@ -741,46 +522,25 @@ nav {
 
 .filtro:hover,
 .filtro.activo {
-
     color: var(--marfil);
-
     background: var(--borgona);
-
     border-color: var(--borgona);
 }
 
-
-/* =====================================================
-   SUBFILTROS DE RAMOS
-===================================================== */
-
 .subfiltros-ramos {
-
     display: flex;
-
     align-items: center;
-
+    justify-content: center;
     flex-wrap: wrap;
-
     gap: 8px;
-
     max-height: 0;
-
-    margin-top: -18px;
-
+    margin-top: -14px;
     margin-bottom: 0;
-
     padding: 0;
-
     opacity: 0;
-
     overflow: hidden;
-
-    transform:
-        translateY(-8px);
-
+    transform: translateY(-8px);
     pointer-events: none;
-
     transition:
         max-height .35s ease,
         margin .35s ease,
@@ -789,39 +549,22 @@ nav {
 }
 
 .subfiltros-ramos.visible {
-
     max-height: 100px;
-
-    margin-top: -18px;
-
-    margin-bottom: 30px;
-
+    margin-top: -14px;
+    margin-bottom: 28px;
     opacity: 1;
-
-    transform:
-        translateY(0);
-
+    transform: translateY(0);
     pointer-events: auto;
 }
 
 .subfiltro {
-
-    padding:
-        7px 14px;
-
+    padding: 7px 14px;
     color: var(--gris);
-
     background: transparent;
-
-    border:
-        1px solid rgba(110, 65, 72, .16);
-
+    border: 1px solid rgba(110, 65, 72, .16);
     cursor: pointer;
-
     font-family: inherit;
-
-    font-size: 12px;
-
+    font-size: 11px;
     transition:
         color .2s ease,
         background-color .2s ease,
@@ -830,11 +573,8 @@ nav {
 
 .subfiltro:hover,
 .subfiltro.activo {
-
     color: var(--marfil);
-
     background: var(--rosa);
-
     border-color: var(--rosa);
 }
 
@@ -844,161 +584,90 @@ nav {
 ===================================================== */
 
 .productos-grid {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(4, minmax(0, 1fr));
-
-    gap: 28px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 24px;
 }
 
-
-/* =====================================================
-   TARJETA PRODUCTO
-===================================================== */
-
 .producto {
-
     min-width: 0;
-
     background: var(--blanco);
-
-    border:
-        1px solid rgba(110, 65, 72, .12);
-
+    border: 1px solid rgba(110, 65, 72, .12);
     transition:
         transform .25s ease,
         box-shadow .25s ease;
 }
 
 .producto:hover {
-
-    transform:
-        translateY(-4px);
-
-    box-shadow:
-        0 12px 30px rgba(110, 65, 72, .10);
+    transform: translateY(-4px);
+    box-shadow: var(--sombra);
 }
 
-
-/* =====================================================
-   IMAGEN PRODUCTO
-===================================================== */
-
 .producto-imagen {
-
     width: 100%;
-
     aspect-ratio: 1 / 1;
-
     overflow: hidden;
-
     background: var(--rosa-claro);
 }
 
 .producto-imagen img {
-
     width: 100%;
     height: 100%;
-
     display: block;
-
     object-fit: cover;
-
-    transition:
-        transform .4s ease;
+    transition: transform .45s ease;
 }
 
-.producto:hover img {
-
-    transform:
-        scale(1.035);
+.producto:hover .producto-imagen img {
+    transform: scale(1.035);
 }
-
-
-/* =====================================================
-   INFO PRODUCTO
-===================================================== */
 
 .producto-info {
-
     padding: 18px;
 }
 
 .producto-info h3 {
-
-    margin:
-        0 0 8px;
-
+    margin: 0 0 8px;
     color: var(--negro);
-
-    font-size: 18px;
-
+    font-size: 17px;
+    line-height: 1.25;
     font-weight: 500;
 }
 
 .producto-info p {
-
     min-height: 38px;
-
-    margin:
-        0 0 15px;
-
+    margin: 0 0 15px;
     color: var(--gris);
-
     font-family: Arial, sans-serif;
-
-    font-size: 12px;
-
-    line-height: 1.5;
+    font-size: 11px;
+    line-height: 1.55;
 }
 
-
-/* =====================================================
-   WHATSAPP PRODUCTO
-===================================================== */
-
 .contactar-whatsapp {
-
     width: 100%;
-
+    min-height: 43px;
     display: flex;
-
     align-items: center;
     justify-content: center;
-
     gap: 8px;
-
-    padding:
-        12px 10px;
-
+    padding: 11px 10px;
     color: var(--marfil);
-
     background: var(--borgona);
-
-    border:
-        1px solid var(--borgona);
-
-    text-decoration: none;
-
-    font-size: 13px;
-
+    border: 1px solid var(--borgona);
+    font-size: 12px;
     transition:
         background-color .2s ease,
-        color .2s ease;
+        color .2s ease,
+        transform .2s ease;
 }
 
 .contactar-whatsapp:hover {
-
     color: var(--borgona);
-
     background: var(--marfil);
 }
 
 .contactar-whatsapp i {
-
-    font-size: 17px;
+    font-size: 16px;
 }
 
 
@@ -1007,99 +676,69 @@ nav {
 ===================================================== */
 
 .cta-final {
-
+    position: relative;
     width: 100%;
-
-    padding:
-        100px 30px;
-
+    padding: 100px 30px;
+    overflow: hidden;
     color: var(--marfil);
-
     background:
         linear-gradient(
             135deg,
             var(--borgona),
-            #5D383F
+            var(--borgona-oscuro)
         );
-
     text-align: center;
 }
 
 .cta-final-contenido {
-
+    position: relative;
+    z-index: 2;
     max-width: 700px;
-
     margin: 0 auto;
 }
 
 .cta-final span {
-
     color: var(--rosa-claro);
-
     font-family: Arial, sans-serif;
-
-    font-size: 11px;
-
+    font-size: 10px;
     letter-spacing: 3px;
 }
 
 .cta-final h2 {
-
-    margin:
-        15px 0;
-
+    margin: 15px 0;
     color: var(--marfil);
-
-    font-size: 42px;
-
+    font-size: 46px;
+    line-height: 1.12;
     font-weight: 500;
 }
 
 .cta-final p {
-
-    margin:
-        0 auto 28px;
-
-    color:
-        rgba(250, 248, 244, .8);
-
+    max-width: 510px;
+    margin: 0 auto 28px;
+    color: rgba(250, 248, 244, .82);
     font-family: Arial, sans-serif;
-
-    font-size: 14px;
-
-    line-height: 1.6;
+    font-size: 13px;
+    line-height: 1.7;
 }
 
 .cta-final a {
-
     display: inline-flex;
-
     align-items: center;
-
+    justify-content: center;
     gap: 10px;
-
-    padding:
-        14px 23px;
-
+    min-height: 48px;
+    padding: 14px 23px;
     color: var(--borgona);
-
     background: var(--marfil);
-
-    text-decoration: none;
-
-    font-size: 14px;
-
+    font-size: 13px;
     transition:
         transform .2s ease,
         background-color .2s ease;
 }
 
 .cta-final a:hover {
-
     background: var(--blanco);
-
-    transform:
-        translateY(-2px);
+    transform: translateY(-2px);
 }
 
 
@@ -1109,17 +748,104 @@ nav {
 
 @media (max-width: 1100px) {
 
-    .productos-grid {
+    nav {
+        height: 120px;
+    }
 
-        grid-template-columns:
-            repeat(3, minmax(0, 1fr));
+    .logo {
+        width: 145px;
+        height: 90px;
+    }
+
+    .menu {
+        left: 28px;
+    }
+
+    .redes {
+        right: 28px;
+    }
+
+    .hero {
+        min-height: 500px;
     }
 
     .hero h1 {
-
-        font-size: 43px;
+        font-size: 50px;
     }
 
+    .productos {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .productos-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+
+/* =====================================================
+   IPAD / TABLET
+===================================================== */
+
+@media (min-width: 769px) and (max-width: 900px) {
+
+    nav {
+        height: 112px;
+        padding: 15px 25px;
+    }
+
+    .logo {
+        width: 140px;
+        height: 82px;
+    }
+
+    .menu {
+        left: 25px;
+    }
+
+    .menu-d {
+        gap: 15px;
+    }
+
+    .menu-d a {
+        font-size: 14px;
+    }
+
+    .redes {
+        right: 25px;
+        gap: 12px;
+    }
+
+    .redes a {
+        font-size: 16px;
+    }
+
+    .hero {
+        height: 65vh;
+        min-height: 460px;
+    }
+
+    .hero-etiqueta {
+        font-size: 25px;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero-subtitulo {
+        font-size: 18px;
+    }
+
+    .productos {
+        padding:
+            70px 25px 85px;
+    }
+
+    .productos-grid {
+        gap: 18px;
+    }
 }
 
 
@@ -1129,636 +855,327 @@ nav {
 
 @media (max-width: 768px) {
 
-
-    /* =================================================
-       NAVBAR
-    ================================================= */
-
     nav {
-
-        height: 82px;
-
-        padding:
-            8px 12px;
-
-        border-bottom:
-            1px solid rgba(110, 65, 72, .12);
+        height: 78px;
+        padding: 6px 14px;
     }
 
-
-    /* =================================================
-       LOGO
-    ================================================= */
-
     .logo {
-
-        width: 145px;
-
+        width: 135px;
         height: 58px;
     }
 
-
-    /* =================================================
-       BOTÓN MENÚ
-    ================================================= */
-
     .menu {
-
         position: static;
-
         transform: none;
     }
 
     .menu button {
-
         position: absolute;
-
-        left: 12px;
-        top: 21px;
-
+        left: 9px;
+        top: 18px;
         display: flex;
-
         align-items: center;
         justify-content: center;
-
-        width: 40px;
-        height: 40px;
-
-        padding: 0;
-
+        width: 42px;
+        height: 42px;
         color: var(--borgona);
-
         background: transparent;
-
-        border: none;
-
-        outline: none;
-
+        border: 0;
         font-size: 25px;
-
-        line-height: 1;
-
         z-index: 4000;
     }
 
-    .menu button:focus,
-    .menu button:focus-visible,
-    .menu button:active {
-
-        outline: none !important;
-
-        border: none !important;
-
-        box-shadow: none !important;
-    }
-
-
-    /* =================================================
-       MENÚ LATERAL
-    ================================================= */
-
     .menu-d {
-
         position: fixed;
-
-        top: 82px;
+        top: 78px;
         left: 0;
-
-        width:
-            min(82vw, 340px);
-
-        height:
-            calc(100vh - 82px);
-
-        display: flex;
-
+        width: min(84vw, 350px);
+        height: calc(100vh - 78px);
         flex-direction: column;
-
+        align-items: stretch;
         gap: 0;
-
         padding: 22px;
-
         background: var(--marfil);
-
-        box-shadow:
-            5px 0 25px rgba(36, 32, 31, .12);
-
-        transform:
-            translateX(-100%);
-
-        transition:
-            transform .35s ease;
-
+        box-shadow: 8px 0 30px rgba(36, 32, 31, .13);
+        transform: translateX(-100%);
+        transition: transform .35s cubic-bezier(.22,.61,.36,1);
         overflow-y: auto;
-
-        z-index: 3500;
     }
 
     .menu-d.abierto {
-
-        transform:
-            translateX(0);
+        transform: translateX(0);
     }
-
-
-    /* =================================================
-       ENLACES MENÚ
-    ================================================= */
 
     .menu-d a {
-
-        position: relative;
-
         width: 100%;
-
-        padding:
-            17px 3px;
-
-        color:
-            var(--negro) !important;
-
-        background:
-            transparent !important;
-
-        border-bottom:
-            1px solid rgba(110, 65, 72, .12);
-
+        padding: 18px 3px;
+        color: var(--negro) !important;
+        border-bottom: 1px solid rgba(110, 65, 72, .12);
         font-size: 17px;
-
-        text-decoration:
-            none !important;
     }
 
-    .menu-d a:visited,
-    .menu-d a:active,
-    .menu-d a:focus {
-
-        color:
-            var(--negro) !important;
-
-        text-decoration:
-            none !important;
-
-        outline: none;
+    .menu-d a::after {
+        display: none;
     }
-
-    .menu-d a:hover {
-
-        color:
-            var(--borgona) !important;
-    }
-
-
-    /* =================================================
-       REDES
-    ================================================= */
 
     .redes {
-
-        right: 12px;
-
+        right: 11px;
         gap: 8px;
     }
 
     .redes a {
-
-        color: var(--borgona);
-
         font-size: 15px;
     }
 
 
-    /* =================================================
-       HERO
-    ================================================= */
+    /* HERO */
 
     .hero {
-
-        height: 390px;
-
+        height: 410px;
         min-height: 0;
-
-        padding:
-            20px 12px;
-
-        background-position: center;
+        padding: 20px 12px;
+        background-position: center 42%;
     }
 
     .hero-contenido {
-
         width: 100%;
-
-        max-width: 500px;
-
-        padding:
-            25px 10px;
+        max-width: 520px;
+        padding: 25px 10px;
     }
-
-
-    /* =================================================
-       ETIQUETA
-    ================================================= */
 
     .hero-etiqueta {
-
         margin-bottom: 10px;
-
-        font-size: 16px;
-
-        letter-spacing: 2.5px;
+        font-size: 14px;
+        letter-spacing: 2.4px;
     }
 
-
-    /* =================================================
-       TÍTULO
-    ================================================= */
-
     .hero h1 {
-
-        max-width: 94%;
-
-        padding:
-            18px 10px;
-
-        font-size: 24px;
-
-        line-height: 1.3;
-
-        text-shadow:
-            0 2px 7px rgba(36, 32, 31, .8),
-            0 3px 16px rgba(36, 32, 31, .45);
+        max-width: 100%;
+        padding: 15px 6px;
+        font-size: 27px;
+        line-height: 1.2;
     }
 
     .hero h1::before,
     .hero h1::after {
-
-        width: 40px;
+        width: 42px;
     }
 
     .hero h1::before {
-
-        margin-bottom: 14px;
+        margin-bottom: 13px;
     }
 
     .hero h1::after {
-
-        margin-top: 14px;
+        margin-top: 13px;
     }
-
-
-    /* =================================================
-       SUBTÍTULO
-    ================================================= */
 
     .hero-subtitulo {
-
-        max-width: 92%;
-
-        margin:
-            13px 0 18px;
-
-        padding:
-            6px 9px;
-
-        font-size: 14px;
-
-        line-height: 1.4;
+        max-width: 340px;
+        margin: 10px 0 21px;
+        padding: 0;
+        font-size: 15px;
+        line-height: 1.55;
     }
-
-
-    /* =================================================
-       CTA
-    ================================================= */
 
     .hero-cta {
-
-        padding:
-            11px 16px;
-
-        font-size: 12px;
+        min-height: 48px;
+        padding: 13px 21px;
+        font-size: 13px;
     }
 
 
-    /* =================================================
-       BENEFICIOS
-    ================================================= */
+    /* BENEFICIOS */
 
     .beneficios {
-
-        width: 100%;
-
-        display: grid;
-
-        grid-template-columns:
-            repeat(3, minmax(0, 1fr));
-
-        background:
-            var(--rosa-claro);
-
-        border-bottom:
-            1px solid rgba(110, 65, 72, .12);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     .beneficio {
-
-        min-width: 0;
-
-        min-height: 75px;
-
-        display: flex;
-
-        align-items: center;
-        justify-content: center;
-
+        min-height: 86px;
         gap: 7px;
-
-        padding:
-            8px 6px;
-
-        border-right:
-            1px solid rgba(110, 65, 72, .14);
-    }
-
-    .beneficio:last-child {
-
-        border-right: none;
+        padding: 10px 7px;
     }
 
     .beneficio i {
-
-        flex-shrink: 0;
-
-        color: var(--rosa);
-
-        font-size: 15px;
+        font-size: 17px;
     }
 
     .beneficio div {
-
-        display: flex;
-
-        flex-direction: column;
-
-        gap: 1px;
-
-        min-width: 0;
+        gap: 2px;
     }
 
     .beneficio strong {
-
-        color: var(--borgona);
-
-        font-size: 11px;
-
-        line-height: 1.2;
+        font-size: 10px;
     }
 
     .beneficio span {
-
-        color: var(--gris);
-
-        font-family: Arial, sans-serif;
-
         font-size: 8px;
-
-        line-height: 1.25;
     }
 
 
-    /* =================================================
-       PRODUCTOS
-    ================================================= */
+    /* PRODUCTOS */
 
     .productos {
-
         padding:
-            25px 12px 70px;
+            72px 17px 78px;
     }
 
     .productos-cabecera {
-
-        margin-bottom: 25px;
+        margin-bottom: 30px;
     }
 
     .seccion-etiqueta {
-
         margin-bottom: 8px;
-
         font-size: 9px;
+        letter-spacing: 2px;
     }
 
     .productos-cabecera h2 {
+        margin-bottom: 10px;
+        font-size: 31px;
+        line-height: 1.18;
+    }
 
-        margin-bottom: 9px;
-
-        font-size: 28px;
-
-        line-height: 1.2;
+    .productos-cabecera h2::after {
+        width: 45px;
+        margin-top: 16px;
     }
 
     .productos-cabecera p {
-
+        margin-top: 16px;
         font-size: 12px;
-
-        line-height: 1.5;
+        line-height: 1.65;
     }
 
 
-    /* =================================================
-       FILTROS PRINCIPALES
-    ================================================= */
+    /* FILTROS */
 
     .filtros {
-
+        justify-content: flex-start;
         flex-wrap: nowrap;
-
         gap: 7px;
-
         margin-bottom: 22px;
-
-        padding-bottom: 12px;
-
+        padding-bottom: 13px;
         overflow-x: auto;
-
         scrollbar-width: none;
     }
 
     .filtros::-webkit-scrollbar {
-
         display: none;
     }
 
     .filtro {
-
-        flex:
-            0 0 auto;
-
-        padding:
-            8px 13px;
-
+        flex: 0 0 auto;
+        min-height: 38px;
+        padding: 9px 14px;
         font-size: 11px;
     }
 
-
-    /* =================================================
-       SUBFILTROS
-    ================================================= */
-
     .subfiltros-ramos {
-
+        justify-content: flex-start;
         flex-wrap: nowrap;
-
         gap: 6px;
-
-        margin-top:
-            -14px;
-
-        margin-bottom: 0;
-
+        margin-top: -14px;
         max-width: 100%;
-
         overflow-x: auto;
-
         scrollbar-width: none;
     }
 
     .subfiltros-ramos::-webkit-scrollbar {
-
         display: none;
     }
 
     .subfiltros-ramos.visible {
-
         max-height: 55px;
-
-        margin-top:
-            -14px;
-
-        margin-bottom:
-            22px;
-
+        margin-top: -14px;
+        margin-bottom: 23px;
         overflow-x: auto;
     }
 
     .subfiltro {
-
-        flex:
-            0 0 auto;
-
-        padding:
-            7px 11px;
-
+        flex: 0 0 auto;
+        min-height: 34px;
+        padding: 7px 11px;
         font-size: 10px;
     }
 
 
-    /* =================================================
-       GRID — 2 COLUMNAS
-    ================================================= */
+    /* GRID PRODUCTOS */
 
     .productos-grid {
-
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-
+        grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: 12px;
     }
 
-
-    /* =================================================
-       TARJETAS
-    ================================================= */
+    .producto {
+        border-color: rgba(110, 65, 72, .13);
+    }
 
     .producto:hover {
-
         transform: none;
-
         box-shadow: none;
     }
 
     .producto-info {
-
-        padding: 11px;
+        padding: 12px;
     }
 
     .producto-info h3 {
-
-        margin-bottom: 5px;
-
-        font-size: 15px;
-
-        line-height: 1.25;
+        margin-bottom: 6px;
+        font-size: 14px;
+        line-height: 1.3;
     }
 
     .producto-info p {
-
-        min-height: 34px;
-
-        margin-bottom: 9px;
-
-        font-size: 10px;
-
-        line-height: 1.4;
+        min-height: 35px;
+        margin-bottom: 10px;
+        font-size: 9.5px;
+        line-height: 1.45;
     }
 
-
-    /* =================================================
-       WHATSAPP
-    ================================================= */
-
     .contactar-whatsapp {
-
-        min-height: 40px;
-
-        padding:
-            8px 4px;
-
+        min-height: 42px;
+        padding: 9px 5px;
         font-size: 10px;
     }
 
     .contactar-whatsapp i {
-
         font-size: 14px;
     }
 
 
-    /* =================================================
-       CTA FINAL
-    ================================================= */
+    /* CTA */
 
     .cta-final {
+        padding: 75px 20px;
+    }
 
-        padding:
-            70px 20px;
+    .cta-final span {
+        font-size: 9px;
+        letter-spacing: 2.5px;
     }
 
     .cta-final h2 {
-
-        margin:
-            13px 0;
-
-        font-size: 30px;
-
-        line-height: 1.2;
+        margin: 14px 0;
+        font-size: 34px;
+        line-height: 1.15;
     }
 
     .cta-final p {
-
-        margin-bottom: 24px;
-
+        max-width: 340px;
+        margin-bottom: 25px;
         font-size: 12px;
-
-        line-height: 1.5;
+        line-height: 1.65;
     }
 
     .cta-final a {
-
-        padding:
-            12px 18px;
-
-        font-size: 12px;
+        width: 100%;
+        max-width: 300px;
+        min-height: 49px;
+        padding: 13px 20px;
+        font-size: 13px;
     }
-
 }
 
 
@@ -1769,134 +1186,449 @@ nav {
 @media (max-width: 390px) {
 
     .logo {
-
         width: 125px;
     }
 
     .redes {
-
-        right: 10px;
-
+        right: 9px;
         gap: 5px;
     }
 
     .redes a {
-
-        font-size: 14px;
+        font-size: 13px;
     }
 
-
-    /* HERO */
-
     .hero {
-
-        height: 370px;
+        height: 390px;
     }
 
     .hero-contenido {
-
         padding:
             20px 5px;
     }
 
-    .hero h1 {
-
-        font-size: 22px;
-
-        padding:
-            16px 8px;
-    }
-
-    .hero-subtitulo {
-
+    .hero-etiqueta {
         font-size: 13px;
     }
 
+    .hero h1 {
+        font-size: 25px;
+        padding:
+            13px 5px;
+    }
 
-    /* BENEFICIOS */
-
-    .beneficios {
-
-        padding: 0;
+    .hero-subtitulo {
+        max-width: 300px;
+        font-size: 13px;
     }
 
     .beneficio {
-
-        min-height: 70px;
-
+        min-height: 78px;
         gap: 5px;
-
         padding:
-            7px 4px;
-
-        border-right:
-            1px solid rgba(110, 65, 72, .14) !important;
-    }
-
-    .beneficio:last-child {
-
-        border-right: none !important;
+            8px 4px;
     }
 
     .beneficio i {
-
-        font-size: 12px;
+        font-size: 13px;
     }
 
     .beneficio strong {
-
         font-size: 9px;
     }
 
     .beneficio span {
-
         font-size: 7px;
     }
 
-
-    /* PRODUCTOS */
-
     .productos {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
 
-        padding-left: 8px;
-
-        padding-right: 8px;
+    .productos-cabecera h2 {
+        font-size: 28px;
     }
 
     .productos-grid {
-
-        gap: 8px;
+        gap: 9px;
     }
 
     .producto-info {
-
         padding: 9px;
     }
 
     .producto-info h3 {
-
-        font-size: 14px;
+        font-size: 13px;
     }
 
     .producto-info p {
-
-        font-size: 9px;
+        font-size: 8.5px;
     }
 
     .contactar-whatsapp {
-
         font-size: 9px;
     }
 
-
-    /* SUBFILTROS */
-
-    .subfiltro {
-
+    .cta-final {
         padding:
-            6px 9px;
-
-        font-size: 9px;
+            68px 16px;
     }
 
+    .cta-final h2 {
+        font-size: 30px;
+    }
+}
+
+
+
+/* =====================================================
+   INDICADOR DE SCROLL DEL HERO
+===================================================== */
+
+.hero-scroll {
+    position: absolute;
+    right: 35px;
+    bottom: 28px;
+    z-index: 3;
+
+    display: flex;
+    align-items: center;
+    gap: 9px;
+
+    color: var(--marfil);
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+
+    text-shadow:
+        0 2px 6px rgba(36, 32, 31, .7);
+}
+
+.hero-scroll i {
+    font-size: 13px;
+}
+
+
+/* =====================================================
+   DECORACIÓN DEL CTA
+===================================================== */
+
+.cta-decoration {
+    position: absolute;
+    z-index: 1;
+
+    color: rgba(250, 248, 244, .07);
+
+    font-size: 220px;
+    line-height: 1;
+
+    pointer-events: none;
+}
+
+.cta-decoration-left {
+    left: -45px;
+    bottom: -85px;
+}
+
+.cta-decoration-right {
+    right: -45px;
+    top: -85px;
+}
+
+
+/* =====================================================
+   FOOTER
+   MISMA ESTÉTICA QUE SOBRE NOSOTROS
+===================================================== */
+
+.footer {
+    width: 100%;
+
+    padding:
+        65px 40px 25px;
+
+    background: var(--negro);
+
+    color: var(--marfil);
+}
+
+.footer-container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns:
+        2fr 1fr 1fr 1fr;
+
+    gap: 50px;
+
+    padding-bottom: 45px;
+
+    border-bottom:
+        1px solid rgba(250, 248, 244, .12);
+}
+
+.footer-brand img {
+    width: 145px;
+    height: auto;
+    display: block;
+}
+
+.footer-brand p {
+    max-width: 280px;
+
+    margin:
+        18px 0 0;
+
+    color:
+        rgba(250, 248, 244, .55);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.footer-column h3 {
+    margin:
+        0 0 8px;
+
+    color: var(--rosa-claro);
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer-column a {
+    width: fit-content;
+
+    color:
+        rgba(250, 248, 244, .58);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 12px;
+
+    transition:
+        color .2s ease;
+}
+
+.footer-column a:hover {
+    color: var(--marfil);
+}
+
+.footer-bottom {
+    width: 100%;
+    max-width: 1200px;
+
+    margin:
+        20px auto 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color:
+        rgba(250, 248, 244, .35);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   FOOTER — TABLET
+===================================================== */
+
+@media (max-width: 1100px) {
+
+    .footer {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .footer-container {
+        gap: 35px;
+    }
+}
+
+
+/* =====================================================
+   FOOTER — MÓVIL
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .hero-scroll {
+        display: none;
+    }
+
+    .cta-decoration {
+        font-size: 145px;
+    }
+
+    .cta-decoration-left {
+        left: -35px;
+        bottom: -55px;
+    }
+
+    .cta-decoration-right {
+        right: -35px;
+        top: -55px;
+    }
+
+    .footer {
+        padding:
+            55px 20px 22px;
+    }
+
+    .footer-container {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap:
+            35px 25px;
+
+        padding-bottom: 35px;
+    }
+
+    .footer-brand {
+        grid-column:
+            1 / -1;
+    }
+
+    .footer-brand img {
+        width: 135px;
+    }
+
+    .footer-brand p {
+        max-width: 280px;
+        margin-top: 15px;
+        font-size: 12px;
+    }
+
+    .footer-column {
+        gap: 10px;
+    }
+
+    .footer-column h3 {
+        font-size: 13px;
+    }
+
+    .footer-column a {
+        font-size: 12px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 7px;
+        margin-top: 18px;
+        font-size: 9px;
+    }
+}
+
+
+/* =====================================================
+   FOOTER — MÓVIL PEQUEÑO
+===================================================== */
+
+@media (max-width: 390px) {
+
+    .footer {
+        padding:
+            48px 15px 18px;
+    }
+
+    .footer-container {
+        gap:
+            28px 15px;
+    }
+
+    .footer-brand img {
+        width: 125px;
+    }
+
+    .footer-brand p {
+        font-size: 11px;
+    }
+
+    .footer-column h3 {
+        font-size: 12px;
+    }
+
+    .footer-column a {
+        font-size: 11px;
+    }
+
+    .footer-bottom {
+        font-size: 8.5px;
+    }
+}
+
+
+
+/* =====================================================
+   MÓVIL MUY PEQUEÑO
+   360px O MENOS
+   MISMA DIMENSIÓN QUE SOBRE NOSOTROS
+===================================================== */
+
+@media (max-width: 360px) {
+
+    .hero {
+        height: 375px;
+    }
+
+}
+
+/* =====================================================
+   REDUCIR MOVIMIENTO SI EL USUARIO LO SOLICITA
+===================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    .hero h1,
+    .producto,
+    .producto-imagen img,
+    .hero-cta,
+    .contactar-whatsapp {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+
+/* =====================================================
+   PANTALLAS GRANDES
+===================================================== */
+
+@media (min-width: 1400px) {
+
+    .productos {
+        padding-top: 105px;
+    }
+
+    .productos-contenido {
+        max-width: 1320px;
+    }
+
+    .productos-grid {
+        gap: 28px;
+    }
 }

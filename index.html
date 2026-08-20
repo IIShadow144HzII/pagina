@@ -2,7 +2,6 @@
 <html lang="es">
 
 <head>
-
     <meta charset="UTF-8">
 
     <meta
@@ -12,19 +11,16 @@
 
     <meta
         name="description"
-        content="Flors I Passió - Decoración floral y ambientación para bodas y eventos."
+        content="Flors I Passió — Atelier floral y composiciones creadas para momentos especiales."
     >
 
     <title>Flors I Passió</title>
 
-
     <!-- FUENTE -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link
         rel="preconnect"
-        href="https://fonts.googleapis.com"
+        href="https://fonts.gstatic.com"
         crossorigin
     >
 
@@ -33,48 +29,36 @@
         rel="stylesheet"
     >
 
-
     <!-- BOOTSTRAP -->
-
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
         rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZEdK2Kadq2F9CUG65"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaA5MgnOM80zW1RWuH61DGLwZEdK2Kadq2F9CUG65"
         crossorigin="anonymous"
     >
 
-
     <!-- ICONOS -->
-
     <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
     >
 
-
     <!-- CSS -->
-
     <link
         rel="stylesheet"
         href="css/index.css"
     >
-
 </head>
 
 
 <body>
-
 
     <!-- =====================================================
          NAVBAR
     ====================================================== -->
 
     <header>
-
         <nav>
-
-
-            <!-- MENÚ -->
 
             <div class="menu">
 
@@ -84,18 +68,17 @@
                     aria-label="Abrir menú"
                     aria-expanded="false"
                 >
-
                     <i class="bi bi-list"></i>
-
                 </button>
-
 
                 <div
                     class="menu-d"
                     id="menuDesplegable"
                 >
-
-                    <a href="#inicio">
+                    <a
+                        href="#inicio"
+                        class="activo"
+                    >
                         Inicio
                     </a>
 
@@ -103,14 +86,13 @@
                         Sobre nosotros
                     </a>
 
-                    <a href="#catalogo">
+                    <a href="#productos">
                         Catálogo
                     </a>
 
                     <a href="#contacto">
                         Contacto
                     </a>
-
                 </div>
 
             </div>
@@ -122,13 +104,11 @@
                 href="#inicio"
                 class="logo-link"
             >
-
                 <img
                     class="logo"
                     src="fotos/logo.png"
                     alt="Flors I Passió"
                 >
-
             </a>
 
 
@@ -143,14 +123,12 @@
                     <i class="bi bi-facebook"></i>
                 </a>
 
-
                 <a
                     href="#"
                     aria-label="Instagram"
                 >
                     <i class="bi bi-instagram"></i>
                 </a>
-
 
                 <a
                     href="#"
@@ -162,13 +140,10 @@
             </div>
 
         </nav>
-
     </header>
 
 
-
     <main>
-
 
         <!-- =================================================
              HERO
@@ -181,39 +156,47 @@
 
             <div class="hero-overlay"></div>
 
-
             <div class="hero-contenido">
 
                 <p class="hero-etiqueta">
                     FLORS I PASSIÓ
                 </p>
 
-
                 <h1>
-                    "Confeccionar un ramo con el alma es danzar al compás de la belleza de las flores"
+                    "Confeccionar un ramo con el
+                    <em>alma</em>
+                    es danzar al compás de la
+                    <em>belleza</em>
+                    de las flores"
                 </h1>
 
+                <cite class="hero-cita">
+                    L. Miralles
+                </cite>
 
                 <p class="hero-subtitulo">
-                    Atelier & Floral Design Boutique.
+                    Atelier &amp; Floral Design Boutique.
                 </p>
-
 
                 <a
                     href="#productos"
                     class="hero-cta"
                 >
-
                     Descubre nuestra colección
-
                     <i class="bi bi-arrow-down"></i>
-
                 </a>
 
             </div>
 
-        </section>
+            <div class="hero-scroll">
+                <span>
+                    Descubre nuestras composiciones
+                </span>
 
+                <i class="bi bi-arrow-down"></i>
+            </div>
+
+        </section>
 
 
         <!-- =================================================
@@ -222,13 +205,10 @@
 
         <section class="beneficios">
 
-
             <div class="beneficio">
-
                 <i class="bi bi-flower1"></i>
 
                 <div>
-
                     <strong>
                         Diseño floral
                     </strong>
@@ -236,18 +216,14 @@
                     <span>
                         Creado con atención al detalle
                     </span>
-
                 </div>
-
             </div>
 
 
             <div class="beneficio">
-
                 <i class="bi bi-heart"></i>
 
                 <div>
-
                     <strong>
                         Hecho con pasión
                     </strong>
@@ -255,18 +231,14 @@
                     <span>
                         Cada composición es especial.
                     </span>
-
                 </div>
-
             </div>
 
 
             <div class="beneficio">
-
                 <i class="bi bi-stars"></i>
 
                 <div>
-
                     <strong>
                         Momentos únicos
                     </strong>
@@ -274,18 +246,14 @@
                     <span>
                         Nos sumergimos en cada una de vuestras emociones.
                     </span>
-
                 </div>
-
             </div>
-
 
         </section>
 
 
-
         <!-- =================================================
-             PRODUCTOS
+             CATÁLOGO
         ================================================== -->
 
         <section
@@ -295,33 +263,26 @@
 
             <div class="productos-contenido">
 
-
-                <!-- CABECERA -->
-
                 <div class="productos-cabecera">
 
                     <span class="seccion-etiqueta">
                         NUESTRA COLECCIÓN
                     </span>
 
-
                     <h2>
-                        Encuentra tu composición floral
+                        Flores para cada momento
                     </h2>
 
-
                     <p>
-                        Descubre nuestra selección y encuentra
-                        la pieza perfecta para cada ocasión.
+                        Descubre nuestras composiciones florales
+                        y encuentra la pieza perfecta para cada
+                        ocasión.
                     </p>
 
                 </div>
 
 
-
-                <!-- =================================================
-                     FILTROS PRINCIPALES
-                ================================================== -->
+                <!-- FILTROS -->
 
                 <div
                     class="filtros"
@@ -336,7 +297,6 @@
                         Todos
                     </button>
 
-
                     <button
                         type="button"
                         class="filtro"
@@ -345,7 +305,6 @@
                         Ramos
                     </button>
 
-
                     <button
                         type="button"
                         class="filtro"
@@ -353,7 +312,6 @@
                     >
                         Decoración
                     </button>
-
 
                     <button
                         type="button"
@@ -366,10 +324,7 @@
                 </div>
 
 
-
-                <!-- =================================================
-                     SUBFILTROS DE RAMOS
-                ================================================== -->
+                <!-- SUBFILTROS -->
 
                 <div
                     class="subfiltros-ramos"
@@ -385,7 +340,6 @@
                         Todos los ramos
                     </button>
 
-
                     <button
                         type="button"
                         class="subfiltro"
@@ -393,7 +347,6 @@
                     >
                         Invierno
                     </button>
-
 
                     <button
                         type="button"
@@ -403,7 +356,6 @@
                         Primavera
                     </button>
 
-
                     <button
                         type="button"
                         class="subfiltro"
@@ -411,7 +363,6 @@
                     >
                         Verano
                     </button>
-
 
                     <button
                         type="button"
@@ -424,25 +375,16 @@
                 </div>
 
 
-
-                <!-- =================================================
-                     PRODUCTOS
-                ================================================== -->
+                <!-- PRODUCTOS GENERADOS POR JS -->
 
                 <div
                     class="productos-grid"
                     id="productosGrid"
-                >
-
-                    <!-- JS GENERA LOS PRODUCTOS -->
-
-                </div>
-
+                ></div>
 
             </div>
 
         </section>
-
 
 
         <!-- =================================================
@@ -454,17 +396,19 @@
             id="contacto"
         >
 
+            <div class="cta-decoration cta-decoration-left">
+                ❀
+            </div>
+
             <div class="cta-final-contenido">
 
                 <span>
                     FLORS I PASSIÓ
                 </span>
 
-
                 <h2>
                     Hablemos de flores
                 </h2>
-
 
                 <p>
                     Cuéntanos qué estás buscando y estaremos
@@ -472,16 +416,130 @@
                     composición perfecta.
                 </p>
 
+                <a
+                    href="https://wa.me/"
+                    class="hero-cta"
+                >
+                    Habla con nosotros
+                    <i class="bi bi-arrow-right"></i>
+                </a>
 
-                
+            </div>
 
+            <div class="cta-decoration cta-decoration-right">
+                ❀
             </div>
 
         </section>
 
-
     </main>
 
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+
+                <img
+                    src="fotos/logo.png"
+                    alt="Flors I Passió"
+                >
+
+                <p>
+                    Flores, emociones y detalles
+                    para momentos especiales.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Navegación
+                </h3>
+
+                <a href="#inicio">
+                    Inicio
+                </a>
+
+                <a href="sobrenosotros.html">
+                    Sobre nosotros
+                </a>
+
+                <a href="#productos">
+                    Catálogo
+                </a>
+
+                <a href="#contacto">
+                    Contacto
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Síguenos
+                </h3>
+
+                <a href="#">
+                    Instagram
+                </a>
+
+                <a href="#">
+                    Facebook
+                </a>
+
+                <a href="#">
+                    Google
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h3>
+                    Información
+                </h3>
+
+                <a href="#">
+                    Aviso legal
+                </a>
+
+                <a href="#">
+                    Privacidad
+                </a>
+
+                <a href="#">
+                    Cookies
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Flors I Passió
+            </span>
+
+            <span>
+                Lourdes Miralles
+            </span>
+
+        </div>
+
+    </footer>
 
 
     <script src="js/index.js"></script>

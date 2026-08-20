@@ -243,6 +243,7 @@ document.head.appendChild(
 
 /* =====================================================
    PARALLAX MUY SUTIL DEL HERO
+   PC + IPAD + MÓVIL
 ===================================================== */
 
 const heroImage =
@@ -255,10 +256,7 @@ window.addEventListener(
     "scroll",
     () => {
 
-        if (
-            !heroImage ||
-            window.innerWidth <= 768
-        ) {
+        if (!heroImage) {
             return;
         }
 
@@ -275,41 +273,52 @@ window.addEventListener(
     }
 );
 
+
 /* =====================================================
    ANIMACIÓN ORGÁNICA — USTEDES / NOSOTROS
 ===================================================== */
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    const valuesHeader = document.querySelector(".values-header");
+    const valuesHeader =
+        document.querySelector(
+            ".values-header"
+        );
 
     if (!valuesHeader) {
         return;
     }
 
-    const observer = new IntersectionObserver(
-        (entries) => {
+    const observer =
+        new IntersectionObserver(
+            (entries) => {
 
-            entries.forEach((entry) => {
+                entries.forEach((entry) => {
 
-                if (entry.isIntersecting) {
+                    if (entry.isIntersecting) {
 
-                    valuesHeader.classList.add("visible");
+                        valuesHeader.classList.add(
+                            "visible"
+                        );
 
-                } else {
+                    } else {
 
-                    valuesHeader.classList.remove("visible");
+                        valuesHeader.classList.remove(
+                            "visible"
+                        );
 
-                }
+                    }
 
-            });
+                });
 
-        },
-        {
-            threshold: 0.25
-        }
+            },
+            {
+                threshold: 0.25
+            }
+        );
+
+    observer.observe(
+        valuesHeader
     );
-
-    observer.observe(valuesHeader);
 
 });

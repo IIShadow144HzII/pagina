@@ -1801,7 +1801,7 @@ nav {
     .values-section {
 
         padding:
-            45px 30px;
+            20px 30px;
     }
 
     .value-card {
@@ -1830,7 +1830,29 @@ nav {
     }
 
 }
+/* =====================================================
+   IPAD / TABLETS
+   AJUSTE DE "SPAN UNO"
+===================================================== */
 
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .story-image-caption .uno {
+
+        top: 4%;
+
+        bottom: auto;
+
+        left: 20px;
+
+        right: 43px;
+
+        font-size: 8px;
+
+        letter-spacing: 1.3px;
+    }
+
+}
 
 /* =====================================================
    MÓVIL
@@ -2165,6 +2187,7 @@ nav {
         margin-bottom: 9px;
 
         font-size: 10px;
+        margin-left:25px;
 
         letter-spacing: 2px;
     }
@@ -2184,6 +2207,7 @@ nav {
 
         margin:
             17px 0 23px;
+        margin-left:22px;
     }
 
     .story-content .story-intro {
@@ -2764,7 +2788,7 @@ nav {
     .story-section {
 
         padding:
-            50px 17px;
+            50px 30px 17px;
     }
 
     .story-container {
@@ -2809,6 +2833,7 @@ nav {
     .story-content h2 {
 
         font-size: 29px;
+        margin-left: 25px;
     }
 
     .story-content .story-intro {
