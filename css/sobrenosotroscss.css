@@ -496,7 +496,7 @@ nav {
 
     color: var(--marfil);
 
-    font-family: Arial, sans-serif;
+    font-family: "Lora", serif;
 
     font-size: 10px;
 
@@ -538,7 +538,7 @@ nav {
 
     color: var(--rosa);
 
-    font-family: Arial, sans-serif;
+    font-family: "Lora", serif;
 
     font-size: 11px;
 
@@ -553,7 +553,7 @@ nav {
 
     color: var(--rosa);
 
-    font-family: Arial, sans-serif;
+    font-family: "Lora", serif;
 
     font-size: 11px;
 
@@ -681,7 +681,7 @@ nav {
 
     color: var(--marfil);
 
-    font-family: Arial, sans-serif;
+    font-family: "Lora", serif;
 
     font-size: 9px;
 
@@ -708,7 +708,7 @@ nav {
 
     color: var(--marfil);
 
-    font-family: Arial, sans-serif;
+    font-family: "Lora", serif;
 
     font-size: 9px;
 
@@ -754,7 +754,7 @@ nav {
 
     color: var(--gris);
 
-    font-family: Arial, sans-serif;
+    font-family: "Lora", serif;
 
     font-size: 15px;
 
@@ -865,7 +865,7 @@ nav {
 
     color: var(--rosa);
 
-    font-family: Arial, sans-serif;
+    font-family: "Lora", serif;
 
     font-size: 10px;
 
@@ -1050,7 +1050,7 @@ nav {
 
     color: var(--rosa);
 
-    font-family: Arial, sans-serif;
+    font-family: "Lora", serif;
 
     font-size: 10px;
 
@@ -1088,7 +1088,7 @@ nav {
 
     color: var(--gris);
 
-    font-family: Arial, sans-serif;
+    font-family: "Lora", serif;
 
     font-size: 12px;
 
@@ -1164,7 +1164,7 @@ nav {
 
     color: var(--rosa-claro);
 
-    font-family: Arial, sans-serif;
+    font-family: "Lora", serif;
 
     font-size: 10px;
 
@@ -1260,7 +1260,7 @@ nav {
 
     color: var(--gris);
 
-    font-family: Arial, sans-serif;
+    font-family: "Lora", serif;
 
     font-size: 14px;
 
@@ -1428,7 +1428,7 @@ nav {
 
     color: var(--rosa-claro);
 
-    font-family: Arial, sans-serif;
+    font-family: "Lora", serif;
 
     font-size: 11px;
 
@@ -1466,7 +1466,7 @@ nav {
     color:
         rgba(250,248,244,.8);
 
-    font-family: Arial, sans-serif;
+    font-family: "Lora", serif;
 
     font-size: 14px;
 
@@ -1620,7 +1620,7 @@ nav {
     color:
         rgba(250,248,244,.55);
 
-    font-family: Arial, sans-serif;
+    font-family: "Lora", serif;
 
     font-size: 12px;
 
@@ -1655,7 +1655,7 @@ nav {
     color:
         rgba(250,248,244,.58);
 
-    font-family: Arial, sans-serif;
+    font-family: "Lora", serif;
 
     font-size: 12px;
 
@@ -1686,7 +1686,7 @@ nav {
     color:
         rgba(250,248,244,.35);
 
-    font-family: Arial, sans-serif;
+    font-family: "Lora", serif;
 
     font-size: 10px;
 }
