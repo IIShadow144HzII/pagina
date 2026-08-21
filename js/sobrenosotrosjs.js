@@ -322,3 +322,35 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
 });
+
+/* =====================================================
+   NAVBAR STICKY
+===================================================== */
+
+const navbar = document.querySelector("nav");
+
+if (navbar) {
+
+    function actualizarNavbar() {
+
+        if (window.scrollY > 0) {
+
+            navbar.classList.add("navbar-scroll");
+
+        } else {
+
+            navbar.classList.remove("navbar-scroll");
+
+        }
+
+    }
+
+    window.addEventListener(
+        "scroll",
+        actualizarNavbar,
+        {
+            passive: true
+        }
+    );
+
+}
