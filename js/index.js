@@ -803,52 +803,23 @@ const navbar = document.querySelector("nav");
 
 if (navbar) {
 
-    let navbarFijado = false;
-    let ticking = false;
-
-
     function actualizarNavbar() {
 
-        const scrollActual = window.scrollY;
-
-
-        if (scrollActual > 80 && !navbarFijado) {
+        if (window.scrollY > 0) {
 
             navbar.classList.add("navbar-scroll");
 
-            navbarFijado = true;
-
-        }
-
-
-        if (scrollActual <= 80 && navbarFijado) {
+        } else {
 
             navbar.classList.remove("navbar-scroll");
 
-            navbarFijado = false;
-
         }
 
-
-        ticking = false;
     }
-
 
     window.addEventListener(
         "scroll",
-        () => {
-
-            if (!ticking) {
-
-                window.requestAnimationFrame(
-                    actualizarNavbar
-                );
-
-                ticking = true;
-
-            }
-
-        },
+        actualizarNavbar,
         {
             passive: true
         }
