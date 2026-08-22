@@ -439,6 +439,9 @@ nav {
 
     text-shadow:
         0 2px 7px rgba(36, 32, 31, .8);
+
+    animation:
+        aparecerTitulo 1.2s ease-out .35s both;
 }
 
 .hero-button {
@@ -730,7 +733,7 @@ nav {
         0 0 10px;
 
     color: var(--borgona);
-
+    margin-left: 6px;
     font-size: 42px;
 
     line-height: 1.15;
@@ -1885,6 +1888,8 @@ nav {
    MÓVIL
 ===================================================== */
 
+
+
 @media (max-width: 768px) {
 
 
@@ -2208,7 +2213,8 @@ nav {
 
         width: 100%;
     }
-
+    
+    
     .section-label {
 
         margin-bottom: 9px;
@@ -2818,11 +2824,15 @@ nav {
     }
 
     .about-hero-content p {
-
-        max-width: 310px;
-
-        font-size: 14px;
-    }
+    max-width: 310px;
+    font-size: 16px;
+    color: #FFF8F3;
+    font-weight: 500;
+    text-shadow:
+        0 2px 5px rgba(36, 32, 31, .90),
+        0 4px 12px rgba(36, 32, 31, .65),
+        0 7px 20px rgba(36, 32, 31, .35);
+}
 
 
     /* STORY */
@@ -3377,7 +3387,8 @@ nav {
         transition: none;
     }
 
-    .about-hero h1 {
+    .about-hero h1,
+    .about-hero-content p {
 
         animation: none;
     }
@@ -3470,4 +3481,17 @@ nav.navbar-scroll {
 
     transition:
         box-shadow .3s ease;
+}
+
+@media(min-width: 1919px){
+
+        .section-label {
+
+        margin-bottom: 9px;
+
+        font-size: 13px;
+        margin-left:9px;
+
+        letter-spacing: 2px;
+    }
 }

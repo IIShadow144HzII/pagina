@@ -328,6 +328,8 @@ nav {
 
         transform: translateY(290px);
 
+        animation: aparecerEtiqueta 1.5s ease-out .05s both;
+
 }
 
 .hero h1 {
@@ -422,6 +424,30 @@ nav {
     transform: translateY(-50%);
 }
 
+@keyframes aparecerEtiqueta {
+    from {
+        opacity: 0;
+        transform: translateY(305px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(290px);
+    }
+}
+
+@keyframes aparecerSubtitulo {
+    from {
+        opacity: 0;
+        transform: translateY(calc(var(--hero-subtitulo-y) + 15px));
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(var(--hero-subtitulo-y));
+    }
+}
+
 @keyframes aparecerTitulo {
     from {
         opacity: 0;
@@ -450,6 +476,8 @@ nav {
     margin: 2px 0 25px;
     transform: translateY(100px);
     color: #FFF4EF;
+    --hero-subtitulo-y: 100px;
+    animation: aparecerSubtitulo 1.5s ease-out .35s both;
     font-size: 23px;
     line-height: 1.55;
     font-weight: 500;
@@ -527,7 +555,7 @@ nav {
 @media (min-width: 769px) {
 
     .hero {
-        height: 75vh;
+        height: 72vh;
         min-height: 470px;
         max-height: 760px;
         padding: 0;
@@ -597,6 +625,18 @@ nav {
     }
 
 
+
+@keyframes aparecerEtiquetaMovil {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 @keyframes aparecerCitaMovil {
     from {
@@ -1175,6 +1215,7 @@ nav {
         font-size: 17px;
         letter-spacing: 2.4px;
         transform: translateY(0);
+        animation-name: aparecerEtiquetaMovil;
     }
 
     .hero h1 {
@@ -1217,6 +1258,7 @@ nav {
         font-size: 16px;
         font-weight: 500;
         letter-spacing: .1px;
+        --hero-subtitulo-y: 0px;
     }
 
     /* BENEFICIOS */
@@ -1453,6 +1495,7 @@ nav {
 
     .hero-subtitulo {
         max-width: 300px;
+        --hero-subtitulo-y: 30px;
         font-size: 13px;
     }
 
@@ -1906,6 +1949,7 @@ nav {
     }
 
     .hero-subtitulo {
+        --hero-subtitulo-y: 0px;
         width: min(80%, 500px);
         max-width: 500px;
         margin: 8px auto 0;
@@ -1968,6 +2012,7 @@ nav {
     }
 
     .hero-subtitulo {
+        --hero-subtitulo-y: 0px;
         width: min(86%, 460px);
         max-width: 460px;
         margin: 8px auto 0;
@@ -1991,6 +2036,8 @@ nav {
     }
 
     .hero h1,
+    .hero-etiqueta,
+    .hero-subtitulo,
     .producto,
     .producto-imagen img,
     .hero-cta,
@@ -2260,7 +2307,7 @@ nav {
 /* ---------- Catálogo ---------- */
 
 .productos {
-    padding-top: clamp(55px, 6vw, 82px);
+    padding-top: 40px;
 }
 
 .productos-cabecera {
