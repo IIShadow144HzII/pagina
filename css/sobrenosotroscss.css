@@ -3495,3 +3495,7 @@ nav.navbar-scroll {
         letter-spacing: 2px;
     }
 }
+
+.nopace{
+    margin-bottom:0px !important;
+}
