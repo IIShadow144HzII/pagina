@@ -48,7 +48,7 @@ const tiposRamos = {
     18: "ramos",
     19: "ramos",
 
-    20: "capazos",
+    20: "ramos",
 
     21: "ramos",
     22: "ramos",
@@ -131,8 +131,8 @@ const imagenesProductos = [
     "ramos/350c6836-db7f-48c6-8c8a-2b75650422e7.jpg",
     "ramos/9ccbc9ea-ce49-45de-b1a0-f76477987fc2.png",
     "ramos/viena.png",
-    "ramos/viena.png",
-    "fotos/producto14.png",
+    "ramos/8f1ba69b-d37f-40d9-9b6a-417a098c2d5d.png",
+    "ramos/89153cee-be99-475d-bf65-2959fc721442.png",
     "fotos/producto15.png",
     "fotos/producto16.png",
     "fotos/producto17.png",
