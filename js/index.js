@@ -128,7 +128,7 @@ const imagenesProductos = [
     "ramos/c3431b4c-b30d-477d-a718-3653415fdb8e.png",
     "ramos/acdf600c-d8b1-4efd-ae57-7c87451ef397.png",
     "ramos/0b1a97fc-3de8-4430-a930-cf52c33d4f0a.png",
-    "fotos/producto10.png",
+    "ramos/350c6836-db7f-48c6-8c8a-2b75650422e7.jpg",
     "fotos/producto11.png",
     "fotos/producto12.png",
     "fotos/producto13.png",
