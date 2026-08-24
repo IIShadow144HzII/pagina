@@ -18,41 +18,141 @@ const categorias = [
 ];
 
 
-/*
-   Estaciones asignadas a los ramos.
+/* =====================================================
+   TIPOS DE RAMOS
+===================================================== */
 
-   Los ramos son:
+const tiposRamos = {
 
-   01 → invierno
-   02 → primavera
-   05 → verano
-   08 → otono
-   11 → invierno
-   14 → primavera
-   17 → verano
-   20 → otono
-   23 → invierno
-   26 → primavera
-   29 → verano
-   32 → otono
-*/
+    1: "jarrones",
+    2: "jarrones",
+    3: "jarrones",
 
-const estacionesRamos = {
+    4: "capazos",
+    5: "capazos",
+    6: "capazos",
 
-    1: "invierno",
-    2: "primavera",
-    5: "verano",
-    8: "otono",
-    11: "invierno",
-    14: "primavera",
-    17: "verano",
-    20: "otono",
-    23: "invierno",
-    26: "primavera",
-    29: "verano",
-    32: "otono"
+    7: "ramos",
+    8: "ramos",
+    9: "ramos",
+    10: "ramos",
+    11: "ramos",
+    12: "ramos",
+    13: "ramos",
+    14: "ramos",
+    15: "ramos",
+    16: "ramos",
+
+    17: "jarrones",
+
+    18: "ramos",
+    19: "ramos",
+
+    20: "capazos",
+
+    21: "ramos",
+    22: "ramos",
+
+    23: "jarrones",
+
+    24: "ramos",
+    25: "ramos",
+
+    26: "capazos",
+
+    27: "ramos",
+    28: "ramos",
+
+    29: "jarrones",
+
+    30: "ramos",
+    31: "ramos",
+
+    32: "capazos"
 
 };
+
+
+/* =====================================================
+   NOMBRES Y FOTOS DE LOS PRODUCTOS
+===================================================== */
+
+const nombresProductos = [
+
+    "Jarrón Miramar",
+    "Jarrón Bibury",
+    "Jarrón Versailles",
+    "Capazo Sweet Song",
+    "Capazo Paradise",
+    "Capazo Melody",
+    "Bouquet Neko",
+    "Bouquet Campiña",
+    "Bouquet Sissí",
+    "Bouquet Lavanda",
+    "Bouquet Romantic",
+    "Bouquet Viena",
+    "Bouquet Borgoña",
+    "Bouquet Lyra",
+    "Ramo Verano",
+    "Decoración Floral Elegante",
+    "Ramo Silvestre Especial",
+    "Centro Floral Natural",
+    "Ramo Romántico",
+    "Composición Floral Premium",
+    "Ramo Invierno Especial",
+    "Centro Floral Exclusivo",
+    "Ramo Primavera Especial",
+    "Decoración Floral Premium",
+    "Ramo Verano Especial",
+    "Composición Natural",
+    "Ramo Elegante",
+    "Centro Floral Romántico",
+    "Ramo Verano Premium",
+    "Decoración Floral Especial",
+    "Ramo Natural Premium",
+    "Centro Floral Otoño"
+
+];
+
+
+const imagenesProductos = [
+
+    "jarrones/12720740-7f2a-4d99-92c8-8fe3e6f0f42c.png",
+    "jarrones/ca961ce3-bf7d-47e5-a21b-dff939145d45 (1).png",
+    "jarrones/6c5b50ae-9bb9-442b-bff3-6648e44e5d23.png",
+
+    "capazos/a8de9997-2b08-4d9e-a82a-6bc203d22d35.png",
+    "capazos/ee274873-4e51-474b-b09c-4bda965f7a11.png",
+    "capazos/42499836-87db-4c1c-a38d-9a0c2c825f36.png",
+
+    "ramos/c3431b4c-b30d-477d-a718-3653415fdb8e.png",
+    "ramos/acdf600c-d8b1-4efd-ae57-7c87451ef397.png",
+    "ramos/0b1a97fc-3de8-4430-a930-cf52c33d4f0a.png",
+    "fotos/producto10.png",
+    "fotos/producto11.png",
+    "fotos/producto12.png",
+    "fotos/producto13.png",
+    "fotos/producto14.png",
+    "fotos/producto15.png",
+    "fotos/producto16.png",
+    "fotos/producto17.png",
+    "fotos/producto18.png",
+    "fotos/producto19.png",
+    "fotos/producto20.png",
+    "fotos/producto21.png",
+    "fotos/producto22.png",
+    "fotos/producto23.png",
+    "fotos/producto24.png",
+    "fotos/producto25.png",
+    "fotos/producto26.png",
+    "fotos/producto27.png",
+    "fotos/producto28.png",
+    "fotos/producto29.png",
+    "fotos/producto30.png",
+    "fotos/producto31.png",
+    "fotos/producto32.png"
+
+];
 
 
 /* =====================================================
@@ -68,28 +168,35 @@ for (let numero = 1; numero <= 32; numero++) {
 
 
     /*
-       Distribución actual:
-
-       1  → ramos
-       2  → ramos
-       3  → decoracion
-       4  → eventos
-       etc.
+       Distribución actual.
     */
 
-    if (numero === 1 || numero === 2) {
+    if (
+        numero === 1 ||
+        numero === 2
+    ) {
 
         categoria = "ramos";
 
-    } else if (numero % 3 === 0) {
+    }
+
+    else if (
+        numero % 3 === 0
+    ) {
 
         categoria = "decoracion";
 
-    } else if (numero % 3 === 1) {
+    }
+
+    else if (
+        numero % 3 === 1
+    ) {
 
         categoria = "eventos";
 
-    } else {
+    }
+
+    else {
 
         categoria = "ramos";
 
@@ -97,11 +204,13 @@ for (let numero = 1; numero <= 32; numero++) {
 
 
     /*
-       Los productos 1, 2, 5, 8, 11...
-       son los ramos.
+       Si el producto tiene un tipo de ramo,
+       pertenece a la categoría Ramos.
     */
 
-    if (estacionesRamos[numero]) {
+    if (
+        tiposRamos[numero]
+    ) {
 
         categoria = "ramos";
 
@@ -114,13 +223,13 @@ for (let numero = 1; numero <= 32; numero++) {
             `producto-${String(numero).padStart(2, "0")}`,
 
         nombre:
-            `Producto ${numero}`,
+            nombresProductos[numero - 1],
 
         descripcion:
             `Descripción del producto ${numero}.`,
 
         imagen:
-            `fotos/producto${String(numero).padStart(2, "0")}.png`,
+            imagenesProductos[numero - 1],
 
         categoria:
             categoria
@@ -129,14 +238,16 @@ for (let numero = 1; numero <= 32; numero++) {
 
 
     /*
-       Añadimos estación únicamente
+       Añadimos el tipo únicamente
        a los productos de Ramos.
     */
 
-    if (categoria === "ramos") {
+    if (
+        categoria === "ramos"
+    ) {
 
-        producto.estacion =
-            estacionesRamos[numero];
+        producto.tipo =
+            tiposRamos[numero];
 
     }
 
@@ -151,19 +262,27 @@ for (let numero = 1; numero <= 32; numero++) {
 ===================================================== */
 
 const productosGrid =
-    document.getElementById("productosGrid");
+    document.getElementById(
+        "productosGrid"
+    );
 
 
 const filtros =
-    document.querySelectorAll(".filtro");
+    document.querySelectorAll(
+        ".filtro"
+    );
 
 
 const subfiltrosRamos =
-    document.getElementById("subfiltrosRamos");
+    document.getElementById(
+        "subfiltrosRamos"
+    );
 
 
 const subfiltros =
-    document.querySelectorAll(".subfiltro");
+    document.querySelectorAll(
+        ".subfiltro"
+    );
 
 
 /* =====================================================
@@ -199,7 +318,9 @@ function mostrarProductos(lista) {
        Si no hay resultados
     */
 
-    if (lista.length === 0) {
+    if (
+        lista.length === 0
+    ) {
 
         productosGrid.innerHTML = `
 
@@ -215,34 +336,28 @@ function mostrarProductos(lista) {
         `;
 
         return;
+
     }
 
 
     lista.forEach((producto) => {
 
-
-        /* =============================================
-           TARJETA
-        ============================================= */
-
         const tarjeta =
-            document.createElement("article");
+            document.createElement(
+                "article"
+            );
 
 
-        tarjeta.classList.add("producto");
+        tarjeta.classList.add(
+            "producto"
+        );
 
-
-        /* =============================================
-           WHATSAPP
-        ============================================= */
 
         const enlaceWhatsApp =
-            crearEnlaceWhatsApp(producto);
+            crearEnlaceWhatsApp(
+                producto
+            );
 
-
-        /* =============================================
-           HTML TARJETA
-        ============================================= */
 
         tarjeta.innerHTML = `
 
@@ -287,7 +402,9 @@ function mostrarProductos(lista) {
         `;
 
 
-        productosGrid.appendChild(tarjeta);
+        productosGrid.appendChild(
+            tarjeta
+        );
 
     });
 
@@ -298,16 +415,21 @@ function mostrarProductos(lista) {
    MOSTRAR / OCULTAR SUBFILTROS
 ===================================================== */
 
-function actualizarSubfiltros(categoria) {
-
+function actualizarSubfiltros(
+    categoria
+) {
 
     /*
        SI ES RAMOS
     */
 
-    if (categoria === "ramos") {
+    if (
+        categoria === "ramos"
+    ) {
 
-        subfiltrosRamos.classList.add("visible");
+        subfiltrosRamos.classList.add(
+            "visible"
+        );
 
         subfiltrosRamos.setAttribute(
             "aria-hidden",
@@ -317,26 +439,37 @@ function actualizarSubfiltros(categoria) {
 
         /*
            Al entrar en Ramos,
-           seleccionamos Todos los ramos.
+           seleccionamos Todos.
         */
 
-        subfiltros.forEach((boton) => {
+        subfiltros.forEach(
+            (boton) => {
 
-            boton.classList.remove("activo");
+                boton.classList.remove(
+                    "activo"
+                );
 
-        });
+            }
+        );
 
 
         const todosLosRamos =
             document.querySelector(
-                '.subfiltro[data-estacion="todos"]'
+                '.subfiltro[data-tipo="todos"]'
             );
 
 
-        todosLosRamos.classList.add("activo");
+        if (todosLosRamos) {
+
+            todosLosRamos.classList.add(
+                "activo"
+            );
+
+        }
 
 
         return;
+
     }
 
 
@@ -344,7 +477,9 @@ function actualizarSubfiltros(categoria) {
        SI NO ES RAMOS
     */
 
-    subfiltrosRamos.classList.remove("visible");
+    subfiltrosRamos.classList.remove(
+        "visible"
+    );
 
     subfiltrosRamos.setAttribute(
         "aria-hidden",
@@ -352,30 +487,30 @@ function actualizarSubfiltros(categoria) {
     );
 
 
-    /*
-       Quitamos el estado activo
-       de todos los subfiltros.
-    */
+    subfiltros.forEach(
+        (boton) => {
 
-    subfiltros.forEach((boton) => {
+            boton.classList.remove(
+                "activo"
+            );
 
-        boton.classList.remove("activo");
+        }
+    );
 
-    });
-
-
-    /*
-       Volvemos a dejar "Todos los ramos"
-       preparado para la próxima vez.
-    */
 
     const todosLosRamos =
         document.querySelector(
-            '.subfiltro[data-estacion="todos"]'
+            '.subfiltro[data-tipo="todos"]'
         );
 
 
-    todosLosRamos.classList.add("activo");
+    if (todosLosRamos) {
+
+        todosLosRamos.classList.add(
+            "activo"
+        );
+
+    }
 
 }
 
@@ -384,155 +519,157 @@ function actualizarSubfiltros(categoria) {
    FILTROS PRINCIPALES
 ===================================================== */
 
-filtros.forEach((filtro) => {
+filtros.forEach(
+    (filtro) => {
 
+        filtro.addEventListener(
+            "click",
+            () => {
 
-    filtro.addEventListener(
-        "click",
-        () => {
+                filtros.forEach(
+                    (boton) => {
 
+                        boton.classList.remove(
+                            "activo"
+                        );
 
-            /*
-               Quitamos activo
-               de todos los filtros.
-            */
-
-            filtros.forEach((boton) => {
-
-                boton.classList.remove("activo");
-
-            });
-
-
-            /*
-               Activamos el pulsado.
-            */
-
-            filtro.classList.add("activo");
-
-
-            /*
-               Obtenemos categoría.
-            */
-
-            const categoria =
-                filtro.dataset.categoria;
-
-
-            /*
-               Mostrar / ocultar subfiltros.
-            */
-
-            actualizarSubfiltros(categoria);
-
-
-            /*
-               TODOS
-            */
-
-            if (categoria === "todos") {
-
-                mostrarProductos(productos);
-
-                return;
-            }
-
-
-            /*
-               Filtrado normal.
-            */
-
-            const productosFiltrados =
-                productos.filter(
-                    (producto) =>
-                        producto.categoria === categoria
+                    }
                 );
 
 
-            mostrarProductos(productosFiltrados);
+                filtro.classList.add(
+                    "activo"
+                );
 
-        }
-    );
 
-});
+                const categoria =
+                    filtro.dataset.categoria;
+
+
+                actualizarSubfiltros(
+                    categoria
+                );
+
+
+                /*
+                   TODOS
+                */
+
+                if (
+                    categoria === "todos"
+                ) {
+
+                    mostrarProductos(
+                        productos
+                    );
+
+                    return;
+
+                }
+
+
+                /*
+                   Filtrado normal.
+                */
+
+                const productosFiltrados =
+                    productos.filter(
+                        (producto) =>
+                            producto.categoria ===
+                            categoria
+                    );
+
+
+                mostrarProductos(
+                    productosFiltrados
+                );
+
+            }
+        );
+
+    }
+);
 
 
 /* =====================================================
    SUBFILTROS DE RAMOS
 ===================================================== */
 
-subfiltros.forEach((subfiltro) => {
+subfiltros.forEach(
+    (subfiltro) => {
 
+        subfiltro.addEventListener(
+            "click",
+            () => {
 
-    subfiltro.addEventListener(
-        "click",
-        () => {
+                subfiltros.forEach(
+                    (boton) => {
 
+                        boton.classList.remove(
+                            "activo"
+                        );
 
-            /*
-               Quitamos activo
-               de los demás subfiltros.
-            */
-
-            subfiltros.forEach((boton) => {
-
-                boton.classList.remove("activo");
-
-            });
-
-
-            /*
-               Activamos el seleccionado.
-            */
-
-            subfiltro.classList.add("activo");
-
-
-            /*
-               Obtenemos estación.
-            */
-
-            const estacion =
-                subfiltro.dataset.estacion;
-
-
-            /*
-               TODOS LOS RAMOS
-            */
-
-            if (estacion === "todos") {
-
-                const todosLosRamos =
-                    productos.filter(
-                        (producto) =>
-                            producto.categoria === "ramos"
-                    );
-
-
-                mostrarProductos(todosLosRamos);
-
-                return;
-            }
-
-
-            /*
-               RAMOS DE UNA ESTACIÓN
-            */
-
-            const ramosFiltrados =
-                productos.filter(
-                    (producto) =>
-                        producto.categoria === "ramos" &&
-                        producto.estacion === estacion
+                    }
                 );
 
 
-            mostrarProductos(ramosFiltrados);
+                subfiltro.classList.add(
+                    "activo"
+                );
 
-        }
-    );
 
-});
+                const tipoRamo =
+                    subfiltro.dataset.tipo;
+
+
+                /*
+                   TODOS
+                */
+
+                if (
+                    tipoRamo === "todos"
+                ) {
+
+                    const todosLosRamos =
+                        productos.filter(
+                            (producto) =>
+                                producto.categoria ===
+                                "ramos"
+                        );
+
+
+                    mostrarProductos(
+                        todosLosRamos
+                    );
+
+                    return;
+
+                }
+
+
+                /*
+                   RAMOS / JARRONES / CAPAZOS
+                */
+
+                const ramosFiltrados =
+                    productos.filter(
+                        (producto) =>
+                            producto.categoria ===
+                                "ramos" &&
+                            producto.tipo ===
+                                tipoRamo
+                    );
+
+
+                mostrarProductos(
+                    ramosFiltrados
+                );
+
+            }
+        );
+
+    }
+);
 
 
 /* =====================================================
@@ -540,23 +677,28 @@ subfiltros.forEach((subfiltro) => {
 ===================================================== */
 
 const botonMenu =
-    document.getElementById("menuBtn");
+    document.getElementById(
+        "menuBtn"
+    );
 
 
 const menuDesplegable =
-    document.getElementById("menuDesplegable");
+    document.getElementById(
+        "menuDesplegable"
+    );
 
 
-if (botonMenu && menuDesplegable) {
+if (
+    botonMenu &&
+    menuDesplegable
+) {
 
-
-    /* =================================================
-       ABRIR MENÚ
-    ================================================= */
 
     function abrirMenu() {
 
-        menuDesplegable.classList.add("abierto");
+        menuDesplegable.classList.add(
+            "abierto"
+        );
 
         botonMenu.setAttribute(
             "aria-expanded",
@@ -572,21 +714,12 @@ if (botonMenu && menuDesplegable) {
             '<i class="bi bi-x-lg"></i>';
 
 
-        /*
-           Bloquear completamente el scroll
-           mientras el menú está abierto.
-        */
-
         document.documentElement.style.overflow =
             "hidden";
 
         document.body.style.overflow =
             "hidden";
 
-
-        /*
-           Evitar rebote del scroll en iOS.
-        */
 
         document.documentElement.style.overscrollBehavior =
             "none";
@@ -596,10 +729,6 @@ if (botonMenu && menuDesplegable) {
 
     }
 
-
-    /* =================================================
-       CERRAR MENÚ
-    ================================================= */
 
     function cerrarMenu() {
 
@@ -621,10 +750,6 @@ if (botonMenu && menuDesplegable) {
             '<i class="bi bi-list"></i>';
 
 
-        /*
-           Restaurar scroll.
-        */
-
         document.documentElement.style.overflow =
             "";
 
@@ -640,10 +765,6 @@ if (botonMenu && menuDesplegable) {
     }
 
 
-    /* =================================================
-       ALTERNAR MENÚ
-    ================================================= */
-
     function alternarMenu() {
 
         if (
@@ -654,7 +775,9 @@ if (botonMenu && menuDesplegable) {
 
             cerrarMenu();
 
-        } else {
+        }
+
+        else {
 
             abrirMenu();
 
@@ -662,10 +785,6 @@ if (botonMenu && menuDesplegable) {
 
     }
 
-
-    /* =================================================
-       BOTÓN DEL MENÚ
-    ================================================= */
 
     botonMenu.addEventListener(
         "click",
@@ -679,31 +798,27 @@ if (botonMenu && menuDesplegable) {
     );
 
 
-    /* =================================================
-       CERRAR AL PULSAR UN ENLACE
-    ================================================= */
-
     const enlacesMenu =
-        menuDesplegable.querySelectorAll("a");
-
-
-    enlacesMenu.forEach((enlace) => {
-
-        enlace.addEventListener(
-            "click",
-            () => {
-
-                cerrarMenu();
-
-            }
+        menuDesplegable.querySelectorAll(
+            "a"
         );
 
-    });
 
+    enlacesMenu.forEach(
+        (enlace) => {
 
-    /* =================================================
-       CERRAR AL PULSAR FUERA
-    ================================================= */
+            enlace.addEventListener(
+                "click",
+                () => {
+
+                    cerrarMenu();
+
+                }
+            );
+
+        }
+    );
+
 
     document.addEventListener(
         "click",
@@ -745,10 +860,6 @@ if (botonMenu && menuDesplegable) {
     );
 
 
-    /* =================================================
-       CERRAR CON ESC
-    ================================================= */
-
     document.addEventListener(
         "keydown",
         (evento) => {
@@ -769,10 +880,6 @@ if (botonMenu && menuDesplegable) {
         }
     );
 
-
-    /* =================================================
-       CERRAR AL PASAR A ESCRITORIO
-    ================================================= */
 
     window.addEventListener(
         "resize",
@@ -799,23 +906,36 @@ if (botonMenu && menuDesplegable) {
    NAVBAR STICKY
 ===================================================== */
 
-const navbar = document.querySelector("nav");
+const navbar =
+    document.querySelector(
+        "nav"
+    );
+
 
 if (navbar) {
 
     function actualizarNavbar() {
 
-        if (window.scrollY > 0) {
+        if (
+            window.scrollY > 0
+        ) {
 
-            navbar.classList.add("navbar-scroll");
+            navbar.classList.add(
+                "navbar-scroll"
+            );
 
-        } else {
+        }
 
-            navbar.classList.remove("navbar-scroll");
+        else {
+
+            navbar.classList.remove(
+                "navbar-scroll"
+            );
 
         }
 
     }
+
 
     window.addEventListener(
         "scroll",
@@ -827,8 +947,11 @@ if (navbar) {
 
 }
 
+
 /* =====================================================
    INICIALIZAR
 ===================================================== */
 
-mostrarProductos(productos);
+mostrarProductos(
+    productos
+);
