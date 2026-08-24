@@ -1,26 +1,81 @@
 /* =====================================================
-   CONFIGURACIÓN WHATSAPP
+   WHATSAPP
 ===================================================== */
 
 const NUMERO_WHATSAPP = "34686606704";
 
 
 /* =====================================================
-   PRODUCTOS
+   CATEGORÍA DE CADA PRODUCTO
 ===================================================== */
 
-const categorias = [
+const categoriasProductos = {
 
-    "ramos",
-    "decoracion",
-    "eventos"
+    /* RAMOS */
 
-];
+    1: "ramos",
+    2: "ramos",
+    3: "ramos",
+    4: "ramos",
+    5: "ramos",
+    6: "ramos",
+    7: "ramos",
+    8: "ramos",
+    9: "ramos",
+    10: "ramos",
+    11: "ramos",
+    12: "ramos",
+    13: "ramos",
+    14: "ramos",
+
+
+    /* BUQUÉS DE ROSAS */
+
+    15: "buquesR",
+    16: "buquesR",
+    17: "buquesR",
+    18: "buquesR",
+    19: "buquesR",
+    20: "buquesR",
+
+
+    /* FLOR SECA */
+
+    21: "florSeca",
+    22: "florSeca",
+    23: "florSeca",
+    24: "florSeca",
+    25: "florSeca",
+    26: "florSeca",
+    27: "florSeca",
+    28: "florSeca",
+    29: "florSeca",
+    30: "florSeca",
+    31: "florSeca",
+    32: "florSeca",
+    33: "florSeca",
+    34: "florSeca",
+    35: "florSeca",
+
+
+    /* BUQUÉS DE ROSAS */
+
+};
 
 
 /* =====================================================
-   TIPOS DE RAMOS
+   TIPO DE CADA PRODUCTO DE RAMOS
 ===================================================== */
+
+/*
+   Solo los productos de Ramos necesitan tipo.
+
+   Tipos disponibles:
+
+   "buques"
+   "jarrones"
+   "capazos"
+*/
 
 const tiposRamos = {
 
@@ -32,59 +87,34 @@ const tiposRamos = {
     5: "capazos",
     6: "capazos",
 
-    7: "ramos",
-    8: "ramos",
-    9: "ramos",
-    10: "ramos",
-    11: "ramos",
-    12: "ramos",
-    13: "ramos",
-    14: "ramos",
-    15: "ramos",
-    16: "ramos",
-
-    17: "ramos",
-
-    18: "ramos",
-    19: "ramos",
-
-    20: "ramos",
-
-    21: "ramos",
-    22: "ramos",
-
-    23: "jarrones",
-
-    24: "ramos",
-    25: "ramos",
-
-    26: "capazos",
-
-    27: "ramos",
-    28: "ramos",
-
-    29: "jarrones",
-
-    30: "ramos",
-    31: "ramos",
-
-    32: "capazos"
+    7: "buques",
+    8: "buques",
+    9: "buques",
+    10: "buques",
+    11: "buques",
+    12: "buques",
+    13: "buques",
+    14: "buques"
 
 };
 
 
 /* =====================================================
-   NOMBRES Y FOTOS DE LOS PRODUCTOS
+   NOMBRES DE PRODUCTOS
 ===================================================== */
 
 const nombresProductos = [
 
+    /* RAMOS */
+
     "Jarrón Miramar",
     "Jarrón Bibury",
     "Jarrón Versailles",
+
     "Capazo Sweet Song",
     "Capazo Paradise",
     "Capazo Melody",
+
     "Bouquet Neko",
     "Bouquet Campiña",
     "Bouquet Sissí",
@@ -93,29 +123,49 @@ const nombresProductos = [
     "Bouquet Viena",
     "Bouquet Borgoña",
     "Bouquet Lyra",
-    "Bouquet Viena",
-    "Decoración Floral Elegante",
-    "Ramo Silvestre Especial",
-    "Centro Floral Natural",
-    "Ramo Romántico",
-    "Composición Floral Premium",
-    "Ramo Invierno Especial",
-    "Centro Floral Exclusivo",
-    "Ramo Primavera Especial",
-    "Decoración Floral Premium",
-    "Ramo Verano Especial",
-    "Composición Natural",
-    "Ramo Elegante",
-    "Centro Floral Romántico",
-    "Ramo Verano Premium",
-    "Decoración Floral Especial",
-    "Ramo Natural Premium",
-    "Centro Floral Otoño"
+
+
+    /* BUQUÉS DE ROSAS */
+
+    "Ramo Sinfonía Escarlata",
+    "Bouquet Rubí Imperial",
+    "Bouquet Alba Imperial",
+    "Cesto 200 rosas Premium",
+    "Bouquet 12 rosas Premium",
+    "Dúo Mon Amour",
+
+
+    /* FLOR SECA */
+
+    "Jarrón Nirvana",
+    "Cesto Thanksgiving",
+    "Jarrón Sophie",
+    "Ramo Velvet",
+    "Jarrón Cinque Terre",
+    "Jarrón Victoria ( Seco/preservado)",
+    "Jarrón Venezia",
+    "Capazo Atardecer",
+    "Capazo Carnaval",
+    "Centro Siena",
+    "Jarrón Preservado Nostalgia",
+    "Jarrón Bretagne",
+    "Capazo Sorrento",
+    "Centro flor seca/preservada",
+    "Capazo Swetness",
+
+
+    /* BUQUÉS DE ROSAS */
 
 ];
 
 
+/* =====================================================
+   FOTOS DE PRODUCTOS
+===================================================== */
+
 const imagenesProductos = [
+
+    /* RAMOS */
 
     "jarrones/12720740-7f2a-4d99-92c8-8fe3e6f0f42c.png",
     "jarrones/ca961ce3-bf7d-47e5-a21b-dff939145d45 (1).png",
@@ -133,24 +183,45 @@ const imagenesProductos = [
     "ramos/viena.png",
     "ramos/8f1ba69b-d37f-40d9-9b6a-417a098c2d5d.png",
     "ramos/89153cee-be99-475d-bf65-2959fc721442.png",
-    "fotos/producto15.png",
-    "fotos/producto16.png",
-    "fotos/producto17.png",
-    "fotos/producto18.png",
-    "fotos/producto19.png",
-    "fotos/producto20.png",
-    "fotos/producto21.png",
-    "fotos/producto22.png",
-    "fotos/producto23.png",
-    "fotos/producto24.png",
-    "fotos/producto25.png",
-    "fotos/producto26.png",
-    "fotos/producto27.png",
-    "fotos/producto28.png",
-    "fotos/producto29.png",
-    "fotos/producto30.png",
-    "fotos/producto31.png",
-    "fotos/producto32.png"
+
+
+    /* BUQUÉS DE ROSAS */
+
+    "buquesR/ChatGPT Image 24 ago 2026, 23_58_14.png",
+    "buquesR/53983f73-8293-4655-a271-99ff14534300.png",
+    "buquesR/11855efe-da6f-4e31-a50d-f7ab4841e69a.png",
+    "buquesR/ChatGPT Image 25 ago 2026, 00_11_24.png",
+    "buquesR/96d86412-f838-48c8-b051-64e8cfd24392.png",
+    "buquesR/88d61d80-58c4-4a00-be09-9115fe4e9331.png",
+
+
+    /* FLOR SECA */
+
+    "florSeca/0030198b-e793-449b-a18c-f6a501c7af14.png",
+    "florSeca/4e9d48e9-5159-4d34-903b-118f4a2bb5ed.png",
+    "florSeca/5abef82e-0260-47b3-b50e-82ad78135f8e.png",
+    "florSeca/a8b55ccb-62d6-4506-a0f1-b7ff750c753d.png",
+    "florSeca/2628f61d-8dd4-4cde-bc13-1aa28682db71.png",
+    "florSeca/d7402061-e60a-4f05-b389-5eba2e679c85.png",
+    "florSeca/0d6350fb-78d8-4274-a3e4-e0195f2ebc33.png",
+    "florSeca/285cdf90-e40c-4101-849d-3446fc974436.png",
+    "florSeca/d49d0753-4dd8-4c43-9bca-2e3cbabcfcaf.png",
+    "florSeca/41167f49-90bb-4085-9b4c-dc1e1230387e.png",
+    "florSeca/b5d228c2-9bb7-494d-9682-b5923ef3a1c0.png",
+    "florSeca/321cfe22-b9e9-4882-a6fc-a547d9a98810.png",
+    "florSeca/0e39b813-10be-4ba1-a423-f3553f2ca17b.png",
+    "florSeca/49a08bb2-eb83-49bc-853f-12e82542b3d8.png",
+    "florSeca/6caa529e-2ecb-4b6c-af8a-2a3095e01269.png",
+
+
+    /* BUQUÉS DE ROSAS */
+
+    "buques-rosas/buque-rosas-01.png",
+    "buques-rosas/buque-rosas-02.png",
+    "buques-rosas/buque-rosas-03.png",
+    "buques-rosas/buque-rosas-04.png",
+    "buques-rosas/buque-rosas-05.png",
+    "buques-rosas/buque-rosas-06.png"
 
 ];
 
@@ -162,60 +233,7 @@ const imagenesProductos = [
 const productos = [];
 
 
-for (let numero = 1; numero <= 32; numero++) {
-
-    let categoria;
-
-
-    /*
-       Distribución actual.
-    */
-
-    if (
-        numero === 1 ||
-        numero === 2
-    ) {
-
-        categoria = "ramos";
-
-    }
-
-    else if (
-        numero % 3 === 0
-    ) {
-
-        categoria = "decoracion";
-
-    }
-
-    else if (
-        numero % 3 === 1
-    ) {
-
-        categoria = "eventos";
-
-    }
-
-    else {
-
-        categoria = "ramos";
-
-    }
-
-
-    /*
-       Si el producto tiene un tipo de ramo,
-       pertenece a la categoría Ramos.
-    */
-
-    if (
-        tiposRamos[numero]
-    ) {
-
-        categoria = "ramos";
-
-    }
-
+for (let numero = 1; numero <= 41; numero++) {
 
     const producto = {
 
@@ -232,18 +250,18 @@ for (let numero = 1; numero <= 32; numero++) {
             imagenesProductos[numero - 1],
 
         categoria:
-            categoria
+            categoriasProductos[numero]
 
     };
 
 
     /*
-       Añadimos el tipo únicamente
-       a los productos de Ramos.
+       Si pertenece a Ramos,
+       añadimos su tipo.
     */
 
     if (
-        categoria === "ramos"
+        producto.categoria === "ramos"
     ) {
 
         producto.tipo =
@@ -266,18 +284,15 @@ const productosGrid =
         "productosGrid"
     );
 
-
 const filtros =
     document.querySelectorAll(
         ".filtro"
     );
 
-
 const subfiltrosRamos =
     document.getElementById(
         "subfiltrosRamos"
     );
-
 
 const subfiltros =
     document.querySelectorAll(
@@ -286,7 +301,7 @@ const subfiltros =
 
 
 /* =====================================================
-   CREAR ENLACE WHATSAPP
+   WHATSAPP
 ===================================================== */
 
 function crearEnlaceWhatsApp(producto) {
@@ -295,7 +310,6 @@ function crearEnlaceWhatsApp(producto) {
         `¡Hola! 🌷 He descubierto el "${producto.nombre}" ` +
         `y me ha encantado. ¿Podríais informarme acerca ` +
         `de su disponibilidad? 😊`;
-
 
     return (
         `https://wa.me/${NUMERO_WHATSAPP}` +
@@ -314,13 +328,7 @@ function mostrarProductos(lista) {
     productosGrid.innerHTML = "";
 
 
-    /*
-       Si no hay resultados
-    */
-
-    if (
-        lista.length === 0
-    ) {
+    if (lista.length === 0) {
 
         productosGrid.innerHTML = `
 
@@ -347,7 +355,6 @@ function mostrarProductos(lista) {
                 "article"
             );
 
-
         tarjeta.classList.add(
             "producto"
         );
@@ -371,18 +378,15 @@ function mostrarProductos(lista) {
 
             </div>
 
-
             <div class="producto-info">
 
                 <h3>
                     ${producto.nombre}
                 </h3>
 
-
                 <p>
                     ${producto.descripcion}
                 </p>
-
 
                 <a
                     class="contactar-whatsapp"
@@ -419,10 +423,6 @@ function actualizarSubfiltros(
     categoria
 ) {
 
-    /*
-       SI ES RAMOS
-    */
-
     if (
         categoria === "ramos"
     ) {
@@ -437,11 +437,6 @@ function actualizarSubfiltros(
         );
 
 
-        /*
-           Al entrar en Ramos,
-           seleccionamos Todos.
-        */
-
         subfiltros.forEach(
             (boton) => {
 
@@ -453,15 +448,15 @@ function actualizarSubfiltros(
         );
 
 
-        const todosLosRamos =
+        const todos =
             document.querySelector(
                 '.subfiltro[data-tipo="todos"]'
             );
 
 
-        if (todosLosRamos) {
+        if (todos) {
 
-            todosLosRamos.classList.add(
+            todos.classList.add(
                 "activo"
             );
 
@@ -473,10 +468,6 @@ function actualizarSubfiltros(
     }
 
 
-    /*
-       SI NO ES RAMOS
-    */
-
     subfiltrosRamos.classList.remove(
         "visible"
     );
@@ -485,32 +476,6 @@ function actualizarSubfiltros(
         "aria-hidden",
         "true"
     );
-
-
-    subfiltros.forEach(
-        (boton) => {
-
-            boton.classList.remove(
-                "activo"
-            );
-
-        }
-    );
-
-
-    const todosLosRamos =
-        document.querySelector(
-            '.subfiltro[data-tipo="todos"]'
-        );
-
-
-    if (todosLosRamos) {
-
-        todosLosRamos.classList.add(
-            "activo"
-        );
-
-    }
 
 }
 
@@ -569,10 +534,10 @@ filtros.forEach(
 
 
                 /*
-                   Filtrado normal.
+                   Filtrar por categoría.
                 */
 
-                const productosFiltrados =
+                const filtrados =
                     productos.filter(
                         (producto) =>
                             producto.categoria ===
@@ -581,7 +546,7 @@ filtros.forEach(
 
 
                 mostrarProductos(
-                    productosFiltrados
+                    filtrados
                 );
 
             }
@@ -596,16 +561,24 @@ filtros.forEach(
 ===================================================== */
 
 subfiltros.forEach(
-    (subfiltro) => {
+    (boton) => {
 
-        subfiltro.addEventListener(
+        boton.addEventListener(
             "click",
-            () => {
+            (evento) => {
+
+                /*
+                   Evita que el clic active
+                   también el botón Ramos.
+                */
+
+                evento.stopPropagation();
+
 
                 subfiltros.forEach(
-                    (boton) => {
+                    (b) => {
 
-                        boton.classList.remove(
+                        b.classList.remove(
                             "activo"
                         );
 
@@ -613,21 +586,21 @@ subfiltros.forEach(
                 );
 
 
-                subfiltro.classList.add(
+                boton.classList.add(
                     "activo"
                 );
 
 
-                const tipoRamo =
-                    subfiltro.dataset.tipo;
+                const tipo =
+                    boton.dataset.tipo;
 
 
                 /*
-                   TODOS
+                   TODOS LOS RAMOS
                 */
 
                 if (
-                    tipoRamo === "todos"
+                    tipo === "todos"
                 ) {
 
                     const todosLosRamos =
@@ -648,21 +621,21 @@ subfiltros.forEach(
 
 
                 /*
-                   RAMOS / JARRONES / CAPAZOS
+                   BUQUÉS / JARRONES / CAPAZOS
                 */
 
-                const ramosFiltrados =
+                const filtrados =
                     productos.filter(
                         (producto) =>
                             producto.categoria ===
                                 "ramos" &&
                             producto.tipo ===
-                                tipoRamo
+                                tipo
                     );
 
 
                 mostrarProductos(
-                    ramosFiltrados
+                    filtrados
                 );
 
             }
@@ -680,7 +653,6 @@ const botonMenu =
     document.getElementById(
         "menuBtn"
     );
-
 
 const menuDesplegable =
     document.getElementById(
@@ -720,13 +692,6 @@ if (
         document.body.style.overflow =
             "hidden";
 
-
-        document.documentElement.style.overscrollBehavior =
-            "none";
-
-        document.body.style.overscrollBehavior =
-            "none";
-
     }
 
 
@@ -756,33 +721,6 @@ if (
         document.body.style.overflow =
             "";
 
-        document.documentElement.style.overscrollBehavior =
-            "";
-
-        document.body.style.overscrollBehavior =
-            "";
-
-    }
-
-
-    function alternarMenu() {
-
-        if (
-            menuDesplegable.classList.contains(
-                "abierto"
-            )
-        ) {
-
-            cerrarMenu();
-
-        }
-
-        else {
-
-            abrirMenu();
-
-        }
-
     }
 
 
@@ -792,7 +730,22 @@ if (
 
             evento.stopPropagation();
 
-            alternarMenu();
+
+            if (
+                menuDesplegable.classList.contains(
+                    "abierto"
+                )
+            ) {
+
+                cerrarMenu();
+
+            }
+
+            else {
+
+                abrirMenu();
+
+            }
 
         }
     );
@@ -809,11 +762,7 @@ if (
 
             enlace.addEventListener(
                 "click",
-                () => {
-
-                    cerrarMenu();
-
-                }
+                cerrarMenu
             );
 
         }
@@ -835,21 +784,13 @@ if (
             }
 
 
-            const dentroMenu =
-                menuDesplegable.contains(
-                    evento.target
-                );
-
-
-            const dentroBoton =
-                botonMenu.contains(
-                    evento.target
-                );
-
-
             if (
-                !dentroMenu &&
-                !dentroBoton
+                !menuDesplegable.contains(
+                    evento.target
+                ) &&
+                !botonMenu.contains(
+                    evento.target
+                )
             ) {
 
                 cerrarMenu();
@@ -872,8 +813,6 @@ if (
             ) {
 
                 cerrarMenu();
-
-                botonMenu.focus();
 
             }
 
@@ -949,7 +888,7 @@ if (navbar) {
 
 
 /* =====================================================
-   INICIALIZAR
+   INICIAR
 ===================================================== */
 
 mostrarProductos(
