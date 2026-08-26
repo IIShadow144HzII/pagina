@@ -6,273 +6,425 @@ const NUMERO_WHATSAPP = "34686606704";
 
 
 /* =====================================================
-   CATEGORÍA DE CADA PRODUCTO
+   PRODUCTOS
 ===================================================== */
 
-const categoriasProductos = {
-
-    /* RAMOS */
-
-    1: "ramos",
-    2: "ramos",
-    3: "ramos",
-    4: "ramos",
-    5: "ramos",
-    6: "ramos",
-    7: "ramos",
-    8: "ramos",
-    9: "ramos",
-    10: "ramos",
-    11: "ramos",
-    12: "ramos",
-    13: "ramos",
-    14: "ramos",
-
-
-    /* BUQUÉS DE ROSAS */
-
-    15: "buquesR",
-    16: "buquesR",
-    17: "buquesR",
-    18: "buquesR",
-    19: "buquesR",
-    20: "buquesR",
-
-
-    /* FLOR SECA */
-
-    21: "florSeca",
-    22: "florSeca",
-    23: "florSeca",
-    24: "florSeca",
-    25: "florSeca",
-    26: "florSeca",
-    27: "florSeca",
-    28: "florSeca",
-    29: "florSeca",
-    30: "florSeca",
-    31: "florSeca",
-    32: "florSeca",
-    33: "florSeca",
-    34: "florSeca",
-    35: "florSeca",
-
-
-    /* BUQUÉS DE ROSAS */
-
-};
-
-
-/* =====================================================
-   TIPO DE CADA PRODUCTO DE RAMOS
-===================================================== */
-
-/*
-   Solo los productos de Ramos necesitan tipo.
-
-   Tipos disponibles:
-
-   "buques"
-   "jarrones"
-   "capazos"
-*/
-
-const tiposRamos = {
-
-    1: "jarrones",
-    2: "jarrones",
-    3: "jarrones",
-
-    4: "capazos",
-    5: "capazos",
-    6: "capazos",
-
-    7: "buques",
-    8: "buques",
-    9: "buques",
-    10: "buques",
-    11: "buques",
-    12: "buques",
-    13: "buques",
-    14: "buques"
-
-};
-
-
-/* =====================================================
-   NOMBRES DE PRODUCTOS
-===================================================== */
-
-const nombresProductos = [
-
-    /* RAMOS */
-
-    "Jarrón Miramar",
-    "Jarrón Bibury",
-    "Jarrón Versailles",
-
-    "Capazo Sweet Song",
-    "Capazo Paradise",
-    "Capazo Melody",
-
-    "Bouquet Neko",
-    "Bouquet Campiña",
-    "Bouquet Sissí",
-    "Bouquet Lavanda",
-    "Bouquet Romantic",
-    "Bouquet Viena",
-    "Bouquet Borgoña",
-    "Bouquet Lyra",
-
-
-    /* BUQUÉS DE ROSAS */
-
-    "Ramo Sinfonía Escarlata",
-    "Bouquet Rubí Imperial",
-    "Bouquet Alba Imperial",
-    "Cesto 200 rosas Premium",
-    "Bouquet 12 rosas Premium",
-    "Dúo Mon Amour",
-
-
-    /* FLOR SECA */
-
-    "Jarrón Nirvana",
-    "Cesto Thanksgiving",
-    "Jarrón Sophie",
-    "Ramo Velvet",
-    "Jarrón Cinque Terre",
-    "Jarrón Victoria ( Seco/preservado)",
-    "Jarrón Venezia",
-    "Capazo Atardecer",
-    "Capazo Carnaval",
-    "Centro Siena",
-    "Jarrón Preservado Nostalgia",
-    "Jarrón Bretagne",
-    "Capazo Sorrento",
-    "Centro flor seca/preservada",
-    "Capazo Swetness",
-
-
-    /* BUQUÉS DE ROSAS */
-
-];
-
-
-/* =====================================================
-   FOTOS DE PRODUCTOS
-===================================================== */
-
-const imagenesProductos = [
-
-    /* RAMOS */
-
-    "jarrones/12720740-7f2a-4d99-92c8-8fe3e6f0f42c.png",
-    "jarrones/ca961ce3-bf7d-47e5-a21b-dff939145d45 (1).png",
-    "jarrones/6c5b50ae-9bb9-442b-bff3-6648e44e5d23.png",
-
-    "capazos/a8de9997-2b08-4d9e-a82a-6bc203d22d35.png",
-    "capazos/ee274873-4e51-474b-b09c-4bda965f7a11.png",
-    "capazos/42499836-87db-4c1c-a38d-9a0c2c825f36.png",
-
-    "ramos/c3431b4c-b30d-477d-a718-3653415fdb8e.png",
-    "ramos/acdf600c-d8b1-4efd-ae57-7c87451ef397.png",
-    "ramos/0b1a97fc-3de8-4430-a930-cf52c33d4f0a.png",
-    "ramos/350c6836-db7f-48c6-8c8a-2b75650422e7.jpg",
-    "ramos/9ccbc9ea-ce49-45de-b1a0-f76477987fc2.png",
-    "ramos/viena.png",
-    "ramos/8f1ba69b-d37f-40d9-9b6a-417a098c2d5d.png",
-    "ramos/89153cee-be99-475d-bf65-2959fc721442.png",
-
-
-    /* BUQUÉS DE ROSAS */
-
-    "buquesR/ChatGPT Image 24 ago 2026, 23_58_14.png",
-    "buquesR/53983f73-8293-4655-a271-99ff14534300.png",
-    "buquesR/11855efe-da6f-4e31-a50d-f7ab4841e69a.png",
-    "buquesR/ChatGPT Image 25 ago 2026, 00_11_24.png",
-    "buquesR/96d86412-f838-48c8-b051-64e8cfd24392.png",
-    "buquesR/88d61d80-58c4-4a00-be09-9115fe4e9331.png",
-
-
-    /* FLOR SECA */
-
-    "florSeca/0030198b-e793-449b-a18c-f6a501c7af14.png",
-    "florSeca/4e9d48e9-5159-4d34-903b-118f4a2bb5ed.png",
-    "florSeca/5abef82e-0260-47b3-b50e-82ad78135f8e.png",
-    "florSeca/a8b55ccb-62d6-4506-a0f1-b7ff750c753d.png",
-    "florSeca/2628f61d-8dd4-4cde-bc13-1aa28682db71.png",
-    "florSeca/d7402061-e60a-4f05-b389-5eba2e679c85.png",
-    "florSeca/0d6350fb-78d8-4274-a3e4-e0195f2ebc33.png",
-    "florSeca/285cdf90-e40c-4101-849d-3446fc974436.png",
-    "florSeca/d49d0753-4dd8-4c43-9bca-2e3cbabcfcaf.png",
-    "florSeca/41167f49-90bb-4085-9b4c-dc1e1230387e.png",
-    "florSeca/b5d228c2-9bb7-494d-9682-b5923ef3a1c0.png",
-    "florSeca/321cfe22-b9e9-4882-a6fc-a547d9a98810.png",
-    "florSeca/0e39b813-10be-4ba1-a423-f3553f2ca17b.png",
-    "florSeca/49a08bb2-eb83-49bc-853f-12e82542b3d8.png",
-    "florSeca/6caa529e-2ecb-4b6c-af8a-2a3095e01269.png",
-
-
-    /* BUQUÉS DE ROSAS */
-
-    "buques-rosas/buque-rosas-01.png",
-    "buques-rosas/buque-rosas-02.png",
-    "buques-rosas/buque-rosas-03.png",
-    "buques-rosas/buque-rosas-04.png",
-    "buques-rosas/buque-rosas-05.png",
-    "buques-rosas/buque-rosas-06.png"
-
-];
-
-
-/* =====================================================
-   CREAR PRODUCTOS
-===================================================== */
-
-const productos = [];
-
-
-for (let numero = 1; numero <= 41; numero++) {
-
-    const producto = {
-
-        id:
-            `producto-${String(numero).padStart(2, "0")}`,
-
-        nombre:
-            nombresProductos[numero - 1],
-
-        descripcion:
-            `Descripción del producto ${numero}.`,
-
-        imagen:
-            imagenesProductos[numero - 1],
-
-        categoria:
-            categoriasProductos[numero]
-
-    };
-
-
-    /*
-       Si pertenece a Ramos,
-       añadimos su tipo.
-    */
-
-    if (
-        producto.categoria === "ramos"
-    ) {
-
-        producto.tipo =
-            tiposRamos[numero];
-
+const productos = [
+
+    /* =================================================
+       RAMOS
+    ================================================= */
+
+    {
+        id: "producto-01",
+        nombre: "Jarrón Miramar",
+        descripcion: "Descripción del producto 1.",
+        imagen: "jarrones/12720740-7f2a-4d99-92c8-8fe3e6f0f42c.png",
+        categoria: "ramos",
+        tipo: "jarrones"
+    },
+
+    {
+        id: "producto-02",
+        nombre: "Jarrón Bibury",
+        descripcion: "Descripción del producto 2.",
+        imagen: "jarrones/ca961ce3-bf7d-47e5-a21b-dff939145d45 (1).png",
+        categoria: "ramos",
+        tipo: "jarrones"
+    },
+
+    {
+        id: "producto-03",
+        nombre: "Jarrón Versailles",
+        descripcion: "Descripción del producto 3.",
+        imagen: "jarrones/6c5b50ae-9bb9-442b-bff3-6648e44e5d23.png",
+        categoria: "ramos",
+        tipo: "jarrones"
+    },
+
+
+    {
+        id: "producto-04",
+        nombre: "Capazo Sweet Song",
+        descripcion: "Descripción del producto 4.",
+        imagen: "capazos/a8de9997-2b08-4d9e-a82a-6bc203d22d35.png",
+        categoria: "ramos",
+        tipo: "capazos"
+    },
+
+    {
+        id: "producto-05",
+        nombre: "Capazo Paradise",
+        descripcion: "Descripción del producto 5.",
+        imagen: "capazos/ee274873-4e51-474b-b09c-4bda965f7a11.png",
+        categoria: "ramos",
+        tipo: "capazos"
+    },
+
+    {
+        id: "producto-06",
+        nombre: "Capazo Melody",
+        descripcion: "Descripción del producto 6.",
+        imagen: "capazos/42499836-87db-4c1c-a38d-9a0c2c825f36.png",
+        categoria: "ramos",
+        tipo: "capazos"
+    },
+
+
+    {
+        id: "producto-07",
+        nombre: "Bouquet Neko",
+        descripcion: "Descripción del producto 7.",
+        imagen: "ramos/c3431b4c-b30d-477d-a718-3653415fdb8e.png",
+        categoria: "ramos",
+        tipo: "buques"
+    },
+
+    {
+        id: "producto-08",
+        nombre: "Bouquet Campiña",
+        descripcion: "Descripción del producto 8.",
+        imagen: "ramos/acdf600c-d8b1-4efd-ae57-7c87451ef397.png",
+        categoria: "ramos",
+        tipo: "buques"
+    },
+
+    {
+        id: "producto-09",
+        nombre: "Bouquet Sissí",
+        descripcion: "Descripción del producto 9.",
+        imagen: "ramos/0b1a97fc-3de8-4430-a930-cf52c33d4f0a.png",
+        categoria: "ramos",
+        tipo: "buques"
+    },
+
+    {
+        id: "producto-10",
+        nombre: "Bouquet Lavanda",
+        descripcion: "Descripción del producto 10.",
+        imagen: "ramos/350c6836-db7f-48c6-8c8a-2b75650422e7.jpg",
+        categoria: "ramos",
+        tipo: "buques"
+    },
+
+    {
+        id: "producto-11",
+        nombre: "Bouquet Romantic",
+        descripcion: "Descripción del producto 11.",
+        imagen: "ramos/9ccbc9ea-ce49-45de-b1a0-f76477987fc2.png",
+        categoria: "ramos",
+        tipo: "buques"
+    },
+
+    {
+        id: "producto-12",
+        nombre: "Bouquet Viena",
+        descripcion: "Descripción del producto 12.",
+        imagen: "ramos/viena.png",
+        categoria: "ramos",
+        tipo: "buques"
+    },
+
+    {
+        id: "producto-13",
+        nombre: "Bouquet Borgoña",
+        descripcion: "Descripción del producto 13.",
+        imagen: "ramos/8f1ba69b-d37f-40d9-9b6a-417a098c2d5d.png",
+        categoria: "ramos",
+        tipo: "buques"
+    },
+
+    {
+        id: "producto-14",
+        nombre: "Bouquet Lyra",
+        descripcion: "Descripción del producto 14.",
+        imagen: "ramos/89153cee-be99-475d-bf65-2959fc721442.png",
+        categoria: "ramos",
+        tipo: "buques"
+    },
+
+
+    /* =================================================
+       BUQUÉS DE ROSAS
+    ================================================= */
+
+    {
+        id: "producto-15",
+        nombre: "Ramo Sinfonía Escarlata",
+        descripcion: "Descripción del producto 15.",
+        imagen: "buquesR/ChatGPT Image 24 ago 2026, 23_58_14.png",
+        categoria: "buquesR"
+    },
+
+    {
+        id: "producto-16",
+        nombre: "Bouquet Rubí Imperial",
+        descripcion: "Descripción del producto 16.",
+        imagen: "buquesR/53983f73-8293-4655-a271-99ff14534300.png",
+        categoria: "buquesR"
+    },
+
+    {
+        id: "producto-17",
+        nombre: "Bouquet Alba Imperial",
+        descripcion: "Descripción del producto 17.",
+        imagen: "buquesR/11855efe-da6f-4e31-a50d-f7ab4841e69a.png",
+        categoria: "buquesR"
+    },
+
+    {
+        id: "producto-18",
+        nombre: "Cesto 200 rosas Premium",
+        descripcion: "Descripción del producto 18.",
+        imagen: "buquesR/ChatGPT Image 25 ago 2026, 00_11_24.png",
+        categoria: "buquesR"
+    },
+
+    {
+        id: "producto-19",
+        nombre: "Bouquet 12 rosas Premium",
+        descripcion: "Descripción del producto 19.",
+        imagen: "buquesR/96d86412-f838-48c8-b051-64e8cfd24392.png",
+        categoria: "buquesR"
+    },
+
+    {
+        id: "producto-20",
+        nombre: "Dúo Mon Amour",
+        descripcion: "Descripción del producto 20.",
+        imagen: "buquesR/88d61d80-58c4-4a00-be09-9115fe4e9331.png",
+        categoria: "buquesR"
+    },
+
+
+    /* =================================================
+       FLOR SECA
+    ================================================= */
+
+    {
+        id: "producto-21",
+        nombre: "Jarrón Nirvana",
+        descripcion: "Descripción del producto 21.",
+        imagen: "florSeca/0030198b-e793-449b-a18c-f6a501c7af14.png",
+        categoria: "florSeca"
+    },
+
+    {
+        id: "producto-22",
+        nombre: "Cesto Thanksgiving",
+        descripcion: "Descripción del producto 22.",
+        imagen: "florSeca/4e9d48e9-5159-4d34-903b-118f4a2bb5ed.png",
+        categoria: "florSeca"
+    },
+
+    {
+        id: "producto-23",
+        nombre: "Jarrón Sophie",
+        descripcion: "Descripción del producto 23.",
+        imagen: "florSeca/5abef82e-0260-47b3-b50e-82ad78135f8e.png",
+        categoria: "florSeca"
+    },
+
+    {
+        id: "producto-24",
+        nombre: "Ramo Velvet",
+        descripcion: "Descripción del producto 24.",
+        imagen: "florSeca/a8b55ccb-62d6-4506-a0f1-b7ff750c753d.png",
+        categoria: "florSeca"
+    },
+
+    {
+        id: "producto-25",
+        nombre: "Jarrón Cinque Terre",
+        descripcion: "Descripción del producto 25.",
+        imagen: "florSeca/2628f61d-8dd4-4cde-bc13-1aa28682db71.png",
+        categoria: "florSeca"
+    },
+
+    {
+        id: "producto-26",
+        nombre: "Jarrón Victoria ( Seco/preservado)",
+        descripcion: "Descripción del producto 26.",
+        imagen: "florSeca/d7402061-e60a-4f05-b389-5eba2e679c85.png",
+        categoria: "florSeca"
+    },
+
+    {
+        id: "producto-27",
+        nombre: "Jarrón Venezia",
+        descripcion: "Descripción del producto 27.",
+        imagen: "florSeca/0d6350fb-78d8-4274-a3e4-e0195f2ebc33.png",
+        categoria: "florSeca"
+    },
+
+    {
+        id: "producto-28",
+        nombre: "Capazo Atardecer",
+        descripcion: "Descripción del producto 28.",
+        imagen: "florSeca/285cdf90-e40c-4101-849d-3446fc974436.png",
+        categoria: "florSeca"
+    },
+
+    {
+        id: "producto-29",
+        nombre: "Capazo Carnaval",
+        descripcion: "Descripción del producto 29.",
+        imagen: "florSeca/d49d0753-4dd8-4c43-9bca-2e3cbabcfcaf.png",
+        categoria: "florSeca"
+    },
+
+    {
+        id: "producto-30",
+        nombre: "Centro Siena",
+        descripcion: "Descripción del producto 30.",
+        imagen: "florSeca/41167f49-90bb-4085-9b4c-dc1e1230387e.png",
+        categoria: "florSeca"
+    },
+
+    {
+        id: "producto-31",
+        nombre: "Jarrón Preservado Nostalgia",
+        descripcion: "Descripción del producto 31.",
+        imagen: "florSeca/b5d228c2-9bb7-494d-9682-b5923ef3a1c0.png",
+        categoria: "florSeca"
+    },
+
+    {
+        id: "producto-32",
+        nombre: "Jarrón Bretagne",
+        descripcion: "Descripción del producto 32.",
+        imagen: "florSeca/321cfe22-b9e9-4882-a6fc-a547d9a98810.png",
+        categoria: "florSeca"
+    },
+
+    {
+        id: "producto-33",
+        nombre: "Capazo Sorrento",
+        descripcion: "Descripción del producto 33.",
+        imagen: "florSeca/0e39b813-10be-4ba1-a423-f3553f2ca17b.png",
+        categoria: "florSeca"
+    },
+
+    {
+        id: "producto-34",
+        nombre: "Centro flor seca/preservada",
+        descripcion: "Descripción del producto 34.",
+        imagen: "florSeca/49a08bb2-eb83-49bc-853f-12e82542b3d8.png",
+        categoria: "florSeca"
+    },
+
+    {
+        id: "producto-35",
+        nombre: "Capazo Swetness",
+        descripcion: "Descripción del producto 35.",
+        imagen: "florSeca/6caa529e-2ecb-4b6c-af8a-2a3095e01269.png",
+        categoria: "florSeca"
+    },
+
+
+   
+
+    /* =================================================
+       CENTROS FLORALES
+    ================================================= */
+
+    {
+        id: "producto-42",
+        nombre: "Centro Elegance",
+        descripcion: "Descripción del producto 42.",
+        imagen: "centros-florales/80f57d45-59da-4cf8-adad-e1c49e8f36da.png",
+        categoria: "centros-florales"
+    },
+
+    {
+        id: "producto-43",
+        nombre: "Centro Armonía",
+        descripcion: "Descripción del producto 43.",
+        imagen: "centros-florales/c5d5f52a-d687-4f88-b931-60c52f806fa7.png",
+        categoria: "centros-florales"
+    },
+
+    {
+        id: "producto-44",
+        nombre: "Centro Sweet",
+        descripcion: "Descripción del producto 44.",
+        imagen: "centros-florales/c03df9d4-432c-4c92-a708-d099c5181a24.png",
+        categoria: "centros-florales"
+    },
+
+    {
+        id: "producto-45",
+        nombre: "Centro Moon",
+        descripcion: "Descripción del producto 45.",
+        imagen: "centros-florales/ec8675d3-8943-43bc-b5e4-176c33e0aa11.png",
+        categoria: "centros-florales"
+    },
+
+    {
+        id: "producto-46",
+        nombre: "Centro Memory",
+        descripcion: "Descripción del producto 46.",
+        imagen: "centros-florales/17002b9e-0730-46db-b831-35fba41c850d.png",
+        categoria: "centros-florales"
+    },
+
+    {
+        id: "producto-47",
+        nombre: "Centro Tropic",
+        descripcion: "Descripción del producto 47.",
+        imagen: "centros-florales/b1fb872e-cf60-44c9-8d2e-3dbae33b6eb1.png",
+        categoria: "centros-florales"
+    },
+
+    {
+        id: "producto-48",
+        nombre: "Centro Nieve y Terciopelo",
+        descripcion: "Descripción del producto 48.",
+        imagen: "centros-florales/22c7c252-95aa-4ed3-a1e1-ad0a12ca6a13.png",
+        categoria: "centros-florales"
+    },
+
+    {
+        id: "producto-49",
+        nombre: "Centro Essence",
+        descripcion: "Descripción del producto 49.",
+        imagen: "centros-florales/9ae6657a-e9d2-4439-8388-ffbaf2ac3278.png",
+        categoria: "centros-florales"
+    },
+
+    {
+        id: "producto-50",
+        nombre: "Centro Duende y Alma",
+        descripcion: "Descripción del producto 50.",
+        imagen: "centros-florales/ddce1a27-bae0-4dd2-a2ce-81a10b1ffbb1.png",
+        categoria: "centros-florales"
+    },
+
+    {
+        id: "producto-51",
+        nombre: "Centro Vals",
+        descripcion: "Descripción del producto 51.",
+        imagen: "centros-florales/9dcc46b7-c2ec-4764-9524-103e74e68436.png",
+        categoria: "centros-florales"
+    },
+
+    {
+        id: "producto-53",
+        nombre: "Centro Edelwise",
+        descripcion: "Descripción del producto 53.",
+        imagen: "centros-florales/31d87979-4a60-4610-aac3-3fcbc4588a00.png",
+        categoria: "centros-florales"
+    },
+
+    {
+        id: "producto-54",
+        nombre: "Centro Blue Moon",
+        descripcion: "Descripción del producto 54.",
+        imagen: "centros-florales/4c2df6af-bcf4-4a9b-a592-d350c75f1a93.png",
+        categoria: "centros-florales"
     }
 
-
-    productos.push(producto);
-
-}
+];
 
 
 /* =====================================================
@@ -280,24 +432,16 @@ for (let numero = 1; numero <= 41; numero++) {
 ===================================================== */
 
 const productosGrid =
-    document.getElementById(
-        "productosGrid"
-    );
+    document.getElementById("productosGrid");
 
 const filtros =
-    document.querySelectorAll(
-        ".filtro"
-    );
+    document.querySelectorAll(".filtro");
 
 const subfiltrosRamos =
-    document.getElementById(
-        "subfiltrosRamos"
-    );
+    document.getElementById("subfiltrosRamos");
 
 const subfiltros =
-    document.querySelectorAll(
-        ".subfiltro"
-    );
+    document.querySelectorAll(".subfiltro");
 
 
 /* =====================================================
@@ -351,19 +495,13 @@ function mostrarProductos(lista) {
     lista.forEach((producto) => {
 
         const tarjeta =
-            document.createElement(
-                "article"
-            );
+            document.createElement("article");
 
-        tarjeta.classList.add(
-            "producto"
-        );
+        tarjeta.classList.add("producto");
 
 
         const enlaceWhatsApp =
-            crearEnlaceWhatsApp(
-                producto
-            );
+            crearEnlaceWhatsApp(producto);
 
 
         tarjeta.innerHTML = `
@@ -406,9 +544,7 @@ function mostrarProductos(lista) {
         `;
 
 
-        productosGrid.appendChild(
-            tarjeta
-        );
+        productosGrid.appendChild(tarjeta);
 
     });
 
@@ -416,20 +552,14 @@ function mostrarProductos(lista) {
 
 
 /* =====================================================
-   MOSTRAR / OCULTAR SUBFILTROS
+   SUBFILTROS DE RAMOS
 ===================================================== */
 
-function actualizarSubfiltros(
-    categoria
-) {
+function actualizarSubfiltros(categoria) {
 
-    if (
-        categoria === "ramos"
-    ) {
+    if (categoria === "ramos") {
 
-        subfiltrosRamos.classList.add(
-            "visible"
-        );
+        subfiltrosRamos.classList.add("visible");
 
         subfiltrosRamos.setAttribute(
             "aria-hidden",
@@ -437,15 +567,11 @@ function actualizarSubfiltros(
         );
 
 
-        subfiltros.forEach(
-            (boton) => {
+        subfiltros.forEach((boton) => {
 
-                boton.classList.remove(
-                    "activo"
-                );
+            boton.classList.remove("activo");
 
-            }
-        );
+        });
 
 
         const todos =
@@ -456,9 +582,7 @@ function actualizarSubfiltros(
 
         if (todos) {
 
-            todos.classList.add(
-                "activo"
-            );
+            todos.classList.add("activo");
 
         }
 
@@ -468,9 +592,7 @@ function actualizarSubfiltros(
     }
 
 
-    subfiltrosRamos.classList.remove(
-        "visible"
-    );
+    subfiltrosRamos.classList.remove("visible");
 
     subfiltrosRamos.setAttribute(
         "aria-hidden",
@@ -484,165 +606,121 @@ function actualizarSubfiltros(
    FILTROS PRINCIPALES
 ===================================================== */
 
-filtros.forEach(
-    (filtro) => {
+filtros.forEach((filtro) => {
 
-        filtro.addEventListener(
-            "click",
-            () => {
+    filtro.addEventListener("click", () => {
 
-                filtros.forEach(
-                    (boton) => {
+        filtros.forEach((boton) => {
 
-                        boton.classList.remove(
-                            "activo"
-                        );
+            boton.classList.remove("activo");
 
-                    }
-                );
+        });
 
 
-                filtro.classList.add(
-                    "activo"
-                );
+        filtro.classList.add("activo");
 
 
-                const categoria =
-                    filtro.dataset.categoria;
+        const categoria =
+            filtro.dataset.categoria;
 
 
-                actualizarSubfiltros(
-                    categoria
-                );
+        actualizarSubfiltros(categoria);
 
 
-                /*
-                   TODOS
-                */
+        /* TODOS */
 
-                if (
-                    categoria === "todos"
-                ) {
+        if (categoria === "todos") {
 
-                    mostrarProductos(
-                        productos
-                    );
+            mostrarProductos(productos);
 
-                    return;
+            return;
 
-                }
+        }
 
 
-                /*
-                   Filtrar por categoría.
-                */
+        /*
+           IMPORTANTE:
+           Solo muestra productos cuya
+           categoría sea EXACTAMENTE la
+           del botón pulsado.
+        */
 
-                const filtrados =
-                    productos.filter(
-                        (producto) =>
-                            producto.categoria ===
-                            categoria
-                    );
+        const filtrados =
+            productos.filter(
+                (producto) =>
+                    producto.categoria === categoria
+            );
 
 
-                mostrarProductos(
-                    filtrados
-                );
+        mostrarProductos(filtrados);
 
-            }
-        );
+    });
 
-    }
-);
+});
 
 
 /* =====================================================
    SUBFILTROS DE RAMOS
 ===================================================== */
 
-subfiltros.forEach(
-    (boton) => {
+subfiltros.forEach((boton) => {
 
-        boton.addEventListener(
-            "click",
-            (evento) => {
+    boton.addEventListener("click", (evento) => {
 
-                /*
-                   Evita que el clic active
-                   también el botón Ramos.
-                */
-
-                evento.stopPropagation();
+        evento.stopPropagation();
 
 
-                subfiltros.forEach(
-                    (b) => {
+        subfiltros.forEach((b) => {
 
-                        b.classList.remove(
-                            "activo"
-                        );
+            b.classList.remove("activo");
 
-                    }
+        });
+
+
+        boton.classList.add("activo");
+
+
+        const tipo =
+            boton.dataset.tipo;
+
+
+        /* TODOS LOS RAMOS */
+
+        if (tipo === "todos") {
+
+            const todosLosRamos =
+                productos.filter(
+                    (producto) =>
+                        producto.categoria === "ramos"
                 );
 
 
-                boton.classList.add(
-                    "activo"
-                );
+            mostrarProductos(todosLosRamos);
+
+            return;
+
+        }
 
 
-                const tipo =
-                    boton.dataset.tipo;
+        /*
+           Solo buscamos dentro de Ramos.
+           Esto impide que productos de
+           otras categorías aparezcan aquí.
+        */
+
+        const filtrados =
+            productos.filter(
+                (producto) =>
+                    producto.categoria === "ramos" &&
+                    producto.tipo === tipo
+            );
 
 
-                /*
-                   TODOS LOS RAMOS
-                */
+        mostrarProductos(filtrados);
 
-                if (
-                    tipo === "todos"
-                ) {
+    });
 
-                    const todosLosRamos =
-                        productos.filter(
-                            (producto) =>
-                                producto.categoria ===
-                                "ramos"
-                        );
-
-
-                    mostrarProductos(
-                        todosLosRamos
-                    );
-
-                    return;
-
-                }
-
-
-                /*
-                   BUQUÉS / JARRONES / CAPAZOS
-                */
-
-                const filtrados =
-                    productos.filter(
-                        (producto) =>
-                            producto.categoria ===
-                                "ramos" &&
-                            producto.tipo ===
-                                tipo
-                    );
-
-
-                mostrarProductos(
-                    filtrados
-                );
-
-            }
-        );
-
-    }
-);
+});
 
 
 /* =====================================================
@@ -650,27 +728,18 @@ subfiltros.forEach(
 ===================================================== */
 
 const botonMenu =
-    document.getElementById(
-        "menuBtn"
-    );
+    document.getElementById("menuBtn");
 
 const menuDesplegable =
-    document.getElementById(
-        "menuDesplegable"
-    );
+    document.getElementById("menuDesplegable");
 
 
-if (
-    botonMenu &&
-    menuDesplegable
-) {
+if (botonMenu && menuDesplegable) {
 
 
     function abrirMenu() {
 
-        menuDesplegable.classList.add(
-            "abierto"
-        );
+        menuDesplegable.classList.add("abierto");
 
         botonMenu.setAttribute(
             "aria-expanded",
@@ -697,9 +766,7 @@ if (
 
     function cerrarMenu() {
 
-        menuDesplegable.classList.remove(
-            "abierto"
-        );
+        menuDesplegable.classList.remove("abierto");
 
         botonMenu.setAttribute(
             "aria-expanded",
@@ -715,11 +782,9 @@ if (
             '<i class="bi bi-list"></i>';
 
 
-        document.documentElement.style.overflow =
-            "";
+        document.documentElement.style.overflow = "";
 
-        document.body.style.overflow =
-            "";
+        document.body.style.overflow = "";
 
     }
 
@@ -739,9 +804,7 @@ if (
 
                 cerrarMenu();
 
-            }
-
-            else {
+            } else {
 
                 abrirMenu();
 
@@ -752,21 +815,17 @@ if (
 
 
     const enlacesMenu =
-        menuDesplegable.querySelectorAll(
-            "a"
+        menuDesplegable.querySelectorAll("a");
+
+
+    enlacesMenu.forEach((enlace) => {
+
+        enlace.addEventListener(
+            "click",
+            cerrarMenu
         );
 
-
-    enlacesMenu.forEach(
-        (enlace) => {
-
-            enlace.addEventListener(
-                "click",
-                cerrarMenu
-            );
-
-        }
-    );
+    });
 
 
     document.addEventListener(
@@ -846,26 +905,20 @@ if (
 ===================================================== */
 
 const navbar =
-    document.querySelector(
-        "nav"
-    );
+    document.querySelector("nav");
 
 
 if (navbar) {
 
     function actualizarNavbar() {
 
-        if (
-            window.scrollY > 0
-        ) {
+        if (window.scrollY > 0) {
 
             navbar.classList.add(
                 "navbar-scroll"
             );
 
-        }
-
-        else {
+        } else {
 
             navbar.classList.remove(
                 "navbar-scroll"
@@ -891,6 +944,4 @@ if (navbar) {
    INICIAR
 ===================================================== */
 
-mostrarProductos(
-    productos
-);
+mostrarProductos(productos);
