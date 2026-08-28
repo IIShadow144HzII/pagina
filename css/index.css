@@ -38,7 +38,7 @@ body {
 body {
     font-family: "Lora", serif;
     color: var(--negro);
-    background: var(--marfil);
+    background: #FAF8F4;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 }
@@ -747,105 +747,356 @@ nav {
 }
 
 /* Fondo fotográfico: empieza debajo de cabecera + filtros */
+.productos {
+    position: relative;
+    isolation: isolate;
+    width: 100%;
+    padding: 40px 40px 110px;
+    background: #FAF8F4;
+    overflow: hidden;
+}
+
+/* El contenido queda siempre por encima del fondo fotográfico */
+.productos > * {
+    position: relative;
+    z-index: 2;
+}
+
+/*
+   =========================================================
+   FONDOS DEL CATÁLOGO
+   =========================================================
+
+   IMPORTANTE:
+   La altura del pseudo-elemento coincide EXACTAMENTE con la
+   proporción de la imagen. De esta forma el degradado termina
+   antes de que desaparezca la fotografía y se funde con
+   #FAF8F4 sin crear ninguna línea de corte.
+*/
+
 .productos::after {
     content: "";
     position: absolute;
     left: 0;
-    right: 0;
     top: 314px;
-    bottom: 0;
+    width: 100%;
     z-index: 0;
     pointer-events: none;
 
-    background-size: 100% auto;
     background-position: center top;
     background-repeat: no-repeat;
-
+    background-size: 100% 100%;
     opacity: 1;
 }
 
-/* Todos */
+/*
+   El degradado se coloca como primera capa.
+   La fotografía queda debajo.
+
+   A partir del 90% de la altura de la imagen el resultado es
+   completamente #FAF8F4. Por tanto, al llegar al último píxel
+   de la fotografía ya no existe contraste con el fondo general.
+*/
+
+/* TODOS */
 .productos.fondo-todos::after {
+    aspect-ratio: 1672 / 941;
     background-image:
         linear-gradient(
             to bottom,
-            rgba(250, 248, 244, .12) 0%,
-            rgba(250, 248, 244, .28) 28%,
-            rgba(250, 248, 244, .62) 58%,
-            #FAF8F4 86%,
+            rgba(250, 248, 244, 0) 48%,
+            rgba(250, 248, 244, .08) 58%,
+            rgba(250, 248, 244, .22) 66%,
+            rgba(250, 248, 244, .45) 74%,
+            rgba(250, 248, 244, .70) 82%,
+            rgba(250, 248, 244, .90) 88%,
+            #FAF8F4 94%,
             #FAF8F4 100%
         ),
-        url("../fondos/ChatGPT\ Image\ 28\ ago\ 2026\,\ 15_08_25.png");
+        url("../fondos/2e7f0c35-0f9a-4234-95ae-5a80096e32AAAAAAAAAAAAAAAAc6.png");
 }
 
-/* Ramos + sus subfiltros */
+/* RAMOS */
 .productos.fondo-ramos::after {
+    aspect-ratio: 1672 / 941;
     background-image:
         linear-gradient(
             to bottom,
-            rgba(250, 245, 243, .12) 0%,
-            rgba(250, 245, 243, .28) 28%,
-            rgba(250, 245, 243, .62) 58%,
-            #FAF5F3 86%,
-            #FAF5F3 100%
-        ),
-        url("../fondos/ChatGPT\ Image\ 28\ ago\ 2026\,\ 15_09_03.png");
-}
-
-/* Buqués de rosas */
-.productos.fondo-buquesR::after {
-    background-image:
-        linear-gradient(
-            to bottom,
-            rgba(248, 241, 240, .12) 0%,
-            rgba(248, 241, 240, .28) 28%,
-            rgba(248, 241, 240, .62) 58%,
-            #F8F1F0 86%,
-            #F8F1F0 100%
-        ),
-        url("../fondos/ChatGPT\ Image\ 28\ ago\ 2026\,\ 15_10_02.png");
-}
-
-/* Flor seca / preservada */
-.productos.fondo-florSeca::after {
-    background-image:
-        linear-gradient(
-            to bottom,
-            rgba(248, 244, 235, .12) 0%,
-            rgba(248, 244, 235, .28) 28%,
-            rgba(248, 244, 235, .62) 58%,
-            #F8F4EB 86%,
-            #F8F4EB 100%
-        ),
-        url("../fondos/ChatGPT\ Image\ 28\ ago\ 2026\,\ 15_11_09.png");
-}
-
-/* Centros florales */
-.productos.fondo-centros::after {
-    background-image:
-        linear-gradient(
-            to bottom,
-            rgba(245, 246, 239, .12) 0%,
-            rgba(245, 246, 239, .28) 28%,
-            rgba(245, 246, 239, .62) 58%,
-            #F5F6EF 86%,
-            #F5F6EF 100%
-        ),
-        url("../fondos/ChatGPT\ Image\ 28\ ago\ 2026\,\ 15_12_09.png");
-}
-
-/* Complementos / eventos */
-.productos.fondo-eventos::after {
-    background-image:
-        linear-gradient(
-            to bottom,
-            rgba(250, 248, 244, .12) 0%,
-            rgba(250, 248, 244, .28) 28%,
-            rgba(250, 248, 244, .62) 58%,
-            #FAF8F4 86%,
+            rgba(250, 248, 244, 0) 48%,
+            rgba(250, 248, 244, .08) 58%,
+            rgba(250, 248, 244, .22) 66%,
+            rgba(250, 248, 244, .45) 74%,
+            rgba(250, 248, 244, .70) 82%,
+            rgba(250, 248, 244, .90) 88%,
+            #FAF8F4 94%,
             #FAF8F4 100%
         ),
-        url("../fondos/ChatGPT\ Image\ 28\ ago\ 2026\,\ 15_08_25.png");
+        url("../fondos/3e2dfe2a-7fc1-4c0a-ab44-86bdc3d2624a.png");
+}
+
+/* BUQUÉS DE ROSAS */
+.productos.fondo-buquesR::after {
+    aspect-ratio: 1672 / 941;
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(250, 248, 244, 0) 48%,
+            rgba(250, 248, 244, .08) 58%,
+            rgba(250, 248, 244, .22) 66%,
+            rgba(250, 248, 244, .45) 74%,
+            rgba(250, 248, 244, .70) 82%,
+            rgba(250, 248, 244, .90) 88%,
+            #FAF8F4 94%,
+            #FAF8F4 100%
+        ),
+        url("../fondos/a96a3f1c-2672-4161-88cd-0efe5eb4fcb2.png");
+}
+
+/* FLOR SECA / PRESERVADA */
+.productos.fondo-florSeca::after {
+    aspect-ratio: 1672 / 941;
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(250, 248, 244, 0) 48%,
+            rgba(250, 248, 244, .08) 58%,
+            rgba(250, 248, 244, .22) 66%,
+            rgba(250, 248, 244, .45) 74%,
+            rgba(250, 248, 244, .70) 82%,
+            rgba(250, 248, 244, .90) 88%,
+            #FAF8F4 94%,
+            #FAF8F4 100%
+        ),
+        url("../fondos/7623cff2-c089-489a-9bd5-042e69ef9fca.png");
+}
+
+/* CENTROS FLORALES */
+.productos.fondo-centros::after {
+    aspect-ratio: 1672 / 941;
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(250, 248, 244, 0) 48%,
+            rgba(250, 248, 244, .08) 58%,
+            rgba(250, 248, 244, .22) 66%,
+            rgba(250, 248, 244, .45) 74%,
+            rgba(250, 248, 244, .70) 82%,
+            rgba(250, 248, 244, .90) 88%,
+            #FAF8F4 94%,
+            #FAF8F4 100%
+        ),
+        url("../fondos/ChatGPT Image 28 ago 2026, 16_12_02.png");
+}
+
+/* COMPLEMENTOS / EVENTOS */
+.productos.fondo-eventos::after {
+    aspect-ratio: 1672 / 941;
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba(250, 248, 244, 0) 48%,
+            rgba(250, 248, 244, .08) 58%,
+            rgba(250, 248, 244, .22) 66%,
+            rgba(250, 248, 244, .45) 74%,
+            rgba(250, 248, 244, .70) 82%,
+            rgba(250, 248, 244, .90) 88%,
+            #FAF8F4 94%,
+            #FAF8F4 100%
+        ),
+        url("../fondos/3e2dfe2a-7fc1-4c0a-ab44-86bdc3d2624a.png");
+}
+
+/*
+   =========================================================
+   MÓVIL / IPAD
+   =========================================================
+*/
+
+@media (max-width: 768px) {
+
+    /* RAMOS + TODOS */
+    .productos.fondo-ramos::after,
+    .productos.fondo-todos::after {
+        aspect-ratio: 853 / 1844;
+        background-image:
+            linear-gradient(
+                to bottom,
+                rgba(250, 248, 244, 0) 48%,
+                rgba(250, 248, 244, .08) 58%,
+                rgba(250, 248, 244, .22) 66%,
+                rgba(250, 248, 244, .45) 74%,
+                rgba(250, 248, 244, .70) 82%,
+                rgba(250, 248, 244, .90) 88%,
+                #FAF8F4 94%,
+                #FAF8F4 100%
+            ),
+            url("../fondos/01a20372-44f5-445f-b102-44bfc3de5b08.png");
+    }
+
+    /* BUQUÉS DE ROSAS */
+    .productos.fondo-buquesR::after {
+        aspect-ratio: 864 / 1821;
+        background-image:
+            linear-gradient(
+                to bottom,
+                rgba(250, 248, 244, 0) 48%,
+                rgba(250, 248, 244, .08) 58%,
+                rgba(250, 248, 244, .22) 66%,
+                rgba(250, 248, 244, .45) 74%,
+                rgba(250, 248, 244, .70) 82%,
+                rgba(250, 248, 244, .90) 88%,
+                #FAF8F4 94%,
+                #FAF8F4 100%
+            ),
+            url("../fondos/5fe0dfea-9617-4645-932f-d3fe35de8eaf.png");
+    }
+
+    /* FLOR SECA / PRESERVADA */
+    .productos.fondo-florSeca::after {
+        aspect-ratio: 941 / 1672;
+        background-image:
+            linear-gradient(
+                to bottom,
+                rgba(250, 248, 244, 0) 48%,
+                rgba(250, 248, 244, .08) 58%,
+                rgba(250, 248, 244, .22) 66%,
+                rgba(250, 248, 244, .45) 74%,
+                rgba(250, 248, 244, .70) 82%,
+                rgba(250, 248, 244, .90) 88%,
+                #FAF8F4 94%,
+                #FAF8F4 100%
+            ),
+            url("../fondos/3465b8c2-3e70-499c-bbc9-84834e329e50.png");
+    }
+
+    /* CENTROS FLORALES */
+    .productos.fondo-centros::after {
+        aspect-ratio: 941 / 1672;
+        background-image:
+            linear-gradient(
+                to bottom,
+                rgba(250, 248, 244, 0) 48%,
+                rgba(250, 248, 244, .08) 58%,
+                rgba(250, 248, 244, .22) 66%,
+                rgba(250, 248, 244, .45) 74%,
+                rgba(250, 248, 244, .70) 82%,
+                rgba(250, 248, 244, .90) 88%,
+                #FAF8F4 94%,
+                #FAF8F4 100%
+            ),
+            url("../fondos/dae31a08-ca8c-4257-9bfe-f2a428b21d1d.png");
+    }
+
+    /* COMPLEMENTOS / EVENTOS */
+    .productos.fondo-eventos::after {
+        aspect-ratio: 853 / 1844;
+        background-image:
+            linear-gradient(
+                to bottom,
+                rgba(250, 248, 244, 0) 48%,
+                rgba(250, 248, 244, .08) 58%,
+                rgba(250, 248, 244, .22) 66%,
+                rgba(250, 248, 244, .45) 74%,
+                rgba(250, 248, 244, .70) 82%,
+                rgba(250, 248, 244, .90) 88%,
+                #FAF8F4 94%,
+                #FAF8F4 100%
+            ),
+            url("../fondos/01a20372-44f5-445f-b102-44bfc3de5b08.png");
+    }
+}
+
+/*
+   iPad/tablet táctil en horizontal:
+   utiliza las versiones verticales.
+*/
+@media (min-width: 769px) and (max-width: 1100px) and (pointer: coarse) {
+
+    .productos.fondo-ramos::after,
+    .productos.fondo-todos::after {
+        aspect-ratio: 853 / 1844;
+        background-image:
+            linear-gradient(
+                to bottom,
+                rgba(250, 248, 244, 0) 48%,
+                rgba(250, 248, 244, .08) 58%,
+                rgba(250, 248, 244, .22) 66%,
+                rgba(250, 248, 244, .45) 74%,
+                rgba(250, 248, 244, .70) 82%,
+                rgba(250, 248, 244, .90) 88%,
+                #FAF8F4 94%,
+                #FAF8F4 100%
+            ),
+            url("../fondos/01a20372-44f5-445f-b102-44bfc3de5b08.png");
+    }
+
+    .productos.fondo-buquesR::after {
+        aspect-ratio: 864 / 1821;
+        background-image:
+            linear-gradient(
+                to bottom,
+                rgba(250, 248, 244, 0) 48%,
+                rgba(250, 248, 244, .08) 58%,
+                rgba(250, 248, 244, .22) 66%,
+                rgba(250, 248, 244, .45) 74%,
+                rgba(250, 248, 244, .70) 82%,
+                rgba(250, 248, 244, .90) 88%,
+                #FAF8F4 94%,
+                #FAF8F4 100%
+            ),
+            url("../fondos/5fe0dfea-9617-4645-932f-d3fe35de8eaf.png");
+    }
+
+    .productos.fondo-florSeca::after {
+        aspect-ratio: 941 / 1672;
+        background-image:
+            linear-gradient(
+                to bottom,
+                rgba(250, 248, 244, 0) 48%,
+                rgba(250, 248, 244, .08) 58%,
+                rgba(250, 248, 244, .22) 66%,
+                rgba(250, 248, 244, .45) 74%,
+                rgba(250, 248, 244, .70) 82%,
+                rgba(250, 248, 244, .90) 88%,
+                #FAF8F4 94%,
+                #FAF8F4 100%
+            ),
+            url("../fondos/3465b8c2-3e70-499c-bbc9-84834e329e50.png");
+    }
+
+    .productos.fondo-centros::after {
+        aspect-ratio: 941 / 1672;
+        background-image:
+            linear-gradient(
+                to bottom,
+                rgba(250, 248, 244, 0) 48%,
+                rgba(250, 248, 244, .08) 58%,
+                rgba(250, 248, 244, .22) 66%,
+                rgba(250, 248, 244, .45) 74%,
+                rgba(250, 248, 244, .70) 82%,
+                rgba(250, 248, 244, .90) 88%,
+                #FAF8F4 94%,
+                #FAF8F4 100%
+            ),
+            url("../fondos/dae31a08-ca8c-4257-9bfe-f2a428b21d1d.png");
+    }
+
+    .productos.fondo-eventos::after {
+        aspect-ratio: 853 / 1844;
+        background-image:
+            linear-gradient(
+                to bottom,
+                rgba(250, 248, 244, 0) 48%,
+                rgba(250, 248, 244, .08) 58%,
+                rgba(250, 248, 244, .22) 66%,
+                rgba(250, 248, 244, .45) 74%,
+                rgba(250, 248, 244, .70) 82%,
+                rgba(250, 248, 244, .90) 88%,
+                #FAF8F4 94%,
+                #FAF8F4 100%
+            ),
+            url("../fondos/01a20372-44f5-445f-b102-44bfc3de5b08.png");
+    }
 }
 
 .productos-contenido {
@@ -1312,7 +1563,7 @@ nav {
         background-size: cover;
         background-position: center 42%;
         background-repeat: no-repeat;
-        background-color: var(--negro);
+        background-color: #FAF8F4;
     }
 
     .hero-contenido {
@@ -1997,7 +2248,7 @@ nav {
         background-position: center 42%;
         background-repeat: no-repeat;
         transform: scale(1.01);
-        background-color: var(--negro);
+        background-color: #FAF8F4;
     }
 
 }
@@ -3130,203 +3381,31 @@ nav.navbar-scroll {
 }
 
 /* =====================================================
-   FONDOS DEL CATÁLOGO
-   IMAGEN FIJA + DEGRADADO HACIA EL COLOR DE FONDO
+   FONDOS DEL CATÁLOGO — AJUSTES FINALES RESPONSIVE
+   Las imágenes no se repiten y conservan su encuadre.
 ===================================================== */
 
-.productos.fondo-todos,
-.productos.fondo-ramos,
-.productos.fondo-buquesR,
-.productos.fondo-florSeca,
-.productos.fondo-centros,
-.productos.fondo-eventos {
-    background-size: 100% auto;
-    background-position: center top;
-    background-repeat: no-repeat;
-
-    transition:
-        background-image 0.7s ease,
-        background-color 0.7s ease;
-}
-
-
-
-
-
-/* -----------------------------------------------------
-   TRANSICIÓN SUAVE
------------------------------------------------------ */
-
-.productos.fondo-todos,
-.productos.fondo-ramos,
-.productos.fondo-buquesR,
-.productos.fondo-florSeca,
-.productos.fondo-centros,
-.productos.fondo-eventos {
-    transition:
-        background 0.7s ease;
-}
-
-
-/* -----------------------------------------------------
-   MÓVIL
------------------------------------------------------ */
-
-@media (max-width: 768px) {
-
-    .productos.fondo-todos,
-    .productos.fondo-ramos,
-    .productos.fondo-buquesR,
-    .productos.fondo-florSeca,
-    .productos.fondo-centros,
-    .productos.fondo-eventos {
-        transition:
-            background-color 0.6s ease;
-        background-size: auto 100%;
-        background-position: center;
-        background-repeat: no-repeat;
-    }
-
-}
-
-/* =====================================================
-   FONDOS RESPONSIVE
-   ORDENADOR / IPAD / MÓVIL
-===================================================== */
-
-
-/* =====================================================
-   ORDENADOR
-===================================================== */
-
-.productos.fondo-todos,
-.productos.fondo-ramos,
-.productos.fondo-buquesR,
-.productos.fondo-florSeca,
-.productos.fondo-centros,
-.productos.fondo-eventos {
-
-    background-size: 100% auto;
-    background-position: center top;
-    background-repeat: no-repeat;
-}
-
-
-/* =====================================================
-   IPAD / TABLET
-   769px - 1100px
-===================================================== */
-
-@media (min-width: 769px) and (max-width: 1100px) {
-
-    .productos.fondo-todos,
-    .productos.fondo-ramos,
-    .productos.fondo-buquesR,
-    .productos.fondo-florSeca,
-    .productos.fondo-centros,
-    .productos.fondo-eventos {
-
-        /*
-           Aumentamos ligeramente la imagen para
-           mantener el tamaño visual de la flor.
-        */
-        background-size: 135% auto;
-
-        background-position:
-            center top;
-
-        background-repeat: no-repeat;
-    }
-
-}
-
-
-/* =====================================================
-   MÓVIL
-   Hasta 768px
-===================================================== */
-
-@media (max-width: 768px) {
-
-    .productos.fondo-todos,
-    .productos.fondo-ramos,
-    .productos.fondo-buquesR,
-    .productos.fondo-florSeca,
-    .productos.fondo-centros,
-    .productos.fondo-eventos {
-
-        /*
-           La imagen aumenta para que la flor
-           no quede diminuta al reducirse el ancho.
-        */
-        background-size: 190% auto;
-
-        background-position:
-            center top;
-
-        background-repeat: no-repeat;
-    }
-
-
-    /*
-       Un poco más de transparencia en móvil.
-       Así las tarjetas siguen destacando.
-    */
-
- 
-
-
-/* =====================================================
-   MÓVILES PEQUEÑOS
-   Hasta 480px
-===================================================== */
-
-@media (max-width: 480px) {
-
-    .productos.fondo-todos,
-    .productos.fondo-ramos,
-    .productos.fondo-buquesR,
-    .productos.fondo-florSeca,
-    .productos.fondo-centros,
-    .productos.fondo-eventos {
-
-        /*
-           En pantallas muy estrechas aumentamos
-           todavía un poco la escala.
-        */
-        background-size: 225% auto;
-
-        background-position:
-            center top;
-
-        background-repeat: no-repeat;
-    }
-
-}
-
-/* =====================================================
-   FONDOS DE PRODUCTOS — RESPONSIVE
-   La fotografía mantiene escala y no se repite.
-   El inicio se adapta a la cabecera + filtros.
-===================================================== */
-
-@media (min-width: 769px) {
+/* Ordenador */
+@media (min-width: 1101px) {
     .productos::after {
-        top: 285px;
+        top: 313px;
         background-size: 100% auto;
         background-position: center top;
         background-repeat: no-repeat;
     }
 }
 
+/* Tablet / iPad */
 @media (min-width: 769px) and (max-width: 1100px) {
     .productos::after {
         top: 305px;
-        background-size: 125% auto;
+        background-size: 135% auto;
         background-position: center top;
+        background-repeat: no-repeat;
     }
 }
 
+/* Móvil */
 @media (max-width: 768px) {
     .productos::after {
         top: 295px;
@@ -3336,11 +3415,12 @@ nav.navbar-scroll {
     }
 }
 
+/* Móvil pequeño */
 @media (max-width: 480px) {
     .productos::after {
         top: 300px;
         background-size: 225% auto;
         background-position: center top;
+        background-repeat: no-repeat;
     }
-}
 }
