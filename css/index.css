@@ -801,7 +801,7 @@ nav {
 /* TODOS */
 .productos.fondo-todos::after {
     aspect-ratio: 1672 / 941;
-    opacity: 60%;
+    opacity: 70%;
     background-image:
         linear-gradient(
             to bottom,
@@ -814,7 +814,7 @@ nav {
             #FAF8F4 94%,
             #FAF8F4 100%
         ),
-        url("../fondos/2e7f0c35-0f9a-4234-95ae-5a80096e32AAAAAAAAAAAAAAAAc6.png");
+        url("../fondos/7623cff2-c089-489a-9bd5-042e69ef9fca.png");
 }
 
 /* RAMOS */
@@ -927,13 +927,13 @@ nav {
         aspect-ratio: 500 / 1844;
         background-image:
             
-            url("../fondos/dae31a08-ca8c-4257-9bfe-f2a428b21d1d.png");
+            url("../fondos/7283c74b-cdfc-4e09-8d26-811cfb0551b4.png");
     }
 
     /* BUQUÉS DE ROSAS */
     .productos.fondo-buquesR::after {
         aspect-ratio: 500 / 2000;
-        opacity: 90%;
+        opacity: 80%;
         background-image:
             linear-gradient(
                 to bottom,
@@ -975,7 +975,7 @@ nav {
         height: 4000px;
         background-image:
             
-            url("../fondos/01a20372-44f5-445f-b102-44bfc3de5b08.png");
+            url("../fondos/1c67bfe8-3605-4e7a-9eba-300d59ef59b0.png");
     }
 
     /* COMPLEMENTOS / EVENTOS */
@@ -1711,7 +1711,7 @@ nav {
 
     .subfiltros-ramos.visible {
         max-height: 55px;
-        margin-top: -14px;
+        margin-top: 0px;
         margin-bottom: 23px;
         overflow-x: auto;
     }
