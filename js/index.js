@@ -310,7 +310,7 @@ const productos = [
 
     {
         id: "producto-31",
-        nombre: "Jarrón Preservado Nostalgia",
+        nombre: "Jarrón Nostalgia",
         descripcion: "Descripción del producto 31.",
         imagen: "florSeca/b5d228c2-9bb7-494d-9682-b5923ef3a1c0.png",
         categoria: "florSeca",
