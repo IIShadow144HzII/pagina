@@ -801,6 +801,7 @@ nav {
 /* TODOS */
 .productos.fondo-todos::after {
     aspect-ratio: 1672 / 941;
+    opacity: 60%;
     background-image:
         linear-gradient(
             to bottom,
@@ -818,6 +819,7 @@ nav {
 
 /* RAMOS */
 .productos.fondo-ramos::after {
+    opacity: 60%;
     aspect-ratio: 1672 / 941;
     background-image:
         linear-gradient(
@@ -831,12 +833,13 @@ nav {
             #FAF8F4 94%,
             #FAF8F4 100%
         ),
-        url("../fondos/3e2dfe2a-7fc1-4c0a-ab44-86bdc3d2624a.png");
+        url("../fondos/2e7f0c35-0f9a-4234-95ae-5a80096e32AAAAAAAAAAAAAAAAc6.png");
 }
 
 /* BUQUÉS DE ROSAS */
 .productos.fondo-buquesR::after {
-    aspect-ratio: 1672 / 941;
+    opacity: 60%;
+    aspect-ratio: 1200 / 1400;
     background-image:
         linear-gradient(
             to bottom,
@@ -854,6 +857,7 @@ nav {
 
 /* FLOR SECA / PRESERVADA */
 .productos.fondo-florSeca::after {
+    opacity: 60%;
     aspect-ratio: 1672 / 941;
     background-image:
         linear-gradient(
@@ -872,6 +876,7 @@ nav {
 
 /* CENTROS FLORALES */
 .productos.fondo-centros::after {
+    opacity: 60%;
     aspect-ratio: 1672 / 941;
     background-image:
         linear-gradient(
@@ -890,6 +895,7 @@ nav {
 
 /* COMPLEMENTOS / EVENTOS */
 .productos.fondo-eventos::after {
+    opacity: 60%;
     aspect-ratio: 1672 / 941;
     background-image:
         linear-gradient(
@@ -917,25 +923,17 @@ nav {
     /* RAMOS + TODOS */
     .productos.fondo-ramos::after,
     .productos.fondo-todos::after {
-        aspect-ratio: 853 / 1844;
+        opacity: 85%;
+        aspect-ratio: 500 / 1844;
         background-image:
-            linear-gradient(
-                to bottom,
-                rgba(250, 248, 244, 0) 48%,
-                rgba(250, 248, 244, .08) 58%,
-                rgba(250, 248, 244, .22) 66%,
-                rgba(250, 248, 244, .45) 74%,
-                rgba(250, 248, 244, .70) 82%,
-                rgba(250, 248, 244, .90) 88%,
-                #FAF8F4 94%,
-                #FAF8F4 100%
-            ),
-            url("../fondos/01a20372-44f5-445f-b102-44bfc3de5b08.png");
+            
+            url("../fondos/dae31a08-ca8c-4257-9bfe-f2a428b21d1d.png");
     }
 
     /* BUQUÉS DE ROSAS */
     .productos.fondo-buquesR::after {
-        aspect-ratio: 864 / 1821;
+        aspect-ratio: 500 / 2000;
+        opacity: 90%;
         background-image:
             linear-gradient(
                 to bottom,
@@ -953,7 +951,8 @@ nav {
 
     /* FLOR SECA / PRESERVADA */
     .productos.fondo-florSeca::after {
-        aspect-ratio: 941 / 1672;
+        aspect-ratio: 500 / 1672;
+        opacity: 90%;
         background-image:
             linear-gradient(
                 to bottom,

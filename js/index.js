@@ -455,7 +455,7 @@ const productos = [
         descripcion: "Descripción del producto 46.",
         imagen: "centros-florales/31d87979-4a60-4610-aac3-3fcbc4588a00.png",
         categoria: "centros-florales",
-        precio: 150
+        precio: 149
     },
 
     {
@@ -464,7 +464,7 @@ const productos = [
         descripcion: "Descripción del producto 47.",
         imagen: "centros-florales/4c2df6af-bcf4-4a9b-a592-d350c75f1a93.png",
         categoria: "centros-florales",
-        precio: 130
+        precio: 129
     }
 
 ];
