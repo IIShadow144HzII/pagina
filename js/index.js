@@ -265,7 +265,7 @@ const productos = [
 
     {
         id: "producto-26",
-        nombre: "Jarrón Victoria ( Seco/preservado)",
+        nombre: "Jarrón Victoria",
         descripcion: "Descripción del producto 26.",
         imagen: "florSeca/d7402061-e60a-4f05-b389-5eba2e679c85.png",
         categoria: "florSeca",
@@ -337,7 +337,7 @@ const productos = [
 
     {
         id: "producto-34",
-        nombre: "Centro flor seca/preservada",
+        nombre: "Jarrón Aurora",
         descripcion: "Descripción del producto 34.",
         imagen: "florSeca/49a08bb2-eb83-49bc-853f-12e82542b3d8.png",
         categoria: "florSeca",
