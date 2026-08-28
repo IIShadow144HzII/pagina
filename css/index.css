@@ -970,20 +970,12 @@ nav {
 
     /* CENTROS FLORALES */
     .productos.fondo-centros::after {
-        aspect-ratio: 941 / 1672;
+        aspect-ratio: 50 / 1672;
+        opacity: 80%;
+        height: 4000px;
         background-image:
-            linear-gradient(
-                to bottom,
-                rgba(250, 248, 244, 0) 48%,
-                rgba(250, 248, 244, .08) 58%,
-                rgba(250, 248, 244, .22) 66%,
-                rgba(250, 248, 244, .45) 74%,
-                rgba(250, 248, 244, .70) 82%,
-                rgba(250, 248, 244, .90) 88%,
-                #FAF8F4 94%,
-                #FAF8F4 100%
-            ),
-            url("../fondos/dae31a08-ca8c-4257-9bfe-f2a428b21d1d.png");
+            
+            url("../fondos/01a20372-44f5-445f-b102-44bfc3de5b08.png");
     }
 
     /* COMPLEMENTOS / EVENTOS */
