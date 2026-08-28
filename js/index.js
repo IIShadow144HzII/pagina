@@ -21,7 +21,7 @@ const productos = [
         imagen: "jarrones/12720740-7f2a-4d99-92c8-8fe3e6f0f42c.png",
         categoria: "ramos",
         tipo: "jarrones",
-        precio: 65
+        precio: 65 
     },
 
     {

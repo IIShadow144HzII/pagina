@@ -3295,20 +3295,37 @@ nav.navbar-scroll {
 }
 
 .producto-precio {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     align-self: center;
-    width: 100%;
-    height: 23px;
-    margin: 2px 0 17px;
+    width: 92px;
+    height: 34px;
+    margin: 2px auto 17px;
+    padding: 0 10px;
+    box-sizing: border-box;
+
     color: var(--borgona);
+    background: #F3E7DC;
+    border: 1px solid rgba(122, 58, 63, .28);
+    border-radius: 4px;
+
     font-family: "Lora", serif;
     font-size: 20px;
     font-weight: 600;
     letter-spacing: .3px;
     line-height: 1;
     text-align: center;
+
+    /* Forma de etiqueta */
+    clip-path: polygon(
+        0 50%,
+        10px 0,
+        100% 0,
+        100% 100%,
+        10px 100%
+    );
 }
 
 .contactar-whatsapp {
@@ -3343,8 +3360,10 @@ nav.navbar-scroll {
     }
 
     .producto-precio {
-        height: 20px;
-        margin: 1px 0 11px;
+        width: 76px;
+        height: 29px;
+        margin: 1px auto 11px;
+        padding: 0 7px;
         font-size: 16.5px;
     }
 
@@ -3369,8 +3388,10 @@ nav.navbar-scroll {
     }
 
     .producto-precio {
-        height: 18px;
-        margin: 1px 0 10px;
+        width: 69px;
+        height: 27px;
+        margin: -10px auto 10px;
+        padding: 0 6px;
         font-size: 15px;
     }
 }
@@ -3422,13 +3443,14 @@ nav.navbar-scroll {
 
 
 /* =====================================================
-   PRECIO — CENTRADO DEFINITIVO
+   PRECIO — ETIQUETA CENTRADA DEFINITIVA
 ===================================================== */
 .producto .producto-info .producto-precio {
     display: flex;
     align-items: center;
     justify-content: center;
     align-self: center;
-    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
 }
