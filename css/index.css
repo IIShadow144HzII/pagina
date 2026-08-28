@@ -3297,6 +3297,9 @@ nav.navbar-scroll {
 .producto-precio {
     display: flex;
     align-items: center;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
     height: 23px;
     margin: 2px 0 17px;
     color: var(--borgona);
@@ -3305,6 +3308,7 @@ nav.navbar-scroll {
     font-weight: 600;
     letter-spacing: .3px;
     line-height: 1;
+    text-align: center;
 }
 
 .contactar-whatsapp {
@@ -3414,4 +3418,17 @@ nav.navbar-scroll {
         background-position: center top;
         background-repeat: no-repeat;
     }
+}
+
+
+/* =====================================================
+   PRECIO — CENTRADO DEFINITIVO
+===================================================== */
+.producto .producto-info .producto-precio {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    text-align: center;
 }

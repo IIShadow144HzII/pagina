@@ -18,7 +18,6 @@ const productos = [
     {
         id: "producto-01",
         nombre: "Jarrón Miramar",
-        descripcion: "Descripción del producto 1.",
         imagen: "jarrones/12720740-7f2a-4d99-92c8-8fe3e6f0f42c.png",
         categoria: "ramos",
         tipo: "jarrones",
@@ -564,10 +563,6 @@ function mostrarProductos(lista) {
                 <h3>
                     ${producto.nombre}
                 </h3>
-
-                <p>
-                    ${producto.descripcion}
-                </p>
 
                 <div class="producto-precio">
                     ${producto.precio} €
