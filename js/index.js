@@ -160,57 +160,63 @@ const productos = [
     ================================================= */
 
     {
-        id: "producto-15",
-        nombre: "Ramo Sinfonía Escarlata",
-        descripcion: "Descripción del producto 15.",
-        imagen: "buquesR/ChatGPT Image 24 ago 2026, 23_58_14.png",
+    id: "producto-15",
+    nombre: "Ramo Sinfonía Escarlata",
+    descripcion: "Una composición espectacular de 50 rosas rojas que transmite elegancia, intensidad y romanticismo.",
+    imagen: "buquesR/ChatGPT Image 24 ago 2026, 23_58_14.png",
+    categoria: "buquesR",
+    precio: 199
+},
+
+{
+    id: "producto-16",
+    nombre: "Bouquet Rubí Imperial",
+    descripcion: "Un impresionante bouquet de 90 rosas rojas cuidadosamente seleccionado para ocasiones realmente especiales.",
+    imagen: "buquesR/53983f73-8293-4655-a271-99ff14534300.png",
+    categoria: "buquesR",
+    precio: 259
+},
+
+{
+    id: "producto-17",
+    nombre: "Bouquet Alba Imperial",
+    descripcion: "Una composición delicada y sofisticada de 50 rosas blancas, pensada para transmitir pureza y elegancia.",
+    imagen: "buquesR/11855efe-da6f-4e31-a50d-f7ab4841e69a.png",
+    categoria: "buquesR",
+    precio: 225
+},
+
+{
+    id: "producto-18",
+    nombre: "Cesto 200 rosas Premium",
+    imagen: "ramosN/38126b48-f17d-40d8-8507-2897803935a8.png",
+    categoria: "buquesR",
+    precio: 735
+},
+
+{
+    id: "producto-19",
+    nombre: "Bouquet 12 rosas (sin jarrón)",
+    imagen: "fotos/08876dc9-ab13-4490-a69f-6555a63da051.png",
+    categoria: "buquesR",
+    precio: 48
+},
+
+    {
+        id: "producto-99",
+        nombre: "Jarrón 9 rosas",
+        imagen: "fotos/2a9b0743-43e4-440f-9ced-a00de0ae5d50.png",
         categoria: "buquesR",
-        precio: 199
+        precio: 55
     },
 
     {
-        id: "producto-16",
-        nombre: "Bouquet Rubí Imperial",
-        descripcion: "Descripción del producto 16.",
-        imagen: "buquesR/53983f73-8293-4655-a271-99ff14534300.png",
-        categoria: "buquesR",
-        precio: 259
-    },
-
-    {
-        id: "producto-17",
-        nombre: "Bouquet Alba Imperial",
-        descripcion: "Descripción del producto 17.",
-        imagen: "buquesR/11855efe-da6f-4e31-a50d-f7ab4841e69a.png",
-        categoria: "buquesR",
-        precio: 225
-    },
-
-    {
-        id: "producto-18",
-        nombre: "Cesto 200 rosas Premium",
-        descripcion: "Descripción del producto 18.",
-        imagen: "buquesR/ChatGPT Image 25 ago 2026, 00_11_24.png",
-        categoria: "buquesR",
-        precio: 735
-    },
-
-    {
-        id: "producto-19",
-        nombre: "Bouquet 12 rosas Premium",
-        descripcion: "Descripción del producto 19.",
-        imagen: "buquesR/96d86412-f838-48c8-b051-64e8cfd24392.png",
-        categoria: "buquesR",
-        precio: 48
-    },
-
-    {
-        id: "producto-20",
-        nombre: "Dúo Mon Amour",
-        descripcion: "Descripción del producto 20.",
-        imagen: "buquesR/88d61d80-58c4-4a00-be09-9115fe4e9331.png",
-        categoria: "buquesR",
-        precio: 99
+    id: "producto-20",
+    nombre: "Dúo Mon Amour",
+    descripcion: "Un romántico dúo floral (20 rosas rojas + osito peluche), ideal para expresar un sentimiento especial.",
+    imagen: "buquesR/88d61d80-58c4-4a00-be09-9115fe4e9331.png",
+    categoria: "buquesR",
+    precio: 99
     },
 
 
@@ -251,7 +257,7 @@ const productos = [
         descripcion: "Descripción del producto 24.",
         imagen: "florSeca/a8b55ccb-62d6-4506-a0f1-b7ff750c753d.png",
         categoria: "florSeca",
-        precio: 29
+        precio: 59
     },
 
     {
@@ -464,6 +470,192 @@ const productos = [
         imagen: "centros-florales/4c2df6af-bcf4-4a9b-a592-d350c75f1a93.png",
         categoria: "centros-florales",
         precio: 129
+    },
+
+
+    {
+        id: "producto-100",
+        nombre: "Gypsophila Clásico",
+        descripcion: "Descripción del producto 47.",
+        imagen: "ramosN/3e3adbcb-d1e4-4747-ac72-25f8db55e2f7.png",
+        categoria: "ramosN",
+        mensaje: "Precio a consultar"
+    },
+
+    {
+        id: "producto-101",
+        nombre: "Jardín romántico",
+        descripcion: "Descripción del producto 47.",
+        imagen: "ramosN/bb816823-90ad-4ccd-929a-9bc3b26ce99d.png",
+        categoria: "ramosN",
+        mensaje: "Precio a consultar"
+    },
+
+    {
+        id: "producto-102",
+        nombre: "Lavanda & Marfil",
+        descripcion: "Descripción del producto 47.",
+        imagen: "ramosN/279d60e3-ffa5-470b-8302-6da12aa13433.png",
+        categoria: "ramosN",
+        mensaje: "Precio a consultar"
+    },
+    {
+        id: "producto-103",
+        nombre: "Ramo Fiore",
+        descripcion: "Descripción del producto 47.",
+        imagen: "ramosN/a0da5288-30d8-4a32-8d40-e0068e4d7925.png",
+        categoria: "ramosN",
+        mensaje: "Precio a consultar"
+    },{
+        id: "producto-104",
+        nombre: "Ramo Moonlight",
+        descripcion: "Descripción del producto 47.",
+        imagen: "ramosN/9a0a89eb-a5ab-43b5-a4fd-6365ea3c9bcd.png",
+        categoria: "ramosN",
+        mensaje: "Precio a consultar"
+    },{
+        id: "producto-105",
+        nombre: "Ramo Elegance",
+        descripcion: "Descripción del producto 47.",
+        imagen: "ramosN/b39c5f51-114f-4a89-9f15-cf40fcb9310e.png",
+        categoria: "ramosN",
+        mensaje: "Precio a consultar"
+    },{
+        id: "producto-106",
+        nombre: "Ramo Golden",
+        descripcion: "Descripción del producto 47.",
+        imagen: "ramosN/a897c90b-e71c-4146-8ee3-79cbcbbe7296.png",
+        categoria: "ramosN",
+        mensaje: "Precio a consultar"
+    },{
+        id: "producto-107",
+        nombre: "Ramo Coral",
+        descripcion: "Descripción del producto 47.",
+        imagen: "ramosN/2b397db0-c054-4cd7-b6ed-0084af2b87c7.png",
+        categoria: "ramosN",
+        mensaje: "Precio a consultar"
+    },{
+        id: "producto-108",
+        nombre: "Ramo Encanto Tropical",
+        descripcion: "Descripción del producto 47.",
+        imagen: "ramosN/00d9b147-f144-40fe-9baf-78686aa9142e.png",
+        categoria: "ramosN",
+        mensaje: "Precio a consultar"
+    },{
+        id: "producto-109",
+        nombre: "Centro Blue Moon",
+        descripcion: "Descripción del producto 47.",
+        imagen: "ramosN/14df2481-2947-466d-b764-119f5d0b52ea.png",
+        categoria: "ramosN",
+        mensaje: "Precio a consultar"
+    }
+    ,{
+        id: "producto-110",
+        nombre: "Ramo nube de Marfil",
+        descripcion: "Descripción del producto 47.",
+        imagen: "ramosN/6a5d1844-a6a8-4cca-959e-d2330fd30a42.png",
+        categoria: "ramosN",
+        mensaje: "Precio a consultar"
+    }
+    ,{
+        id: "producto-111",
+        nombre: "Ramo Rosa Bohemia",
+        descripcion: "Descripción del producto 47.",
+        imagen: "ramosN/1c47f80a-d20c-4472-8bff-253e012ce3ee.png",
+        categoria: "ramosN",
+        mensaje: "Precio a consultar"
+    }
+    ,{
+        id: "producto-112",
+        nombre: "Centro Blue Moon",
+        descripcion: "Descripción del producto 47.",
+        imagen: "ramosN/a66d42ab-3001-407c-837c-71006bfb1cb3.png",
+        categoria: "ramosN",
+        mensaje: "Precio a consultar"
+    }
+    ,
+    {
+        id: "producto-113",
+        nombre: "Centro Blue Moon",
+        descripcion: "Descripción del producto 47.",
+        imagen: "ramosN/65cd7840-7ee9-4be5-98a8-5d41af263697.png",
+        categoria: "ramosN",
+        mensaje: "Precio a consultar"
+    }
+    ,{
+        id: "producto-114",
+        nombre: "Centro Blue Moon",
+        descripcion: "Descripción del producto 47.",
+        imagen: "ramosN/a9f78603-8e3a-4c8b-a937-832ba1a27e6e.png",
+        categoria: "ramosN",
+        mensaje: "Precio a consultar"
+    },{
+        id: "producto-115",
+        nombre: "Centro Blue Moon",
+        descripcion: "Descripción del producto 47.",
+        imagen: "ramosN/261350b7-c086-4c7a-9cd3-9aaf07ee679a.png",
+        categoria: "ramosN",
+        mensaje: "Precio a consultar"
+    },{
+        id: "producto-116",
+        nombre: "Centro Blue Moon",
+        descripcion: "Descripción del producto 47.",
+        imagen: "ramosN/ffadf31f-03af-4dd7-b168-07bfc54ac670.png",
+        categoria: "ramosN",
+        mensaje: "Precio a consultar"
+    },{
+        id: "producto-117",
+        nombre: "Centro Blue Moon",
+        descripcion: "Descripción del producto 47.",
+        imagen: "ramosN/97085e30-42cb-4de2-ac55-4637332baa43.png",
+        categoria: "ramosN",
+        mensaje: "Precio a consultar"
+    },{
+        id: "producto-118",
+        nombre: "Centro Blue Moon",
+        descripcion: "Descripción del producto 47.",
+        imagen: "ramosN/ff05864d-3bd5-4a79-9d71-c20d9d2469d3.png",
+        categoria: "ramosN",
+        mensaje: "Precio a consultar"
+    }
+    ,{
+        id: "producto-119",
+        nombre: "Centro Blue Moon",
+        descripcion: "Descripción del producto 47.",
+        imagen: "ramosN/a0705a1e-8b18-44e8-b253-621ff03cc706.png",
+        categoria: "ramosN",
+        mensaje: "Precio a consultar"
+    }
+    ,{
+        id: "producto-120",
+        nombre: "Centro Blue Moon",
+        descripcion: "Descripción del producto 47.",
+        imagen: "ramosN/02db3d27-5dc2-4d68-b17c-d9501d9508ac.png",
+        categoria: "ramosN",
+        mensaje: "Precio a consultar"
+    }
+    ,{
+        id: "producto-121",
+        nombre: "Centro Blue Moon",
+        descripcion: "Descripción del producto 47.",
+        imagen: "ramosN/777aafbf-d479-4ff5-aaee-df603bb35343.png",
+        categoria: "ramosN",
+        mensaje: "Precio a consultar"
+    }
+    ,{
+        id: "producto-122",
+        nombre: "Centro Blue Moon",
+        descripcion: "Descripción del producto 47.",
+        imagen: "ramosN/bad47e57-6efb-4b53-b196-f4a6c696b682.png",
+        categoria: "ramosN",
+        mensaje: "Precio a consultar"
+    },{
+        id: "producto-123",
+        nombre: "Centro Blue Moon",
+        descripcion: "Descripción del producto 47.",
+        imagen: "ramosN/3d9c3d90-2882-4e8a-be09-b7920fbf07c3.png",
+        categoria: "ramosN",
+        mensaje: "Precio a consultar"
     }
 
 ];
@@ -503,7 +695,194 @@ function crearEnlaceWhatsApp(producto) {
     );
 
 }
+/* =====================================================
+   VISOR DE IMÁGENES DEL CATÁLOGO
+===================================================== */
 
+const visorImagen = document.createElement("div");
+
+visorImagen.className = "visor-imagen";
+
+visorImagen.innerHTML = `
+    <button class="visor-cerrar" aria-label="Cerrar imagen">
+        &times;
+    </button>
+
+    <img class="visor-img" src="" alt="">
+`;
+
+document.body.appendChild(visorImagen);
+
+
+/* ESTILOS DEL VISOR */
+
+const estilosVisor = document.createElement("style");
+
+estilosVisor.textContent = `
+    .visor-imagen {
+        position: fixed;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.88);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        box-sizing: border-box;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 0.25s ease, visibility 0.25s ease;
+        z-index: 99999;
+    }
+
+    .visor-imagen.activo {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .visor-img {
+        display: block;
+        max-width: 92vw;
+        max-height: 90vh;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        border-radius: 8px;
+        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.45);
+        transform: scale(0.92);
+        transition: transform 0.25s ease;
+    }
+
+    .visor-imagen.activo .visor-img {
+        transform: scale(1);
+    }
+
+    .visor-cerrar {
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        width: 45px;
+        height: 45px;
+        border: none;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.15);
+        color: white;
+        font-size: 32px;
+        line-height: 1;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.2s ease;
+        z-index: 2;
+    }
+
+    .visor-cerrar:hover {
+        background: rgba(255, 255, 255, 0.28);
+    }
+
+    .producto-imagen img {
+        cursor: zoom-in;
+    }
+
+    @media (max-width: 768px) {
+        .visor-imagen {
+            padding: 15px;
+        }
+
+        .visor-img {
+            max-width: 95vw;
+            max-height: 85vh;
+        }
+
+        .visor-cerrar {
+            top: 15px;
+            right: 15px;
+            width: 40px;
+            height: 40px;
+            font-size: 28px;
+        }
+    }
+`;
+
+document.head.appendChild(estilosVisor);
+
+
+/* ELEMENTOS DEL VISOR */
+
+const imagenVisor =
+    visorImagen.querySelector(".visor-img");
+
+const botonCerrarVisor =
+    visorImagen.querySelector(".visor-cerrar");
+
+
+/* ABRIR IMAGEN */
+
+function abrirImagen(imagen) {
+
+    imagenVisor.src = imagen.src;
+    imagenVisor.alt = imagen.alt;
+
+    visorImagen.classList.add("activo");
+
+    document.documentElement.style.overflow = "hidden";
+    document.body.style.overflow = "hidden";
+}
+
+
+/* CERRAR IMAGEN */
+
+function cerrarImagen() {
+
+    visorImagen.classList.remove("activo");
+
+    document.documentElement.style.overflow = "";
+    document.body.style.overflow = "";
+
+}
+
+
+/* CLICK EN CERRAR */
+
+botonCerrarVisor.addEventListener(
+    "click",
+    cerrarImagen
+);
+
+
+/* CLICK EN EL FONDO */
+
+visorImagen.addEventListener(
+    "click",
+    (evento) => {
+
+        if (evento.target === visorImagen) {
+            cerrarImagen();
+        }
+
+    }
+);
+
+
+/* ESC PARA CERRAR */
+
+document.addEventListener(
+    "keydown",
+    (evento) => {
+
+        if (
+            evento.key === "Escape" &&
+            visorImagen.classList.contains("activo")
+        ) {
+            cerrarImagen();
+        }
+
+    }
+);
 
 /* =====================================================
    MOSTRAR PRODUCTOS
@@ -564,8 +943,18 @@ function mostrarProductos(lista) {
                     ${producto.nombre}
                 </h3>
 
+                ${producto.categoria === "buquesR" && producto.descripcion ? `
+    <p class="producto-descripcion">
+        ${producto.descripcion}
+    </p>
+` : ""}
+
                 <div class="producto-precio">
-                    ${producto.precio} €
+
+                    <span class="${producto.mensaje ? "texto-consultar" : ""}">
+                        ${producto.mensaje || producto.precio + " €"}
+                    </span>
+
                 </div>
 
                 <a
@@ -587,6 +976,21 @@ function mostrarProductos(lista) {
 
 
         productosGrid.appendChild(tarjeta);
+        /* Hacer clic en la imagen para ampliarla */
+
+const imagenProducto =
+    tarjeta.querySelector(".producto-imagen img");
+
+if (imagenProducto) {
+
+    imagenProducto.addEventListener(
+        "click",
+        () => {
+            abrirImagen(imagenProducto);
+        }
+    );
+
+}
 
     });
 

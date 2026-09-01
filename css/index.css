@@ -3409,6 +3409,10 @@ nav.navbar-scroll {
         background-position: center top;
         background-repeat: no-repeat;
     }
+    .producto-precio .texto-consultar {
+    font-size: 15px;
+    margin-left: 5px;
+}
 }
 
 /* Tablet / iPad */
@@ -3429,6 +3433,10 @@ nav.navbar-scroll {
         background-position: center top;
         background-repeat: no-repeat;
     }
+    .producto-precio .texto-consultar {
+    font-size: 12px;
+    margin-left: 5px;
+}
 }
 
 /* Móvil pequeño */
