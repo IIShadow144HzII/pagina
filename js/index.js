@@ -162,7 +162,7 @@ const productos = [
     {
     id: "producto-15",
     nombre: "Ramo Sinfonía Escarlata",
-    descripcion: "Una composición espectacular de 50 rosas rojas que transmite elegancia, intensidad y romanticismo.",
+    descripcion: "Una composición espectacular de 50 rosas rojas que transmite elegancia.",
     imagen: "buquesR/ChatGPT Image 24 ago 2026, 23_58_14.png",
     categoria: "buquesR",
     precio: 199
@@ -171,7 +171,7 @@ const productos = [
 {
     id: "producto-16",
     nombre: "Bouquet Rubí Imperial",
-    descripcion: "Un impresionante bouquet de 90 rosas rojas cuidadosamente seleccionado para ocasiones realmente especiales.",
+    descripcion: "Un impresionante bouquet de 90 rosas rojas para ocasiones realmente especiales.",
     imagen: "buquesR/53983f73-8293-4655-a271-99ff14534300.png",
     categoria: "buquesR",
     precio: 259
@@ -179,20 +179,21 @@ const productos = [
 
 {
     id: "producto-17",
-    nombre: "Bouquet Alba Imperial",
-    descripcion: "Una composición delicada y sofisticada de 50 rosas blancas, pensada para transmitir pureza y elegancia.",
+    nombre: "Bouquet Alba Imperial ",
+    descripcion: "Una composición delicada y sofisticada de 50 rosas blancas.",
     imagen: "buquesR/11855efe-da6f-4e31-a50d-f7ab4841e69a.png",
     categoria: "buquesR",
     precio: 225
-},
-
-{
-    id: "producto-18",
-    nombre: "Cesto 200 rosas Premium",
-    imagen: "ramosN/38126b48-f17d-40d8-8507-2897803935a8.png",
+},{
+    id: "producto-20",
+    nombre: "Dúo Mon Amour",
+    descripcion: "Un romántico dúo floral (20 rosas rojas + osito peluche).",
+    imagen: "buquesR/88d61d80-58c4-4a00-be09-9115fe4e9331.png",
     categoria: "buquesR",
-    precio: 735
-},
+    precio: 99
+    },
+
+
 
 {
     id: "producto-19",
@@ -209,15 +210,15 @@ const productos = [
         categoria: "buquesR",
         precio: 55
     },
-
     {
-    id: "producto-20",
-    nombre: "Dúo Mon Amour",
-    descripcion: "Un romántico dúo floral (20 rosas rojas + osito peluche), ideal para expresar un sentimiento especial.",
-    imagen: "buquesR/88d61d80-58c4-4a00-be09-9115fe4e9331.png",
+    id: "producto-18",
+    nombre: "Cesto 200 rosas Premium",
+    imagen: "ramosN/38126b48-f17d-40d8-8507-2897803935a8.png",
     categoria: "buquesR",
-    precio: 99
-    },
+    precio: 735
+},
+
+    
 
 
     /* =================================================
@@ -976,21 +977,7 @@ function mostrarProductos(lista) {
 
 
         productosGrid.appendChild(tarjeta);
-        /* Hacer clic en la imagen para ampliarla */
-
-const imagenProducto =
-    tarjeta.querySelector(".producto-imagen img");
-
-if (imagenProducto) {
-
-    imagenProducto.addEventListener(
-        "click",
-        () => {
-            abrirImagen(imagenProducto);
-        }
-    );
-
-}
+        
 
     });
 
