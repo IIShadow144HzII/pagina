@@ -977,6 +977,11 @@ function mostrarProductos(lista) {
 
 
         productosGrid.appendChild(tarjeta);
+        const imagenProducto = tarjeta.querySelector(".producto-imagen img");
+
+imagenProducto.addEventListener("click", () => {
+    abrirImagen(imagenProducto);
+});
         
 
     });
@@ -1451,5 +1456,7 @@ actualizarFondoSeccion("todos");
 /* =====================================================
    INICIAR
 ===================================================== */
+
+
 
 mostrarProductos(productos);
