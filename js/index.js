@@ -582,6 +582,13 @@ const productos = [
         imagen: "ramosN/65cd7840-7ee9-4be5-98a8-5d41af263697.png",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
+    },{
+        id: "producto-123",
+        nombre: "Ramo Silvestre",
+        descripcion: "Descripción del producto 47.",
+        imagen: "ramosN/3d9c3d90-2882-4e8a-be09-b7920fbf07c3.png",
+        categoria: "ramosN",
+        mensaje: "Precio a consultar"
     }
     ,{
         id: "producto-114",
@@ -599,7 +606,7 @@ const productos = [
         mensaje: "Precio a consultar"
     },{
         id: "producto-116",
-        nombre: "Boutonnière Marfil",
+        nombre: "Prendido Marfil",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/ffadf31f-03af-4dd7-b168-07bfc54ac670.png",
         categoria: "ramosN",
@@ -648,13 +655,6 @@ const productos = [
         nombre: "Tocado Coralina",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/bad47e57-6efb-4b53-b196-f4a6c696b682.png",
-        categoria: "ramosN",
-        mensaje: "Precio a consultar"
-    },{
-        id: "producto-123",
-        nombre: "Ramo Silvestre",
-        descripcion: "Descripción del producto 47.",
-        imagen: "ramosN/3d9c3d90-2882-4e8a-be09-b7920fbf07c3.png",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     }
@@ -916,44 +916,27 @@ function mostrarProductos(lista) {
 
     lista.forEach((producto, indice) => {
 
-    /* =================================================
-       SEPARADOR ENTRE RAMOS Y TOCADOS
-    ================================================= */
+   /* =================================================
+   SEPARADOR ENTRE RAMOS Y TOCADOS
+================================================= */
 
-    const esTocado =
-        producto.nombre.toLowerCase().includes("tocado") ||
-        producto.nombre.toLowerCase().includes("boutonnière");
+if (
+    producto.categoria === "ramosN" &&
+    producto.nombre === "Tocado Primavera"
+) {
 
-    const productoAnterior = lista[indice - 1];
+    const separador = document.createElement("div");
 
-    const eraAnteriorRamo =
-        productoAnterior &&
-        productoAnterior.nombre.toLowerCase().includes("ramo");
+    separador.className = "separador-tocados";
 
-    if (
-        producto.categoria === "ramosN" &&
-        esTocado &&
-        (
-            indice === 0 ||
-            !(
-                productoAnterior.nombre.toLowerCase().includes("tocado") ||
-                productoAnterior.nombre.toLowerCase().includes("boutonnière")
-            )
-        )
-    ) {
+    separador.innerHTML = `
+        <span></span>
+        <h2>Tocados y Prendidos</h2>
+        <span></span>
+    `;
 
-        const separador = document.createElement("div");
-
-        separador.className = "separador-tocados";
-
-        separador.innerHTML = `
-            <span></span>
-            <h2>Tocados</h2>
-            <span></span>
-        `;
-
-        productosGrid.appendChild(separador);
-    }
+    productosGrid.appendChild(separador);
+}
 
 
     const tarjeta =

@@ -1265,38 +1265,50 @@ nav {
 .separador-tocados {
     grid-column: 1 / -1;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 18px;
-    margin: 18px 0 4px;
-}
-
-.separador-tocados span {
-    flex: 1;
-    height: 1px;
-    background: rgba(90, 70, 65, 0.18);
+    gap: 10px;
+    margin: 55px 0 25px;
+    padding: 22px 0 20px;
+    border-top: 1px solid rgba(90, 70, 65, 0.22);
+    border-bottom: 1px solid rgba(90, 70, 65, 0.22);
 }
 
 .separador-tocados h2 {
     margin: 0;
     font-family: inherit;
-    font-size: 13px;
+    font-size: 21px;
     font-weight: 500;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     text-transform: uppercase;
     color: #6f5a5a;
-    white-space: nowrap;
+}
+
+.separador-tocados::after {
+    content: "Diseños florales para el cabello";
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #9a8985;
 }
 
 @media (max-width: 768px) {
 
     .separador-tocados {
-        gap: 12px;
-        margin: 14px 0 2px;
+        margin: 30px 0 30px;
+        padding: 18px 0 17px;
+        gap: 8px;
     }
 
     .separador-tocados h2 {
-        font-size: 11px;
-        letter-spacing: 1.6px;
+        font-size: 17px;
+        letter-spacing: 2.5px;
+    }
+
+    .separador-tocados::after {
+        font-size: 10px;
+        letter-spacing: .7px;
     }
 
 }
