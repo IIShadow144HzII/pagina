@@ -568,7 +568,7 @@ const productos = [
     }
     ,{
         id: "producto-112",
-        nombre: "Centro Blue Moon",
+        nombre: "Ramo Eterna",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/a66d42ab-3001-407c-837c-71006bfb1cb3.png",
         categoria: "ramosN",
@@ -577,7 +577,7 @@ const productos = [
     ,
     {
         id: "producto-113",
-        nombre: "Centro Blue Moon",
+        nombre: "Ramo Rosé",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/65cd7840-7ee9-4be5-98a8-5d41af263697.png",
         categoria: "ramosN",
@@ -585,35 +585,35 @@ const productos = [
     }
     ,{
         id: "producto-114",
-        nombre: "Centro Blue Moon",
+        nombre: "Tocado Primavera",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/a9f78603-8e3a-4c8b-a937-832ba1a27e6e.png",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },{
         id: "producto-115",
-        nombre: "Centro Blue Moon",
+        nombre: "Tocado Éter",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/261350b7-c086-4c7a-9cd3-9aaf07ee679a.png",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },{
         id: "producto-116",
-        nombre: "Centro Blue Moon",
+        nombre: "Boutonnière Marfil",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/ffadf31f-03af-4dd7-b168-07bfc54ac670.png",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },{
         id: "producto-117",
-        nombre: "Centro Blue Moon",
+        nombre: "Tocado Olivo",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/97085e30-42cb-4de2-ac55-4637332baa43.png",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },{
         id: "producto-118",
-        nombre: "Centro Blue Moon",
+        nombre: "Tocado Coral",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/ff05864d-3bd5-4a79-9d71-c20d9d2469d3.png",
         categoria: "ramosN",
@@ -621,7 +621,7 @@ const productos = [
     }
     ,{
         id: "producto-119",
-        nombre: "Centro Blue Moon",
+        nombre: "Tocado Amatista",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/a0705a1e-8b18-44e8-b253-621ff03cc706.png",
         categoria: "ramosN",
@@ -629,7 +629,7 @@ const productos = [
     }
     ,{
         id: "producto-120",
-        nombre: "Centro Blue Moon",
+        nombre: "Tocado Provenza",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/02db3d27-5dc2-4d68-b17c-d9501d9508ac.png",
         categoria: "ramosN",
@@ -637,7 +637,7 @@ const productos = [
     }
     ,{
         id: "producto-121",
-        nombre: "Centro Blue Moon",
+        nombre: "Tocado Rosa Perla",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/777aafbf-d479-4ff5-aaee-df603bb35343.png",
         categoria: "ramosN",
@@ -645,14 +645,14 @@ const productos = [
     }
     ,{
         id: "producto-122",
-        nombre: "Centro Blue Moon",
+        nombre: "Tocado Coralina",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/bad47e57-6efb-4b53-b196-f4a6c696b682.png",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },{
         id: "producto-123",
-        nombre: "Centro Blue Moon",
+        nombre: "Ramo Silvestre",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/3d9c3d90-2882-4e8a-be09-b7920fbf07c3.png",
         categoria: "ramosN",
@@ -914,10 +914,52 @@ function mostrarProductos(lista) {
     }
 
 
-    lista.forEach((producto) => {
+    lista.forEach((producto, indice) => {
 
-        const tarjeta =
-            document.createElement("article");
+    /* =================================================
+       SEPARADOR ENTRE RAMOS Y TOCADOS
+    ================================================= */
+
+    const esTocado =
+        producto.nombre.toLowerCase().includes("tocado") ||
+        producto.nombre.toLowerCase().includes("boutonnière");
+
+    const productoAnterior = lista[indice - 1];
+
+    const eraAnteriorRamo =
+        productoAnterior &&
+        productoAnterior.nombre.toLowerCase().includes("ramo");
+
+    if (
+        producto.categoria === "ramosN" &&
+        esTocado &&
+        (
+            indice === 0 ||
+            !(
+                productoAnterior.nombre.toLowerCase().includes("tocado") ||
+                productoAnterior.nombre.toLowerCase().includes("boutonnière")
+            )
+        )
+    ) {
+
+        const separador = document.createElement("div");
+
+        separador.className = "separador-tocados";
+
+        separador.innerHTML = `
+            <span></span>
+            <h2>Tocados</h2>
+            <span></span>
+        `;
+
+        productosGrid.appendChild(separador);
+    }
+
+
+    const tarjeta =
+        document.createElement("article");
+
+    tarjeta.classList.add("producto");
 
         tarjeta.classList.add("producto");
 

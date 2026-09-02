@@ -1262,6 +1262,44 @@ nav {
     object-fit: cover;
     transition: transform .45s ease;
 }
+.separador-tocados {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin: 18px 0 4px;
+}
+
+.separador-tocados span {
+    flex: 1;
+    height: 1px;
+    background: rgba(90, 70, 65, 0.18);
+}
+
+.separador-tocados h2 {
+    margin: 0;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #6f5a5a;
+    white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+
+    .separador-tocados {
+        gap: 12px;
+        margin: 14px 0 2px;
+    }
+
+    .separador-tocados h2 {
+        font-size: 11px;
+        letter-spacing: 1.6px;
+    }
+
+}
 
 .producto:hover .producto-imagen img {
     transform: scale(1.035);
