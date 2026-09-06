@@ -18,7 +18,7 @@ const productos = [
     {
         id: "producto-01",
         nombre: "Jarrón Miramar",
-        imagen: "jarrones/12720740-7f2a-4d99-92c8-8fe3e6f0f42c.png",
+        imagen: "jarrones/12720740-7f2a-4d99-92c8-8fe3e6f0f42c_11zon.webp",
         categoria: "ramos",
         tipo: "jarrones",
         precio: 65
@@ -28,7 +28,7 @@ const productos = [
         id: "producto-02",
         nombre: "Jarrón Bibury",
         descripcion: "Descripción del producto 2.",
-        imagen: "jarrones/ca961ce3-bf7d-47e5-a21b-dff939145d45 (1).png",
+        imagen: "jarrones/ca961ce3-bf7d-47e5-a21b-dff939145d45 (1)_11zon.webp",
         categoria: "ramos",
         tipo: "jarrones",
         precio: 59
@@ -38,7 +38,7 @@ const productos = [
         id: "producto-03",
         nombre: "Jarrón Versailles",
         descripcion: "Descripción del producto 3.",
-        imagen: "jarrones/6c5b50ae-9bb9-442b-bff3-6648e44e5d23.png",
+        imagen: "jarrones/6c5b50ae-9bb9-442b-bff3-6648e44e5d23_11zon.webp",
         categoria: "ramos",
         tipo: "jarrones",
         precio: 79
@@ -48,7 +48,7 @@ const productos = [
         id: "producto-04",
         nombre: "Capazo Sweet Song",
         descripcion: "Descripción del producto 4.",
-        imagen: "capazos/a8de9997-2b08-4d9e-a82a-6bc203d22d35.png",
+        imagen: "capazos/a8de9997-2b08-4d9e-a82a-6bc203d22d35.webp",
         categoria: "ramos",
         tipo: "capazos",
         precio: 59
@@ -58,7 +58,7 @@ const productos = [
         id: "producto-05",
         nombre: "Capazo Paradise",
         descripcion: "Descripción del producto 5.",
-        imagen: "capazos/ee274873-4e51-474b-b09c-4bda965f7a11.png",
+        imagen: "capazos/ee274873-4e51-474b-b09c-4bda965f7a11.webp",
         categoria: "ramos",
         tipo: "capazos",
         precio: 95
@@ -68,7 +68,7 @@ const productos = [
         id: "producto-06",
         nombre: "Capazo Melody",
         descripcion: "Descripción del producto 6.",
-        imagen: "capazos/42499836-87db-4c1c-a38d-9a0c2c825f36.png",
+        imagen: "capazos/42499836-87db-4c1c-a38d-9a0c2c825f36.webp",
         categoria: "ramos",
         tipo: "capazos",
         precio: 65
@@ -78,7 +78,7 @@ const productos = [
         id: "producto-07",
         nombre: "Bouquet Neko",
         descripcion: "Descripción del producto 7.",
-        imagen: "ramos/c3431b4c-b30d-477d-a718-3653415fdb8e.png",
+        imagen: "ramos/c3431b4c-b30d-477d-a718-3653415fdb8e_11zon.webp",
         categoria: "ramos",
         tipo: "buques",
         precio: 35
@@ -88,7 +88,7 @@ const productos = [
         id: "producto-08",
         nombre: "Bouquet Campiña",
         descripcion: "Descripción del producto 8.",
-        imagen: "ramos/acdf600c-d8b1-4efd-ae57-7c87451ef397.png",
+        imagen: "ramos/acdf600c-d8b1-4efd-ae57-7c87451ef397_11zon.webp",
         categoria: "ramos",
         tipo: "buques",
         precio: 39
@@ -98,7 +98,7 @@ const productos = [
         id: "producto-09",
         nombre: "Bouquet Sissí",
         descripcion: "Descripción del producto 9.",
-        imagen: "ramos/0b1a97fc-3de8-4430-a930-cf52c33d4f0a.png",
+        imagen: "ramos/0b1a97fc-3de8-4430-a930-cf52c33d4f0a_11zon.webp",
         categoria: "ramos",
         tipo: "buques",
         precio: 30
@@ -118,7 +118,7 @@ const productos = [
         id: "producto-11",
         nombre: "Bouquet Romantic",
         descripcion: "Descripción del producto 11.",
-        imagen: "ramos/9ccbc9ea-ce49-45de-b1a0-f76477987fc2.png",
+        imagen: "ramos/9ccbc9ea-ce49-45de-b1a0-f76477987fc2_11zon.webp",
         categoria: "ramos",
         tipo: "buques",
         precio: 49
@@ -128,7 +128,7 @@ const productos = [
         id: "producto-12",
         nombre: "Bouquet Viena",
         descripcion: "Descripción del producto 12.",
-        imagen: "ramos/viena.png",
+        imagen: "ramos/viena_11zon.webp",
         categoria: "ramos",
         tipo: "buques",
         precio: 39
@@ -138,7 +138,7 @@ const productos = [
         id: "producto-13",
         nombre: "Bouquet Borgoña",
         descripcion: "Descripción del producto 13.",
-        imagen: "ramos/8f1ba69b-d37f-40d9-9b6a-417a098c2d5d.png",
+        imagen: "ramos/8f1ba69b-d37f-40d9-9b6a-417a098c2d5d_11zon.webp",
         categoria: "ramos",
         tipo: "buques",
         precio: 49
@@ -148,7 +148,7 @@ const productos = [
         id: "producto-14",
         nombre: "Bouquet Lyra",
         descripcion: "Descripción del producto 14.",
-        imagen: "ramos/89153cee-be99-475d-bf65-2959fc721442.png",
+        imagen: "ramos/89153cee-be99-475d-bf65-2959fc721442_11zon.webp",
         categoria: "ramos",
         tipo: "buques",
         precio: 27
@@ -163,7 +163,7 @@ const productos = [
         id: "producto-15",
         nombre: "Ramo Sinfonía Escarlata",
         descripcion: "Una composición espectacular de 50 rosas rojas que transmite elegancia.",
-        imagen: "buquesR/ChatGPT Image 24 ago 2026, 23_58_14.png",
+        imagen: "buquesR/ChatGPT-Image-24-ago-2026_-23_58_14.webp",
         categoria: "buquesR",
         precio: 199
     },
@@ -172,7 +172,7 @@ const productos = [
         id: "producto-16",
         nombre: "Bouquet Rubí Imperial",
         descripcion: "Un impresionante bouquet de 90 rosas rojas para ocasiones realmente especiales.",
-        imagen: "buquesR/53983f73-8293-4655-a271-99ff14534300.png",
+        imagen: "buquesR/53983f73-8293-4655-a271-99ff14534300.webp",
         categoria: "buquesR",
         precio: 259
     },
@@ -181,7 +181,7 @@ const productos = [
         id: "producto-17",
         nombre: "Bouquet Alba Imperial",
         descripcion: "Una composición delicada y sofisticada de 50 rosas blancas.",
-        imagen: "buquesR/11855efe-da6f-4e31-a50d-f7ab4841e69a.png",
+        imagen: "buquesR/11855efe-da6f-4e31-a50d-f7ab4841e69a.webp",
         categoria: "buquesR",
         precio: 225
     },
@@ -190,7 +190,7 @@ const productos = [
         id: "producto-20",
         nombre: "Dúo Mon Amour",
         descripcion: "Un romántico dúo floral (20 rosas rojas + osito peluche).",
-        imagen: "buquesR/88d61d80-58c4-4a00-be09-9115fe4e9331.png",
+        imagen: "buquesR/88d61d80-58c4-4a00-be09-9115fe4e9331.webp",
         categoria: "buquesR",
         precio: 99
     },
@@ -214,7 +214,7 @@ const productos = [
     {
         id: "producto-18",
         nombre: "Cesto 200 rosas Premium",
-        imagen: "ramosN/38126b48-f17d-40d8-8507-2897803935a8.png",
+        imagen: "ramosN/38126b48-f17d-40d8-8507-2897803935a8_11zon.webp",
         categoria: "buquesR",
         precio: 735
     },
@@ -228,7 +228,7 @@ const productos = [
         id: "producto-21",
         nombre: "Jarrón Nirvana",
         descripcion: "Descripción del producto 21.",
-        imagen: "florSeca/0030198b-e793-449b-a18c-f6a501c7af14.png",
+        imagen: "florSeca/0030198b-e793-449b-a18c-f6a501c7af14_11zon.webp",
         categoria: "florSeca",
         precio: 49
     },
@@ -237,7 +237,7 @@ const productos = [
         id: "producto-22",
         nombre: "Cesto Thanksgiving",
         descripcion: "Descripción del producto 22.",
-        imagen: "florSeca/4e9d48e9-5159-4d34-903b-118f4a2bb5ed.png",
+        imagen: "florSeca/4e9d48e9-5159-4d34-903b-118f4a2bb5ed_11zon.webp",
         categoria: "florSeca",
         precio: 49
     },
@@ -246,7 +246,7 @@ const productos = [
         id: "producto-23",
         nombre: "Jarrón Sophie",
         descripcion: "Descripción del producto 23.",
-        imagen: "florSeca/5abef82e-0260-47b3-b50e-82ad78135f8e.png",
+        imagen: "florSeca/5abef82e-0260-47b3-b50e-82ad78135f8e_11zon.webp",
         categoria: "florSeca",
         precio: 49
     },
@@ -255,7 +255,7 @@ const productos = [
         id: "producto-24",
         nombre: "Ramo Velvet",
         descripcion: "Descripción del producto 24.",
-        imagen: "florSeca/a8b55ccb-62d6-4506-a0f1-b7ff750c753d.png",
+        imagen: "florSeca/a8b55ccb-62d6-4506-a0f1-b7ff750c753d_11zon.webp",
         categoria: "florSeca",
         precio: 59
     },
@@ -264,7 +264,7 @@ const productos = [
         id: "producto-25",
         nombre: "Jarrón Cinque Terre",
         descripcion: "Descripción del producto 25.",
-        imagen: "florSeca/2628f61d-8dd4-4cde-bc13-1aa28682db71.png",
+        imagen: "florSeca/2628f61d-8dd4-4cde-bc13-1aa28682db71_11zon.webp",
         categoria: "florSeca",
         precio: 49
     },
@@ -273,7 +273,7 @@ const productos = [
         id: "producto-26",
         nombre: "Jarrón Victoria",
         descripcion: "Descripción del producto 26.",
-        imagen: "florSeca/d7402061-e60a-4f05-b389-5eba2e679c85.png",
+        imagen: "florSeca/d7402061-e60a-4f05-b389-5eba2e679c85_11zon.webp",
         categoria: "florSeca",
         precio: 30
     },
@@ -282,7 +282,7 @@ const productos = [
         id: "producto-27",
         nombre: "Jarrón Venezia",
         descripcion: "Descripción del producto 27.",
-        imagen: "florSeca/0d6350fb-78d8-4274-a3e4-e0195f2ebc33.png",
+        imagen: "florSeca/0d6350fb-78d8-4274-a3e4-e0195f2ebc33_11zon.webp",
         categoria: "florSeca",
         precio: 59
     },
@@ -291,7 +291,7 @@ const productos = [
         id: "producto-28",
         nombre: "Capazo Atardecer",
         descripcion: "Descripción del producto 28.",
-        imagen: "florSeca/285cdf90-e40c-4101-849d-3446fc974436.png",
+        imagen: "florSeca/285cdf90-e40c-4101-849d-3446fc974436_11zon.webp",
         categoria: "florSeca",
         precio: 115
     },
@@ -300,7 +300,7 @@ const productos = [
         id: "producto-29",
         nombre: "Capazo Carnaval",
         descripcion: "Descripción del producto 29.",
-        imagen: "florSeca/d49d0753-4dd8-4c43-9bca-2e3cbabcfcaf.png",
+        imagen: "florSeca/d49d0753-4dd8-4c43-9bca-2e3cbabcfcaf_11zon.webp",
         categoria: "florSeca",
         precio: 30
     },
@@ -309,7 +309,7 @@ const productos = [
         id: "producto-30",
         nombre: "Centro Siena",
         descripcion: "Descripción del producto 30.",
-        imagen: "florSeca/41167f49-90bb-4085-9b4c-dc1e1230387e.png",
+        imagen: "florSeca/41167f49-90bb-4085-9b4c-dc1e1230387e_11zon.webp",
         categoria: "florSeca",
         precio: 65
     },
@@ -318,7 +318,7 @@ const productos = [
         id: "producto-31",
         nombre: "Jarrón Nostalgia",
         descripcion: "Descripción del producto 31.",
-        imagen: "florSeca/b5d228c2-9bb7-494d-9682-b5923ef3a1c0.png",
+        imagen: "florSeca/b5d228c2-9bb7-494d-9682-b5923ef3a1c0_11zon.webp",
         categoria: "florSeca",
         precio: 65
     },
@@ -327,7 +327,7 @@ const productos = [
         id: "producto-32",
         nombre: "Jarrón Bretagne",
         descripcion: "Descripción del producto 32.",
-        imagen: "florSeca/321cfe22-b9e9-4882-a6fc-a547d9a98810.png",
+        imagen: "florSeca/321cfe22-b9e9-4882-a6fc-a547d9a98810_11zon.webp",
         categoria: "florSeca",
         precio: 45
     },
@@ -336,7 +336,7 @@ const productos = [
         id: "producto-33",
         nombre: "Capazo Sorrento",
         descripcion: "Descripción del producto 33.",
-        imagen: "florSeca/0e39b813-10be-4ba1-a423-f3553f2ca17b.png",
+        imagen: "florSeca/0e39b813-10be-4ba1-a423-f3553f2ca17b_11zon.webp",
         categoria: "florSeca",
         precio: 55
     },
@@ -345,7 +345,7 @@ const productos = [
         id: "producto-34",
         nombre: "Jarrón Aurora",
         descripcion: "Descripción del producto 34.",
-        imagen: "florSeca/49a08bb2-eb83-49bc-853f-12e82542b3d8.png",
+        imagen: "florSeca/49a08bb2-eb83-49bc-853f-12e82542b3d8_11zon.webp",
         categoria: "florSeca",
         precio: 59
     },
@@ -354,7 +354,7 @@ const productos = [
         id: "producto-35",
         nombre: "Capazo Swetness",
         descripcion: "Descripción del producto 35.",
-        imagen: "florSeca/6caa529e-2ecb-4b6c-af8a-2a3095e01269.png",
+        imagen: "florSeca/6caa529e-2ecb-4b6c-af8a-2a3095e01269_11zon.webp",
         categoria: "florSeca",
         precio: 65
     },
@@ -368,7 +368,7 @@ const productos = [
         id: "producto-36",
         nombre: "Centro Elegance",
         descripcion: "Descripción del producto 36.",
-        imagen: "centros-florales/80f57d45-59da-4cf8-adad-e1c49e8f36da.png",
+        imagen: "centros-florales/80f57d45-59da-4cf8-adad-e1c49e8f36da_11zon.webp",
         categoria: "centros-florales",
         precio: 149
     },
@@ -377,7 +377,7 @@ const productos = [
         id: "producto-37",
         nombre: "Centro Armonía",
         descripcion: "Descripción del producto 37.",
-        imagen: "centros-florales/c5d5f52a-d687-4f88-b931-60c52f806fa7.png",
+        imagen: "centros-florales/c5d5f52a-d687-4f88-b931-60c52f806fa7_11zon.webp",
         categoria: "centros-florales",
         precio: 149
     },
@@ -386,7 +386,7 @@ const productos = [
         id: "producto-38",
         nombre: "Centro Sweet",
         descripcion: "Descripción del producto 38.",
-        imagen: "centros-florales/c03df9d4-432c-4c92-a708-d099c5181a24.png",
+        imagen: "centros-florales/c03df9d4-432c-4c92-a708-d099c5181a24_11zon.webp",
         categoria: "centros-florales",
         precio: 55
     },
@@ -395,7 +395,7 @@ const productos = [
         id: "producto-39",
         nombre: "Centro Moon",
         descripcion: "Descripción del producto 39.",
-        imagen: "centros-florales/ec8675d3-8943-43bc-b5e4-176c33e0aa11.png",
+        imagen: "centros-florales/ec8675d3-8943-43bc-b5e4-176c33e0aa11_11zon.webp",
         categoria: "centros-florales",
         precio: 99
     },
@@ -404,7 +404,7 @@ const productos = [
         id: "producto-40",
         nombre: "Centro Memory",
         descripcion: "Descripción del producto 40.",
-        imagen: "centros-florales/17002b9e-0730-46db-b831-35fba41c850d.png",
+        imagen: "centros-florales/17002b9e-0730-46db-b831-35fba41c850d_11zon.webp",
         categoria: "centros-florales",
         precio: 110
     },
@@ -413,7 +413,7 @@ const productos = [
         id: "producto-41",
         nombre: "Centro Tropic",
         descripcion: "Descripción del producto 41.",
-        imagen: "centros-florales/b1fb872e-cf60-44c9-8d2e-3dbae33b6eb1.png",
+        imagen: "centros-florales/b1fb872e-cf60-44c9-8d2e-3dbae33b6eb1_11zon.webp",
         categoria: "centros-florales",
         precio: 179
     },
@@ -422,7 +422,7 @@ const productos = [
         id: "producto-42",
         nombre: "Centro Nieve y Terciopelo",
         descripcion: "Descripción del producto 42.",
-        imagen: "centros-florales/22c7c252-95aa-4ed3-a1e1-ad0a12ca6a13.png",
+        imagen: "centros-florales/22c7c252-95aa-4ed3-a1e1-ad0a12ca6a13_11zon.webp",
         categoria: "centros-florales",
         precio: 149
     },
@@ -431,7 +431,7 @@ const productos = [
         id: "producto-43",
         nombre: "Centro Essence",
         descripcion: "Descripción del producto 43.",
-        imagen: "centros-florales/9ae6657a-e9d2-4439-8388-ffbaf2ac3278.png",
+        imagen: "centros-florales/9ae6657a-e9d2-4439-8388-ffbaf2ac3278_11zon.webp",
         categoria: "centros-florales",
         precio: 149
     },
@@ -440,7 +440,7 @@ const productos = [
         id: "producto-44",
         nombre: "Centro Duende y Alma",
         descripcion: "Descripción del producto 44.",
-        imagen: "centros-florales/ddce1a27-bae0-4dd2-a2ce-81a10b1ffbb1.png",
+        imagen: "centros-florales/ddce1a27-bae0-4dd2-a2ce-81a10b1ffbb1_11zon.webp",
         categoria: "centros-florales",
         precio: 75
     },
@@ -449,7 +449,7 @@ const productos = [
         id: "producto-45",
         nombre: "Centro Vals",
         descripcion: "Descripción del producto 45.",
-        imagen: "centros-florales/9dcc46b7-c2ec-4764-9524-103e74e68436.png",
+        imagen: "centros-florales/9dcc46b7-c2ec-4764-9524-103e74e68436_11zon.webp",
         categoria: "centros-florales",
         precio: 79
     },
@@ -458,7 +458,7 @@ const productos = [
         id: "producto-46",
         nombre: "Centro Edelwise",
         descripcion: "Descripción del producto 46.",
-        imagen: "centros-florales/31d87979-4a60-4610-aac3-3fcbc4588a00.png",
+        imagen: "centros-florales/31d87979-4a60-4610-aac3-3fcbc4588a00_11zon.webp",
         categoria: "centros-florales",
         precio: 149
     },
@@ -467,7 +467,7 @@ const productos = [
         id: "producto-47",
         nombre: "Centro Blue Moon",
         descripcion: "Descripción del producto 47.",
-        imagen: "centros-florales/4c2df6af-bcf4-4a9b-a592-d350c75f1a93.png",
+        imagen: "centros-florales/4c2df6af-bcf4-4a9b-a592-d350c75f1a93_11zon.webp",
         categoria: "centros-florales",
         precio: 129
     },
@@ -481,7 +481,7 @@ const productos = [
         id: "producto-100",
         nombre: "Gypsophila Clásico",
         descripcion: "Descripción del producto 47.",
-        imagen: "ramosN/3e3adbcb-d1e4-4747-ac72-25f8db55e2f7.png",
+        imagen: "ramosN/3e3adbcb-d1e4-4747-ac72-25f8db55e2f7_11zon.webp",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },
@@ -490,7 +490,7 @@ const productos = [
         id: "producto-101",
         nombre: "Jardín romántico",
         descripcion: "Descripción del producto 47.",
-        imagen: "ramosN/bb816823-90ad-4ccd-929a-9bc3b26ce99d.png",
+        imagen: "ramosN/bb816823-90ad-4ccd-929a-9bc3b26ce99d_11zon.webp",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },
@@ -499,7 +499,7 @@ const productos = [
         id: "producto-102",
         nombre: "Lavanda & Marfil",
         descripcion: "Descripción del producto 47.",
-        imagen: "ramosN/279d60e3-ffa5-470b-8302-6da12aa13433.png",
+        imagen: "ramosN/279d60e3-ffa5-470b-8302-6da12aa13433_11zon.webp",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },
@@ -508,7 +508,7 @@ const productos = [
         id: "producto-103",
         nombre: "Ramo Fiore",
         descripcion: "Descripción del producto 47.",
-        imagen: "ramosN/a0da5288-30d8-4a32-8d40-e0068e4d7925.png",
+        imagen: "ramosN/a0da5288-30d8-4a32-8d40-e0068e4d7925_11zon.webp",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },
@@ -517,7 +517,7 @@ const productos = [
         id: "producto-104",
         nombre: "Ramo Moonlight",
         descripcion: "Descripción del producto 47.",
-        imagen: "ramosN/9a0a89eb-a5ab-43b5-a4fd-6365ea3c9bcd.png",
+        imagen: "ramosN/9a0a89eb-a5ab-43b5-a4fd-6365ea3c9bcd_11zon.webp",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },
@@ -526,7 +526,7 @@ const productos = [
         id: "producto-105",
         nombre: "Ramo Elegance",
         descripcion: "Descripción del producto 47.",
-        imagen: "ramosN/b39c5f51-114f-4a89-9f15-cf40fcb9310e.png",
+        imagen: "ramosN/b39c5f51-114f-4a89-9f15-cf40fcb9310e_11zon.webp",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },
@@ -535,7 +535,7 @@ const productos = [
         id: "producto-106",
         nombre: "Ramo Golden",
         descripcion: "Descripción del producto 47.",
-        imagen: "ramosN/a897c90b-e71c-4146-8ee3-79cbcbbe7296.png",
+        imagen: "ramosN/a897c90b-e71c-4146-8ee3-79cbcbbe7296_11zon.webp",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },
@@ -544,7 +544,7 @@ const productos = [
         id: "producto-107",
         nombre: "Ramo Coral",
         descripcion: "Descripción del producto 47.",
-        imagen: "ramosN/2b397db0-c054-4cd7-b6ed-0084af2b87c7.png",
+        imagen: "ramosN/2b397db0-c054-4cd7-b6ed-0084af2b87c7_11zon.webp",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },
@@ -553,7 +553,7 @@ const productos = [
         id: "producto-108",
         nombre: "Ramo Encanto Tropical",
         descripcion: "Descripción del producto 47.",
-        imagen: "ramosN/00d9b147-f144-40fe-9baf-78686aa9142e.png",
+        imagen: "ramosN/00d9b147-f144-40fe-9baf-78686aa9142e_11zon.webp",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },
@@ -562,7 +562,7 @@ const productos = [
         id: "producto-109",
         nombre: "Centro Blue Moon",
         descripcion: "Descripción del producto 47.",
-        imagen: "ramosN/14df2481-2947-466d-b764-119f5d0b52ea.png",
+        imagen: "ramosN/14df2481-2947-466d-b764-119f5d0b52ea_11zon.webp",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },
@@ -571,7 +571,7 @@ const productos = [
         id: "producto-110",
         nombre: "Ramo nube de Marfil",
         descripcion: "Descripción del producto 47.",
-        imagen: "ramosN/6a5d1844-a6a8-4cca-959e-d2330fd30a42.png",
+        imagen: "ramosN/6a5d1844-a6a8-4cca-959e-d2330fd30a42_11zon.webp",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },
@@ -580,7 +580,7 @@ const productos = [
         id: "producto-111",
         nombre: "Ramo Rosa Bohemia",
         descripcion: "Descripción del producto 47.",
-        imagen: "ramosN/1c47f80a-d20c-4472-8bff-253e012ce3ee.png",
+        imagen: "ramosN/1c47f80a-d20c-4472-8bff-253e012ce3ee_11zon.webp",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },
@@ -589,7 +589,7 @@ const productos = [
         id: "producto-112",
         nombre: "Ramo Eterna",
         descripcion: "Descripción del producto 47.",
-        imagen: "ramosN/a66d42ab-3001-407c-837c-71006bfb1cb3.png",
+        imagen: "ramosN/a66d42ab-3001-407c-837c-71006bfb1cb3_11zon.webp",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },
@@ -598,7 +598,7 @@ const productos = [
         id: "producto-113",
         nombre: "Ramo Rosé",
         descripcion: "Descripción del producto 47.",
-        imagen: "ramosN/65cd7840-7ee9-4be5-98a8-5d41af263697.png",
+        imagen: "ramosN/65cd7840-7ee9-4be5-98a8-5d41af263697_11zon.webp",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },
@@ -607,7 +607,7 @@ const productos = [
         id: "producto-123",
         nombre: "Ramo Silvestre",
         descripcion: "Descripción del producto 47.",
-        imagen: "ramosN/3d9c3d90-2882-4e8a-be09-b7920fbf07c3.png",
+        imagen: "ramosN/3d9c3d90-2882-4e8a-be09-b7920fbf07c3_11zon.webp",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },
@@ -616,7 +616,7 @@ const productos = [
         id: "producto-114",
         nombre: "Tocado Primavera",
         descripcion: "Descripción del producto 47.",
-        imagen: "ramosN/a9f78603-8e3a-4c8b-a937-832ba1a27e6e.png",
+        imagen: "ramosN/a9f78603-8e3a-4c8b-a937-832ba1a27e6e_11zon.webp",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },
@@ -625,7 +625,7 @@ const productos = [
         id: "producto-115",
         nombre: "Tocado Éter",
         descripcion: "Descripción del producto 47.",
-        imagen: "ramosN/261350b7-c086-4c7a-9cd3-9aaf07ee679a.png",
+        imagen: "ramosN/261350b7-c086-4c7a-9cd3-9aaf07ee679a_11zon.webp",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },
@@ -634,7 +634,7 @@ const productos = [
         id: "producto-116",
         nombre: "Prendido Marfil",
         descripcion: "Descripción del producto 47.",
-        imagen: "ramosN/ffadf31f-03af-4dd7-b168-07bfc54ac670.png",
+        imagen: "ramosN/ffadf31f-03af-4dd7-b168-07bfc54ac670_11zon.webp",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },
@@ -643,7 +643,7 @@ const productos = [
         id: "producto-117",
         nombre: "Tocado Olivo",
         descripcion: "Descripción del producto 47.",
-        imagen: "ramosN/97085e30-42cb-4de2-ac55-4637332baa43.png",
+        imagen: "ramosN/97085e30-42cb-4de2-ac55-4637332baa43_11zon.webp",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },
@@ -652,7 +652,7 @@ const productos = [
         id: "producto-118",
         nombre: "Tocado Coral",
         descripcion: "Descripción del producto 47.",
-        imagen: "ramosN/ff05864d-3bd5-4a79-9d71-c20d9d2469d3.png",
+        imagen: "ramosN/ff05864d-3bd5-4a79-9d71-c20d9d2469d3_11zon.webp",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },
@@ -661,7 +661,7 @@ const productos = [
         id: "producto-119",
         nombre: "Tocado Amatista",
         descripcion: "Descripción del producto 47.",
-        imagen: "ramosN/a0705a1e-8b18-44e8-b253-621ff03cc706.png",
+        imagen: "ramosN/a0705a1e-8b18-44e8-b253-621ff03cc706_11zon.webp",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },
@@ -670,7 +670,7 @@ const productos = [
         id: "producto-120",
         nombre: "Tocado Provenza",
         descripcion: "Descripción del producto 47.",
-        imagen: "ramosN/02db3d27-5dc2-4d68-b17c-d9501d9508ac.png",
+        imagen: "ramosN/02db3d27-5dc2-4d68-b17c-d9501d9508ac_11zon.webp",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },
@@ -679,7 +679,7 @@ const productos = [
         id: "producto-121",
         nombre: "Tocado Rosa Perla",
         descripcion: "Descripción del producto 47.",
-        imagen: "ramosN/777aafbf-d479-4ff5-aaee-df603bb35343.png",
+        imagen: "ramosN/777aafbf-d479-4ff5-aaee-df603bb35343_11zon.webp",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },
@@ -688,7 +688,7 @@ const productos = [
         id: "producto-122",
         nombre: "Tocado Coralina",
         descripcion: "Descripción del producto 47.",
-        imagen: "ramosN/bad47e57-6efb-4b53-b196-f4a6c696b682.png",
+        imagen: "ramosN/bad47e57-6efb-4b53-b196-f4a6c696b682_11zon.webp",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },
@@ -702,7 +702,7 @@ const productos = [
         id: "producto-200",
         nombre: "Osito (I love you) ",
         descripcion: "Un detalle especial para acompañar tu composición floral.",
-        imagen: "complementos/9f2c1312-d0df-416a-a674-118436fc6ed0.png",
+        imagen: "complementos/9f2c1312-d0df-416a-a674-118436fc6ed0_11zon.webp",
         categoria: "complementos",
         precio: 24.95
     },
@@ -711,7 +711,7 @@ const productos = [
         id: "producto-201",
         nombre: "Ositos Dulce Amor (rosa)",
         descripcion: "Una vela decorativa para completar el regalo.",
-        imagen: "complementos/f26da02b-1277-4078-abe1-95f187c010d7.png",
+        imagen: "complementos/f26da02b-1277-4078-abe1-95f187c010d7_11zon.webp",
         categoria: "complementos",
         precio: 4.5 + "0"
     },
@@ -720,7 +720,7 @@ const productos = [
         id: "producto-202",
         nombre: "Ositos Dulce Amor (blanco)",
         descripcion: "Una selección de bombones perfecta para acompañar tus flores.",
-        imagen: "complementos/dfd5518f-4111-49f2-92db-d851804dc31d.png",
+        imagen: "complementos/dfd5518f-4111-49f2-92db-d851804dc31d_11zon.webp",
         categoria: "complementos",
         precio: 4.5 + "0"
     },
@@ -729,7 +729,7 @@ const productos = [
         id: "producto-203",
         nombre: "Osito marrón (love)",
         descripcion: "Un pequeño detalle para acompañar una composición floral.",
-        imagen: "complementos/ddba9621-586c-4ff2-8a0f-28d11f5fe8e7.png",
+        imagen: "complementos/ddba9621-586c-4ff2-8a0f-28d11f5fe8e7_11zon.webp",
         categoria: "complementos",
         precio: 15.95
     }
@@ -739,7 +739,7 @@ const productos = [
         id: "producto-204",
         nombre: "Osito Encanto",
         descripcion: "Un pequeño detalle para acompañar una composición floral.",
-        imagen: "complementos/e734fa6a-92c1-4e90-8b1b-b921762a99ea.png",
+        imagen: "complementos/e734fa6a-92c1-4e90-8b1b-b921762a99ea_11zon.webp",
         categoria: "complementos",
         precio: 15.95
     }
@@ -749,7 +749,7 @@ const productos = [
         id: "producto-205",
         nombre: "Peluchito elefante",
         descripcion: "Un pequeño detalle para acompañar una composición floral.",
-        imagen: "complementos/12ae0c12-ff3a-457b-b4ec-805837be674a (1).png",
+        imagen: "complementos/12ae0c12-ff3a-457b-b4ec-805837be674a (1)_11zon.webp",
         categoria: "complementos",
         precio: 19.95
     }
@@ -759,7 +759,7 @@ const productos = [
         id: "producto-206",
         nombre: "Jarrón básico",
         descripcion: "Un pequeño detalle para acompañar una composición floral.",
-        imagen: "complementos/632c0dc6-9937-490f-bc0d-fa80d0443639.png",
+        imagen: "complementos/632c0dc6-9937-490f-bc0d-fa80d0443639_11zon.webp",
         categoria: "complementos",
         precio: 8.95
     }
@@ -769,7 +769,7 @@ const productos = [
         id: "producto-207",
         nombre: "Jarrón Rústico",
         descripcion: "Un pequeño detalle para acompañar una composición floral.",
-        imagen: "complementos/b0e6e596-a71b-43d6-943e-32492cb0471e.png",
+        imagen: "complementos/b0e6e596-a71b-43d6-943e-32492cb0471e_11zon.webp",
         categoria: "complementos",
         precio:  12.95
     }
