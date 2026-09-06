@@ -21,7 +21,7 @@ const productos = [
         imagen: "jarrones/12720740-7f2a-4d99-92c8-8fe3e6f0f42c.png",
         categoria: "ramos",
         tipo: "jarrones",
-        precio: 65 
+        precio: 65
     },
 
     {
@@ -160,48 +160,48 @@ const productos = [
     ================================================= */
 
     {
-    id: "producto-15",
-    nombre: "Ramo Sinfonía Escarlata",
-    descripcion: "Una composición espectacular de 50 rosas rojas que transmite elegancia.",
-    imagen: "buquesR/ChatGPT Image 24 ago 2026, 23_58_14.png",
-    categoria: "buquesR",
-    precio: 199
-},
-
-{
-    id: "producto-16",
-    nombre: "Bouquet Rubí Imperial",
-    descripcion: "Un impresionante bouquet de 90 rosas rojas para ocasiones realmente especiales.",
-    imagen: "buquesR/53983f73-8293-4655-a271-99ff14534300.png",
-    categoria: "buquesR",
-    precio: 259
-},
-
-{
-    id: "producto-17",
-    nombre: "Bouquet Alba Imperial ",
-    descripcion: "Una composición delicada y sofisticada de 50 rosas blancas.",
-    imagen: "buquesR/11855efe-da6f-4e31-a50d-f7ab4841e69a.png",
-    categoria: "buquesR",
-    precio: 225
-},{
-    id: "producto-20",
-    nombre: "Dúo Mon Amour",
-    descripcion: "Un romántico dúo floral (20 rosas rojas + osito peluche).",
-    imagen: "buquesR/88d61d80-58c4-4a00-be09-9115fe4e9331.png",
-    categoria: "buquesR",
-    precio: 99
+        id: "producto-15",
+        nombre: "Ramo Sinfonía Escarlata",
+        descripcion: "Una composición espectacular de 50 rosas rojas que transmite elegancia.",
+        imagen: "buquesR/ChatGPT Image 24 ago 2026, 23_58_14.png",
+        categoria: "buquesR",
+        precio: 199
     },
 
+    {
+        id: "producto-16",
+        nombre: "Bouquet Rubí Imperial",
+        descripcion: "Un impresionante bouquet de 90 rosas rojas para ocasiones realmente especiales.",
+        imagen: "buquesR/53983f73-8293-4655-a271-99ff14534300.png",
+        categoria: "buquesR",
+        precio: 259
+    },
 
+    {
+        id: "producto-17",
+        nombre: "Bouquet Alba Imperial",
+        descripcion: "Una composición delicada y sofisticada de 50 rosas blancas.",
+        imagen: "buquesR/11855efe-da6f-4e31-a50d-f7ab4841e69a.png",
+        categoria: "buquesR",
+        precio: 225
+    },
 
-{
-    id: "producto-19",
-    nombre: "Bouquet 12 rosas (sin jarrón)",
-    imagen: "fotos/08876dc9-ab13-4490-a69f-6555a63da051.png",
-    categoria: "buquesR",
-    precio: 48
-},
+    {
+        id: "producto-20",
+        nombre: "Dúo Mon Amour",
+        descripcion: "Un romántico dúo floral (20 rosas rojas + osito peluche).",
+        imagen: "buquesR/88d61d80-58c4-4a00-be09-9115fe4e9331.png",
+        categoria: "buquesR",
+        precio: 99
+    },
+
+    {
+        id: "producto-19",
+        nombre: "Bouquet 12 rosas (sin jarrón)",
+        imagen: "fotos/08876dc9-ab13-4490-a69f-6555a63da051.png",
+        categoria: "buquesR",
+        precio: 48
+    },
 
     {
         id: "producto-99",
@@ -210,15 +210,14 @@ const productos = [
         categoria: "buquesR",
         precio: 55
     },
-    {
-    id: "producto-18",
-    nombre: "Cesto 200 rosas Premium",
-    imagen: "ramosN/38126b48-f17d-40d8-8507-2897803935a8.png",
-    categoria: "buquesR",
-    precio: 735
-},
 
-    
+    {
+        id: "producto-18",
+        nombre: "Cesto 200 rosas Premium",
+        imagen: "ramosN/38126b48-f17d-40d8-8507-2897803935a8.png",
+        categoria: "buquesR",
+        precio: 735
+    },
 
 
     /* =================================================
@@ -474,6 +473,10 @@ const productos = [
     },
 
 
+    /* =================================================
+       RAMOS NATURALES / TOCADOS
+    ================================================= */
+
     {
         id: "producto-100",
         nombre: "Gypsophila Clásico",
@@ -500,6 +503,7 @@ const productos = [
         categoria: "ramosN",
         mensaje: "Precio a consultar"
     },
+
     {
         id: "producto-103",
         nombre: "Ramo Fiore",
@@ -507,74 +511,89 @@ const productos = [
         imagen: "ramosN/a0da5288-30d8-4a32-8d40-e0068e4d7925.png",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
-    },{
+    },
+
+    {
         id: "producto-104",
         nombre: "Ramo Moonlight",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/9a0a89eb-a5ab-43b5-a4fd-6365ea3c9bcd.png",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
-    },{
+    },
+
+    {
         id: "producto-105",
         nombre: "Ramo Elegance",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/b39c5f51-114f-4a89-9f15-cf40fcb9310e.png",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
-    },{
+    },
+
+    {
         id: "producto-106",
         nombre: "Ramo Golden",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/a897c90b-e71c-4146-8ee3-79cbcbbe7296.png",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
-    },{
+    },
+
+    {
         id: "producto-107",
         nombre: "Ramo Coral",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/2b397db0-c054-4cd7-b6ed-0084af2b87c7.png",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
-    },{
+    },
+
+    {
         id: "producto-108",
         nombre: "Ramo Encanto Tropical",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/00d9b147-f144-40fe-9baf-78686aa9142e.png",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
-    },{
+    },
+
+    {
         id: "producto-109",
         nombre: "Centro Blue Moon",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/14df2481-2947-466d-b764-119f5d0b52ea.png",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
-    }
-    ,{
+    },
+
+    {
         id: "producto-110",
         nombre: "Ramo nube de Marfil",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/6a5d1844-a6a8-4cca-959e-d2330fd30a42.png",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
-    }
-    ,{
+    },
+
+    {
         id: "producto-111",
         nombre: "Ramo Rosa Bohemia",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/1c47f80a-d20c-4472-8bff-253e012ce3ee.png",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
-    }
-    ,{
+    },
+
+    {
         id: "producto-112",
         nombre: "Ramo Eterna",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/a66d42ab-3001-407c-837c-71006bfb1cb3.png",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
-    }
-    ,
+    },
+
     {
         id: "producto-113",
         nombre: "Ramo Rosé",
@@ -582,81 +601,177 @@ const productos = [
         imagen: "ramosN/65cd7840-7ee9-4be5-98a8-5d41af263697.png",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
-    },{
+    },
+
+    {
         id: "producto-123",
         nombre: "Ramo Silvestre",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/3d9c3d90-2882-4e8a-be09-b7920fbf07c3.png",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
-    }
-    ,{
+    },
+
+    {
         id: "producto-114",
         nombre: "Tocado Primavera",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/a9f78603-8e3a-4c8b-a937-832ba1a27e6e.png",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
-    },{
+    },
+
+    {
         id: "producto-115",
         nombre: "Tocado Éter",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/261350b7-c086-4c7a-9cd3-9aaf07ee679a.png",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
-    },{
+    },
+
+    {
         id: "producto-116",
         nombre: "Prendido Marfil",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/ffadf31f-03af-4dd7-b168-07bfc54ac670.png",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
-    },{
+    },
+
+    {
         id: "producto-117",
         nombre: "Tocado Olivo",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/97085e30-42cb-4de2-ac55-4637332baa43.png",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
-    },{
+    },
+
+    {
         id: "producto-118",
         nombre: "Tocado Coral",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/ff05864d-3bd5-4a79-9d71-c20d9d2469d3.png",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
-    }
-    ,{
+    },
+
+    {
         id: "producto-119",
         nombre: "Tocado Amatista",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/a0705a1e-8b18-44e8-b253-621ff03cc706.png",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
-    }
-    ,{
+    },
+
+    {
         id: "producto-120",
         nombre: "Tocado Provenza",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/02db3d27-5dc2-4d68-b17c-d9501d9508ac.png",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
-    }
-    ,{
+    },
+
+    {
         id: "producto-121",
         nombre: "Tocado Rosa Perla",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/777aafbf-d479-4ff5-aaee-df603bb35343.png",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
-    }
-    ,{
+    },
+
+    {
         id: "producto-122",
         nombre: "Tocado Coralina",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/bad47e57-6efb-4b53-b196-f4a6c696b682.png",
         categoria: "ramosN",
         mensaje: "Precio a consultar"
+    },
+
+
+    /* =================================================
+       COMPLEMENTOS
+    ================================================= */
+
+    {
+        id: "producto-200",
+        nombre: "Osito (I love you) ",
+        descripcion: "Un detalle especial para acompañar tu composición floral.",
+        imagen: "complementos/9f2c1312-d0df-416a-a674-118436fc6ed0.png",
+        categoria: "complementos",
+        precio: 24.95
+    },
+
+    {
+        id: "producto-201",
+        nombre: "Ositos Dulce Amor (rosa)",
+        descripcion: "Una vela decorativa para completar el regalo.",
+        imagen: "complementos/f26da02b-1277-4078-abe1-95f187c010d7.png",
+        categoria: "complementos",
+        precio: 4.5 + "0"
+    },
+
+    {
+        id: "producto-202",
+        nombre: "Ositos Dulce Amor (blanco)",
+        descripcion: "Una selección de bombones perfecta para acompañar tus flores.",
+        imagen: "complementos/dfd5518f-4111-49f2-92db-d851804dc31d.png",
+        categoria: "complementos",
+        precio: 4.5 + "0"
+    },
+
+    {
+        id: "producto-203",
+        nombre: "Osito marrón (love)",
+        descripcion: "Un pequeño detalle para acompañar una composición floral.",
+        imagen: "complementos/ddba9621-586c-4ff2-8a0f-28d11f5fe8e7.png",
+        categoria: "complementos",
+        precio: 15.95
+    }
+    ,
+
+    {
+        id: "producto-204",
+        nombre: "Osito Encanto",
+        descripcion: "Un pequeño detalle para acompañar una composición floral.",
+        imagen: "complementos/e734fa6a-92c1-4e90-8b1b-b921762a99ea.png",
+        categoria: "complementos",
+        precio: 15.95
+    }
+    ,
+
+    {
+        id: "producto-205",
+        nombre: "Peluchito elefante",
+        descripcion: "Un pequeño detalle para acompañar una composición floral.",
+        imagen: "complementos/12ae0c12-ff3a-457b-b4ec-805837be674a (1).png",
+        categoria: "complementos",
+        precio: 19.95
+    }
+    ,
+
+    {
+        id: "producto-206",
+        nombre: "Jarrón básico",
+        descripcion: "Un pequeño detalle para acompañar una composición floral.",
+        imagen: "complementos/632c0dc6-9937-490f-bc0d-fa80d0443639.png",
+        categoria: "complementos",
+        precio: 8.95
+    }
+    ,
+
+    {
+        id: "producto-207",
+        nombre: "Jarrón Rústico",
+        descripcion: "Un pequeño detalle para acompañar una composición floral.",
+        imagen: "complementos/b0e6e596-a71b-43d6-943e-32492cb0471e.png",
+        categoria: "complementos",
+        precio:  12.95
     }
 
 ];
@@ -696,13 +811,17 @@ function crearEnlaceWhatsApp(producto) {
     );
 
 }
+
+
 /* =====================================================
    VISOR DE IMÁGENES DEL CATÁLOGO
 ===================================================== */
 
-const visorImagen = document.createElement("div");
+const visorImagen =
+    document.createElement("div");
 
-visorImagen.className = "visor-imagen";
+visorImagen.className =
+    "visor-imagen";
 
 visorImagen.innerHTML = `
     <button class="visor-cerrar" aria-label="Cerrar imagen">
@@ -715,11 +834,15 @@ visorImagen.innerHTML = `
 document.body.appendChild(visorImagen);
 
 
-/* ESTILOS DEL VISOR */
+/* =====================================================
+   ESTILOS DEL VISOR
+===================================================== */
 
-const estilosVisor = document.createElement("style");
+const estilosVisor =
+    document.createElement("style");
 
 estilosVisor.textContent = `
+
     .visor-imagen {
         position: fixed;
         inset: 0;
@@ -734,7 +857,9 @@ estilosVisor.textContent = `
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
-        transition: opacity 0.25s ease, visibility 0.25s ease;
+        transition:
+            opacity 0.25s ease,
+            visibility 0.25s ease;
         z-index: 99999;
     }
 
@@ -752,9 +877,11 @@ estilosVisor.textContent = `
         height: auto;
         object-fit: contain;
         border-radius: 8px;
-        box-shadow: 0 15px 50px rgba(0, 0, 0, 0.45);
+        box-shadow:
+            0 15px 50px rgba(0, 0, 0, 0.45);
         transform: scale(0.92);
-        transition: transform 0.25s ease;
+        transition:
+            transform 0.25s ease;
     }
 
     .visor-imagen.activo .visor-img {
@@ -777,7 +904,8 @@ estilosVisor.textContent = `
         display: flex;
         align-items: center;
         justify-content: center;
-        transition: background 0.2s ease;
+        transition:
+            background 0.2s ease;
         z-index: 2;
     }
 
@@ -790,6 +918,7 @@ estilosVisor.textContent = `
     }
 
     @media (max-width: 768px) {
+
         .visor-imagen {
             padding: 15px;
         }
@@ -806,13 +935,17 @@ estilosVisor.textContent = `
             height: 40px;
             font-size: 28px;
         }
+
     }
+
 `;
 
 document.head.appendChild(estilosVisor);
 
 
-/* ELEMENTOS DEL VISOR */
+/* =====================================================
+   ELEMENTOS DEL VISOR
+===================================================== */
 
 const imagenVisor =
     visorImagen.querySelector(".visor-img");
@@ -821,33 +954,53 @@ const botonCerrarVisor =
     visorImagen.querySelector(".visor-cerrar");
 
 
-/* ABRIR IMAGEN */
+/* =====================================================
+   ABRIR IMAGEN
+===================================================== */
 
 function abrirImagen(imagen) {
 
-    imagenVisor.src = imagen.src;
-    imagenVisor.alt = imagen.alt;
+    imagenVisor.src =
+        imagen.src;
 
-    visorImagen.classList.add("activo");
+    imagenVisor.alt =
+        imagen.alt;
 
-    document.documentElement.style.overflow = "hidden";
-    document.body.style.overflow = "hidden";
+    visorImagen.classList.add(
+        "activo"
+    );
+
+    document.documentElement.style.overflow =
+        "hidden";
+
+    document.body.style.overflow =
+        "hidden";
+
 }
 
 
-/* CERRAR IMAGEN */
+/* =====================================================
+   CERRAR IMAGEN
+===================================================== */
 
 function cerrarImagen() {
 
-    visorImagen.classList.remove("activo");
+    visorImagen.classList.remove(
+        "activo"
+    );
 
-    document.documentElement.style.overflow = "";
-    document.body.style.overflow = "";
+    document.documentElement.style.overflow =
+        "";
+
+    document.body.style.overflow =
+        "";
 
 }
 
 
-/* CLICK EN CERRAR */
+/* =====================================================
+   CLICK EN CERRAR
+===================================================== */
 
 botonCerrarVisor.addEventListener(
     "click",
@@ -855,21 +1008,29 @@ botonCerrarVisor.addEventListener(
 );
 
 
-/* CLICK EN EL FONDO */
+/* =====================================================
+   CLICK EN EL FONDO
+===================================================== */
 
 visorImagen.addEventListener(
     "click",
     (evento) => {
 
-        if (evento.target === visorImagen) {
+        if (
+            evento.target === visorImagen
+        ) {
+
             cerrarImagen();
+
         }
 
     }
 );
 
 
-/* ESC PARA CERRAR */
+/* =====================================================
+   ESC PARA CERRAR
+===================================================== */
 
 document.addEventListener(
     "keydown",
@@ -877,13 +1038,18 @@ document.addEventListener(
 
         if (
             evento.key === "Escape" &&
-            visorImagen.classList.contains("activo")
+            visorImagen.classList.contains(
+                "activo"
+            )
         ) {
+
             cerrarImagen();
+
         }
 
     }
 );
+
 
 /* =====================================================
    MOSTRAR PRODUCTOS
@@ -914,102 +1080,165 @@ function mostrarProductos(lista) {
     }
 
 
-    lista.forEach((producto, indice) => {
+    lista.forEach(
+        (producto, indice) => {
 
-   /* =================================================
-   SEPARADOR ENTRE RAMOS Y TOCADOS
+
+            /* =================================================
+               SEPARADOR ENTRE RAMOS Y TOCADOS
+            ================================================= */
+
+            if (
+                producto.categoria === "ramosN" &&
+                producto.nombre === "Tocado Primavera"
+            ) {
+
+                const separador =
+                    document.createElement("div");
+
+                separador.className =
+                    "separador-tocados";
+
+                separador.innerHTML = `
+                    <span></span>
+                    <h2>Tocados y Prendidos</h2>
+                    <span></span>
+                `;
+
+                productosGrid.appendChild(
+                    separador
+                );
+
+            }
+
+
+            /* =================================================
+               TARJETA
+            ================================================= */
+
+            const tarjeta =
+    document.createElement("article");
+
+tarjeta.classList.add(
+    "producto"
+);
+
+
+/* =================================================
+   CLASE INDIVIDUAL PARA COMPLEMENTOS
+   Permite modificar su tamaño desde CSS
+   sin afectar al resto de secciones.
 ================================================= */
 
 if (
-    producto.categoria === "ramosN" &&
-    producto.nombre === "Tocado Primavera"
+    producto.categoria === "complementos"
 ) {
 
-    const separador = document.createElement("div");
+    tarjeta.classList.add(
+        "producto-complemento"
+    );
 
-    separador.className = "separador-tocados";
-
-    separador.innerHTML = `
-        <span></span>
-        <h2>Tocados y Prendidos</h2>
-        <span></span>
-    `;
-
-    productosGrid.appendChild(separador);
 }
 
 
-    const tarjeta =
-        document.createElement("article");
-
-    tarjeta.classList.add("producto");
-
-        tarjeta.classList.add("producto");
+            const enlaceWhatsApp =
+                crearEnlaceWhatsApp(
+                    producto
+                );
 
 
-        const enlaceWhatsApp =
-            crearEnlaceWhatsApp(producto);
+            tarjeta.innerHTML = `
 
+                <div class="producto-imagen">
 
-        tarjeta.innerHTML = `
-
-            <div class="producto-imagen">
-
-                <img
-                    src="${producto.imagen}"
-                    alt="${producto.nombre}"
-                    loading="lazy"
-                >
-
-            </div>
-
-            <div class="producto-info">
-
-                <h3>
-                    ${producto.nombre}
-                </h3>
-
-                ${producto.categoria === "buquesR" && producto.descripcion ? `
-    <p class="producto-descripcion">
-        ${producto.descripcion}
-    </p>
-` : ""}
-
-                <div class="producto-precio">
-
-                    <span class="${producto.mensaje ? "texto-consultar" : ""}">
-                        ${producto.mensaje || producto.precio + " €"}
-                    </span>
+                    <img
+                        src="${producto.imagen}"
+                        alt="${producto.nombre}"
+                        loading="lazy"
+                    >
 
                 </div>
 
-                <a
-                    class="contactar-whatsapp"
-                    href="${enlaceWhatsApp}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
 
-                    <i class="bi bi-whatsapp"></i>
+                <div class="producto-info">
 
-                    Me interesa
-
-                </a>
-
-            </div>
-
-        `;
+                    <h3>
+                        ${producto.nombre}
+                    </h3>
 
 
-        productosGrid.appendChild(tarjeta);
-        const imagenProducto = tarjeta.querySelector(".producto-imagen img");
+                    ${
+                        producto.categoria === "buquesR" &&
+                        producto.descripcion
+                        ? `
+                            <p class="producto-descripcion">
+                                ${producto.descripcion}
+                            </p>
+                        `
+                        : ""
+                    }
 
-imagenProducto.addEventListener("click", () => {
-    abrirImagen(imagenProducto);
-});
-        
 
-    });
+                    <div class="producto-precio">
+
+                        <span
+                            class="${
+                                producto.mensaje
+                                    ? "texto-consultar"
+                                    : ""
+                            }"
+                        >
+                            ${
+                                producto.mensaje ||
+                                producto.precio + " €"
+                            }
+                        </span>
+
+                    </div>
+
+
+                    <a
+                        class="contactar-whatsapp"
+                        href="${enlaceWhatsApp}"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+
+                        <i class="bi bi-whatsapp"></i>
+
+                        Me interesa
+
+                    </a>
+
+                </div>
+
+            `;
+
+
+            productosGrid.appendChild(
+                tarjeta
+            );
+
+
+            const imagenProducto =
+                tarjeta.querySelector(
+                    ".producto-imagen img"
+                );
+
+
+            imagenProducto.addEventListener(
+                "click",
+                () => {
+
+                    abrirImagen(
+                        imagenProducto
+                    );
+
+                }
+            );
+
+        }
+    );
 
 }
 
@@ -1018,11 +1247,17 @@ imagenProducto.addEventListener("click", () => {
    MOSTRAR / OCULTAR SUBFILTROS
 ===================================================== */
 
-function actualizarSubfiltros(categoria) {
+function actualizarSubfiltros(
+    categoria
+) {
 
-    if (categoria === "ramos") {
+    if (
+        categoria === "ramos"
+    ) {
 
-        subfiltrosRamos.classList.add("visible");
+        subfiltrosRamos.classList.add(
+            "visible"
+        );
 
         subfiltrosRamos.setAttribute(
             "aria-hidden",
@@ -1030,11 +1265,15 @@ function actualizarSubfiltros(categoria) {
         );
 
 
-        subfiltros.forEach((boton) => {
+        subfiltros.forEach(
+            (boton) => {
 
-            boton.classList.remove("activo");
+                boton.classList.remove(
+                    "activo"
+                );
 
-        });
+            }
+        );
 
 
         const todos =
@@ -1045,7 +1284,9 @@ function actualizarSubfiltros(categoria) {
 
         if (todos) {
 
-            todos.classList.add("activo");
+            todos.classList.add(
+                "activo"
+            );
 
         }
 
@@ -1055,7 +1296,9 @@ function actualizarSubfiltros(categoria) {
     }
 
 
-    subfiltrosRamos.classList.remove("visible");
+    subfiltrosRamos.classList.remove(
+        "visible"
+    );
 
     subfiltrosRamos.setAttribute(
         "aria-hidden",
@@ -1069,136 +1312,216 @@ function actualizarSubfiltros(categoria) {
    FILTROS PRINCIPALES
 ===================================================== */
 
-filtros.forEach((filtro) => {
+filtros.forEach(
+    (filtro) => {
 
-    filtro.addEventListener("click", () => {
-
-        filtros.forEach((boton) => {
-
-            boton.classList.remove("activo");
-
-        });
+        filtro.addEventListener(
+            "click",
+            () => {
 
 
-        filtro.classList.add("activo");
+                filtros.forEach(
+                    (boton) => {
 
+                        boton.classList.remove(
+                            "activo"
+                        );
 
-        const categoria =
-            filtro.dataset.categoria;
-
-        actualizarFondoSeccion(categoria);
-        actualizarSubfiltros(categoria);
-
-
-        /* TODOS */
-
-        if (categoria === "todos") {
-
-            mostrarProductos(productos);
-
-            return;
-
-        }
-
-
-        /*
-           Filtrado exacto por categoría.
-        */
-
-        const filtrados =
-            productos.filter(
-                (producto) =>
-                    producto.categoria === categoria
-            );
-
-
-        mostrarProductos(filtrados);
-
-    });
-
-});
-
-
-subfiltros.forEach((boton) => {
-
-    boton.addEventListener("click", (evento) => {
-
-        evento.stopPropagation();
-
-        subfiltros.forEach((b) => {
-            b.classList.remove("activo");
-        });
-
-        boton.classList.add("activo");
-
-        const tipo =
-            boton.dataset.tipo;
-
-        /* 
-           Todos los subfiltros de Ramos
-           utilizan el mismo fondo.
-        */
-        actualizarFondoSeccion("ramos");
-
-
-        /* TODOS LOS RAMOS */
-
-        if (tipo === "todos") {
-
-            const todosLosRamos =
-                productos.filter(
-                    (producto) =>
-                        producto.categoria === "ramos"
+                    }
                 );
 
-            mostrarProductos(todosLosRamos);
 
-            return;
-        }
+                filtro.classList.add(
+                    "activo"
+                );
 
 
-        /* SOLO EL TIPO SELECCIONADO */
+                const categoria =
+                    filtro.dataset.categoria;
 
-        const filtrados =
-            productos.filter(
-                (producto) =>
-                    producto.categoria === "ramos" &&
-                    producto.tipo === tipo
-            );
 
-        mostrarProductos(filtrados);
+                actualizarFondoSeccion(
+                    categoria
+                );
 
-    });
+                actualizarSubfiltros(
+                    categoria
+                );
 
-});
+
+                /* =================================================
+                   TODOS
+                ================================================= */
+
+                if (
+                    categoria === "todos"
+                ) {
+
+                    mostrarProductos(
+                        productos
+                    );
+
+                    return;
+
+                }
+
+
+                /*
+                    Filtrado exacto por categoría.
+                */
+
+                const filtrados =
+                    productos.filter(
+                        (producto) =>
+                            producto.categoria ===
+                            categoria
+                    );
+
+
+                mostrarProductos(
+                    filtrados
+                );
+
+            }
+        );
+
+    }
+);
+
+
+/* =====================================================
+   SUBFILTROS
+===================================================== */
+
+subfiltros.forEach(
+    (boton) => {
+
+        boton.addEventListener(
+            "click",
+            (evento) => {
+
+                evento.stopPropagation();
+
+
+                subfiltros.forEach(
+                    (b) => {
+
+                        b.classList.remove(
+                            "activo"
+                        );
+
+                    }
+                );
+
+
+                boton.classList.add(
+                    "activo"
+                );
+
+
+                const tipo =
+                    boton.dataset.tipo;
+
+
+                /*
+                    Todos los subfiltros de Ramos
+                    utilizan el mismo fondo.
+                */
+
+                actualizarFondoSeccion(
+                    "ramos"
+                );
+
+
+                /* =================================================
+                   TODOS LOS RAMOS
+                ================================================= */
+
+                if (
+                    tipo === "todos"
+                ) {
+
+                    const todosLosRamos =
+                        productos.filter(
+                            (producto) =>
+                                producto.categoria ===
+                                "ramos"
+                        );
+
+
+                    mostrarProductos(
+                        todosLosRamos
+                    );
+
+                    return;
+
+                }
+
+
+                /* =================================================
+                   SOLO EL TIPO SELECCIONADO
+                ================================================= */
+
+                const filtrados =
+                    productos.filter(
+                        (producto) =>
+                            producto.categoria ===
+                                "ramos" &&
+                            producto.tipo ===
+                                tipo
+                    );
+
+
+                mostrarProductos(
+                    filtrados
+                );
+
+            }
+        );
+
+    }
+);
+
 
 /* =====================================================
    MENÚ MÓVIL
 ===================================================== */
 
 const botonMenu =
-    document.getElementById("menuBtn");
+    document.getElementById(
+        "menuBtn"
+    );
 
 const menuDesplegable =
-    document.getElementById("menuDesplegable");
+    document.getElementById(
+        "menuDesplegable"
+    );
 
 
-if (botonMenu && menuDesplegable) {
+if (
+    botonMenu &&
+    menuDesplegable
+) {
 
 
     function abrirMenu() {
 
-        menuDesplegable.classList.add("abierto");
+        menuDesplegable.classList.add(
+            "abierto"
+        );
+
 
         botonMenu.setAttribute(
             "aria-expanded",
             "true"
         );
 
+
         botonMenu.setAttribute(
             "aria-label",
             "Cerrar menú"
         );
+
 
         botonMenu.innerHTML =
             '<i class="bi bi-x-lg"></i>';
@@ -1215,17 +1538,22 @@ if (botonMenu && menuDesplegable) {
 
     function cerrarMenu() {
 
-        menuDesplegable.classList.remove("abierto");
+        menuDesplegable.classList.remove(
+            "abierto"
+        );
+
 
         botonMenu.setAttribute(
             "aria-expanded",
             "false"
         );
 
+
         botonMenu.setAttribute(
             "aria-label",
             "Abrir menú"
         );
+
 
         botonMenu.innerHTML =
             '<i class="bi bi-list"></i>';
@@ -1266,17 +1594,21 @@ if (botonMenu && menuDesplegable) {
 
 
     const enlacesMenu =
-        menuDesplegable.querySelectorAll("a");
-
-
-    enlacesMenu.forEach((enlace) => {
-
-        enlace.addEventListener(
-            "click",
-            cerrarMenu
+        menuDesplegable.querySelectorAll(
+            "a"
         );
 
-    });
+
+    enlacesMenu.forEach(
+        (enlace) => {
+
+            enlace.addEventListener(
+                "click",
+                cerrarMenu
+            );
+
+        }
+    );
 
 
     document.addEventListener(
@@ -1356,14 +1688,18 @@ if (botonMenu && menuDesplegable) {
 ===================================================== */
 
 const navbar =
-    document.querySelector("nav");
+    document.querySelector(
+        "nav"
+    );
 
 
 if (navbar) {
 
     function actualizarNavbar() {
 
-        if (window.scrollY > 0) {
+        if (
+            window.scrollY > 0
+        ) {
 
             navbar.classList.add(
                 "navbar-scroll"
@@ -1390,31 +1726,53 @@ if (navbar) {
 
 }
 
+
 /* =====================================================
    FONDO DINÁMICO SEGÚN CATEGORÍA
 ===================================================== */
 
 const seccionProductos =
-    document.querySelector(".productos");
-
-
-function actualizarFondoSeccion(categoria) {
-
-    if (!seccionProductos) {
-        return;
-    }
-
-    seccionProductos.classList.remove(
-        "fondo-todos",
-        "fondo-ramos",
-        "fondo-buquesR",
-        "fondo-florSeca",
-        "fondo-centros",
-        "fondo-eventos"
+    document.querySelector(
+        ".productos"
     );
 
 
-    switch (categoria) {
+function actualizarFondoSeccion(
+    categoria
+) {
+
+    if (
+        !seccionProductos
+    ) {
+
+        return;
+
+    }
+
+
+    seccionProductos.classList.remove(
+
+        "fondo-todos",
+
+        "fondo-ramos",
+
+        "fondo-buquesR",
+
+        "fondo-florSeca",
+
+        "fondo-centros",
+
+        "fondo-eventos",
+
+        "fondo-complementos"
+
+    );
+
+
+    switch (
+        categoria
+    ) {
+
 
         case "ramos":
 
@@ -1461,7 +1819,21 @@ function actualizarFondoSeccion(categoria) {
             break;
 
 
+        /* =================================================
+           COMPLEMENTOS
+        ================================================= */
+
+        case "complementos":
+
+            seccionProductos.classList.add(
+                "fondo-complementos"
+            );
+
+            break;
+
+
         case "todos":
+
         default:
 
             seccionProductos.classList.add(
@@ -1469,19 +1841,25 @@ function actualizarFondoSeccion(categoria) {
             );
 
             break;
+
     }
+
 }
 
 
-/* Fondo inicial */
+/* =====================================================
+   FONDO INICIAL
+===================================================== */
 
-actualizarFondoSeccion("todos");
+actualizarFondoSeccion(
+    "todos"
+);
 
 
 /* =====================================================
    INICIAR
 ===================================================== */
 
-
-
-mostrarProductos(productos);
+mostrarProductos(
+    productos
+);
