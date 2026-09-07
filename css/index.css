@@ -3563,3 +3563,11 @@ nav.navbar-scroll {
     }
 
 }
+
+.cta-final,
+.cta-final span,
+.cta-final h2,
+.cta-final p,
+.cta-final a {
+    font-family: "Lora", serif;
+}
