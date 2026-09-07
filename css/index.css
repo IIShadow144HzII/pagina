@@ -626,9 +626,14 @@ nav {
 
     
 .separador-todos:first-child h2 {
-    margin-top: 15px;
+    margin-top: 20px;
+    margin-bottom: 5px;
 }
 
+.separador-todos h2 {
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
 @keyframes aparecerEtiquetaMovil {
     from {
         opacity: 0;
