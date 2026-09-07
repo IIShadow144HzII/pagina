@@ -626,13 +626,13 @@ nav {
 
     
 .separador-todos:first-child h2 {
-    margin-top: 20px;
-    margin-bottom: 0px;
+    margin-top: 15px !important;
+    margin-bottom: 0px !important;
 }
 
 .separador-todos h2 {
-    margin-top: 0px;
-    margin-bottom: 25px;
+    margin-top: 0px !important;
+    margin-bottom: 25px !important;
 }
 @keyframes aparecerEtiquetaMovil {
     from {

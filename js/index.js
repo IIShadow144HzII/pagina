@@ -162,7 +162,7 @@ const productos = [
     {
         id: "producto-15",
         nombre: "Ramo Sinfonía Escarlata",
-        descripcion: "Una composición espectacular de 50 rosas rojas que transmite elegancia.",
+        descripcion: "Una composición espectacular de 50 rosas rojas.",
         imagen: "buquesR/ChatGPT-Image-24-ago-2026_-23_58_14.webp",
         categoria: "buquesR",
         precio: 199
@@ -171,7 +171,7 @@ const productos = [
     {
         id: "producto-16",
         nombre: "Bouquet Rubí Imperial",
-        descripcion: "Un impresionante bouquet de 90 rosas rojas para ocasiones realmente especiales.",
+        descripcion: "Un impresionante bouquet de 90 rosas rojas premium.",
         imagen: "buquesR/53983f73-8293-4655-a271-99ff14534300.webp",
         categoria: "buquesR",
         precio: 259
