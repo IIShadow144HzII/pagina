@@ -625,7 +625,9 @@ nav {
     }
 
     
-
+.separador-todos:first-child h2 {
+    margin-top: 15px;
+}
 
 @keyframes aparecerEtiquetaMovil {
     from {

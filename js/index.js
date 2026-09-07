@@ -1240,7 +1240,333 @@ if (
         }
     );
 
+}/* =====================================================
+   MOSTRAR TODOS SEPARADOS POR CATEGORÍA
+===================================================== */
+
+function mostrarTodosSeparados() {
+
+    productosGrid.innerHTML = "";
+
+    const categorias = [
+        {
+            categoria: "ramos",
+            titulo: "Ramos"
+        },
+        {
+            categoria: "buquesR",
+            titulo: "Bouquets de rosas"
+        },
+        {
+            categoria: "florSeca",
+            titulo: "Flor seca y preservada"
+        },
+        {
+            categoria: "centros-florales",
+            titulo: "Centros Florales"
+        },
+        {
+            categoria: "ramosN",
+            titulo: "Ramos de novia y tocados"
+        },
+        {
+            categoria: "complementos",
+            titulo: "Complementos"
+        }
+    ];
+
+
+    categorias.forEach(
+        (grupo) => {
+
+            const productosCategoria =
+                productos.filter(
+                    (producto) =>
+                        producto.categoria ===
+                        grupo.categoria
+                );
+
+
+            if (
+                productosCategoria.length === 0
+            ) {
+                return;
+            }
+
+
+            /* =================================================
+               SEPARADOR
+            ================================================= */
+
+            const separador =
+                document.createElement("div");
+
+            separador.className =
+                "separador-todos";
+
+
+            separador.innerHTML = `
+                <span></span>
+
+                <h2>
+                    ${grupo.titulo}
+                </h2>
+
+                <span></span>
+            `;
+
+
+            productosGrid.appendChild(
+                separador
+            );
+
+
+            /* =================================================
+               PRODUCTOS
+            ================================================= */
+
+            productosCategoria.forEach(
+                (producto) => {
+
+                    const tarjeta =
+                        document.createElement(
+                            "article"
+                        );
+
+
+                    tarjeta.classList.add(
+                        "producto"
+                    );
+
+
+                    /* =================================================
+                       COMPLEMENTOS
+                    ================================================= */
+
+                    if (
+                        producto.categoria ===
+                        "complementos"
+                    ) {
+
+                        tarjeta.classList.add(
+                            "producto-complemento"
+                        );
+
+                    }
+
+
+                    const enlaceWhatsApp =
+                        crearEnlaceWhatsApp(
+                            producto
+                        );
+
+
+                    tarjeta.innerHTML = `
+
+                        <div class="producto-imagen">
+
+                            <img
+                                src="${producto.imagen}"
+                                alt="${producto.nombre}"
+                                loading="lazy"
+                            >
+
+                        </div>
+
+
+                        <div class="producto-info">
+
+                            <h3>
+                                ${producto.nombre}
+                            </h3>
+
+
+                            ${
+                                producto.categoria === "buquesR" &&
+                                producto.descripcion
+                                    ? `
+                                        <p class="producto-descripcion">
+                                            ${producto.descripcion}
+                                        </p>
+                                    `
+                                    : ""
+                            }
+
+
+                            <div class="producto-precio">
+
+                                <span
+                                    class="${
+                                        producto.mensaje
+                                            ? "texto-consultar"
+                                            : ""
+                                    }"
+                                >
+                                    ${
+                                        producto.mensaje ||
+                                        producto.precio + " €"
+                                    }
+                                </span>
+
+                            </div>
+
+
+                            <a
+                                class="contactar-whatsapp"
+                                href="${enlaceWhatsApp}"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >
+
+                                <i class="bi bi-whatsapp"></i>
+
+                                Me interesa
+
+                            </a>
+
+                        </div>
+
+                    `;
+
+
+                    productosGrid.appendChild(
+                        tarjeta
+                    );
+
+
+                    /* =================================================
+                       VISOR DE IMAGEN
+                    ================================================= */
+
+                    const imagenProducto =
+                        tarjeta.querySelector(
+                            ".producto-imagen img"
+                        );
+
+
+                    imagenProducto.addEventListener(
+                        "click",
+                        () => {
+
+                            abrirImagen(
+                                imagenProducto
+                            );
+
+                        }
+                    );
+
+                }
+            );
+
+        }
+    );
+
 }
+/* =====================================================
+   ESTILOS SEPARADORES "TODOS"
+===================================================== */
+
+const estilosSeparadoresTodos =
+    document.createElement("style");
+
+estilosSeparadoresTodos.textContent = `
+
+    .separador-todos {
+
+        grid-column: 1 / -1;
+
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            minmax(40px, 1fr)
+            auto
+            minmax(40px, 1fr);
+
+        align-items: center;
+
+        gap: 25px;
+
+        margin: 60px 0 30px;
+
+    }
+
+
+    .separador-todos:first-child {
+
+        margin-top: 0;
+
+    }
+
+
+    .separador-todos span {
+
+        display: block;
+
+        width: 100%;
+
+        height: 1px;
+
+        background: #6E4148;
+
+        opacity: 0.45;
+
+    }
+
+
+    .separador-todos h2 {
+
+        margin: 0;
+
+        font-family: "Lora", serif;
+
+        font-size: 24px;
+
+        font-weight: 500;
+
+        color: #6E4148;
+
+        text-align: center;
+
+        white-space: nowrap;
+
+    }
+
+
+    @media (max-width: 768px) {
+
+        .separador-todos {
+
+            grid-template-columns: 1fr;
+
+            gap: 0;
+
+            margin: 45px 0 25px;
+
+        }
+
+
+        .separador-todos span {
+
+            display: none;
+
+        }
+
+
+        .separador-todos h2 {
+
+            font-size: 21px;
+
+        }
+
+    }
+
+`;
+
+document.head.appendChild(
+    estilosSeparadoresTodos
+);
 
 
 /* =====================================================
@@ -1354,16 +1680,13 @@ filtros.forEach(
                 ================================================= */
 
                 if (
-                    categoria === "todos"
-                ) {
+    categoria === "todos"
+) {
 
-                    mostrarProductos(
-                        productos
-                    );
+    mostrarTodosSeparados();
 
-                    return;
-
-                }
+    return;
+}
 
 
                 /*
@@ -1860,6 +2183,4 @@ actualizarFondoSeccion(
    INICIAR
 ===================================================== */
 
-mostrarProductos(
-    productos
-);
+mostrarTodosSeparados();
