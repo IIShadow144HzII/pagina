@@ -627,12 +627,12 @@ nav {
     
 .separador-todos:first-child h2 {
     margin-top: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
 }
 
 .separador-todos h2 {
     margin-top: 0px;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 }
 @keyframes aparecerEtiquetaMovil {
     from {
