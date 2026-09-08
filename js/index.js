@@ -440,7 +440,7 @@ const productos = [
         id: "producto-44",
         nombre: "Centro Duende y Alma",
         descripcion: "Descripción del producto 44.",
-        imagen: "centros-florales/ddce1a27-bae0-4dd2-a2ce-81a10b1ffbb1.webp",
+        imagen: "centros-florales/ddce1a27-bae0-4dd2-a2ce-81a10b1ffbb1_11zon.webp",
         categoria: "centros-florales",
         precio: 75
     },
