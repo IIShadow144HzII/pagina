@@ -560,7 +560,7 @@ const productos = [
 
     {
         id: "producto-109",
-        nombre: "ramo Alma floral",
+        nombre: "Ramo Alma floral",
         descripcion: "Descripción del producto 47.",
         imagen: "ramosN/14df2481-2947-466d-b764-119f5d0b52ea_11zon.webp",
         categoria: "ramosN",
