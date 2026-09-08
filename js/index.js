@@ -68,7 +68,7 @@ const productos = [
         id: "producto-06",
         nombre: "Capazo Melody",
         descripcion: "Descripción del producto 6.",
-        imagen: "capazos/42499836-87db-4c1c-a38d-9a0c2c825f36.webp",
+        imagen: "capazos/f985c597-26a2-4ace-b7d2-aa5c30a14d4b.webp",
         categoria: "ramos",
         tipo: "capazos",
         precio: 65
@@ -214,7 +214,7 @@ const productos = [
     {
         id: "producto-18",
         nombre: "Cesto 200 rosas Premium",
-        imagen: "ramosN/38126b48-f17d-40d8-8507-2897803935a8_11zon.webp",
+        imagen: "buquesR/6fd46f7c-fcda-4269-87ec-1178d174927e.webp",
         categoria: "buquesR",
         precio: 735
     },
@@ -336,7 +336,7 @@ const productos = [
         id: "producto-33",
         nombre: "Capazo Sorrento",
         descripcion: "Descripción del producto 33.",
-        imagen: "florSeca/0e39b813-10be-4ba1-a423-f3553f2ca17b_11zon.webp",
+        imagen: "florSeca/b0791f5b-b408-4685-a0da-0a2d2ce6f7f6.webp",
         categoria: "florSeca",
         precio: 55
     },
@@ -440,7 +440,7 @@ const productos = [
         id: "producto-44",
         nombre: "Centro Duende y Alma",
         descripcion: "Descripción del producto 44.",
-        imagen: "centros-florales/ddce1a27-bae0-4dd2-a2ce-81a10b1ffbb1_11zon.webp",
+        imagen: "centros-florales/ddce1a27-bae0-4dd2-a2ce-81a10b1ffbb1.webp",
         categoria: "centros-florales",
         precio: 75
     },
@@ -696,7 +696,7 @@ const productos = [
 
     /* =================================================
        COMPLEMENTOS
-    ================================================ */
+    ================================================= */
 
     {
         id: "producto-200",
@@ -713,7 +713,7 @@ const productos = [
         descripcion: "Una vela decorativa para completar el regalo.",
         imagen: "complementos/f26da02b-1277-4078-abe1-95f187c010d7_11zon.webp",
         categoria: "complementos",
-        precio: 4.5 + "0"
+        precio: "4.50"
     },
 
     {
@@ -722,7 +722,7 @@ const productos = [
         descripcion: "Una selección de bombones perfecta para acompañar tus flores.",
         imagen: "complementos/dfd5518f-4111-49f2-92db-d851804dc31d_11zon.webp",
         categoria: "complementos",
-        precio: 4.5 + "0"
+        precio: "4.50"
     },
 
     {
@@ -732,8 +732,7 @@ const productos = [
         imagen: "complementos/ddba9621-586c-4ff2-8a0f-28d11f5fe8e7_11zon.webp",
         categoria: "complementos",
         precio: 15.95
-    }
-    ,
+    },
 
     {
         id: "producto-204",
@@ -742,8 +741,7 @@ const productos = [
         imagen: "complementos/e734fa6a-92c1-4e90-8b1b-b921762a99ea_11zon.webp",
         categoria: "complementos",
         precio: 15.95
-    }
-    ,
+    },
 
     {
         id: "producto-205",
@@ -752,8 +750,7 @@ const productos = [
         imagen: "complementos/12ae0c12-ff3a-457b-b4ec-805837be674a (1)_11zon.webp",
         categoria: "complementos",
         precio: 19.95
-    }
-    ,
+    },
 
     {
         id: "producto-206",
@@ -762,8 +759,7 @@ const productos = [
         imagen: "complementos/632c0dc6-9937-490f-bc0d-fa80d0443639_11zon.webp",
         categoria: "complementos",
         precio: 8.95
-    }
-    ,
+    },
 
     {
         id: "producto-207",
@@ -771,7 +767,7 @@ const productos = [
         descripcion: "Un pequeño detalle para acompañar una composición floral.",
         imagen: "complementos/b0e6e596-a71b-43d6-943e-32492cb0471e_11zon.webp",
         categoria: "complementos",
-        precio:  12.95
+        precio: 12.95
     }
 
 ];
@@ -1050,6 +1046,117 @@ document.addEventListener(
     }
 );
 
+/* =====================================================
+   CREAR TARJETA DE PRODUCTO
+===================================================== */
+
+function crearTarjetaProducto(producto) {
+
+    const tarjeta =
+        document.createElement("article");
+
+    tarjeta.classList.add("producto");
+
+    if (
+        producto.categoria === "complementos"
+    ) {
+
+        tarjeta.classList.add(
+            "producto-complemento"
+        );
+
+    }
+
+    const enlaceWhatsApp =
+        crearEnlaceWhatsApp(producto);
+
+    tarjeta.innerHTML = `
+
+        <div class="producto-imagen">
+
+            <img
+                src="${producto.imagen}"
+                alt="${producto.nombre}"
+                loading="lazy"
+            >
+
+        </div>
+
+        <div class="producto-info">
+
+            <h3>
+                ${producto.nombre}
+            </h3>
+
+            ${
+                producto.categoria === "buquesR" &&
+                producto.descripcion
+                    ? `
+                        <p class="producto-descripcion">
+                            ${producto.descripcion}
+                        </p>
+                    `
+                    : ""
+            }
+
+            <div class="producto-precio">
+
+                <span
+                    class="${
+                        producto.mensaje
+                            ? "texto-consultar"
+                            : ""
+                    }"
+                >
+                    ${
+                        producto.mensaje ||
+                        producto.precio + " €"
+                    }
+                </span>
+
+            </div>
+
+            <a
+                class="contactar-whatsapp"
+                href="${enlaceWhatsApp}"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <i class="bi bi-whatsapp"></i>
+
+                Me interesa
+
+            </a>
+
+        </div>
+
+    `;
+
+    productosGrid.appendChild(
+        tarjeta
+    );
+
+    const imagenProducto =
+        tarjeta.querySelector(
+            ".producto-imagen img"
+        );
+
+    imagenProducto.addEventListener(
+        "click",
+        () => {
+
+            abrirImagen(
+                imagenProducto
+            );
+
+        }
+    );
+
+    return tarjeta;
+
+}
+
 
 /* =====================================================
    MOSTRAR PRODUCTOS
@@ -1058,7 +1165,6 @@ document.addEventListener(
 function mostrarProductos(lista) {
 
     productosGrid.innerHTML = "";
-
 
     if (lista.length === 0) {
 
@@ -1079,10 +1185,8 @@ function mostrarProductos(lista) {
 
     }
 
-
     lista.forEach(
-        (producto, indice) => {
-
+        (producto) => {
 
             /* =================================================
                SEPARADOR ENTRE RAMOS Y TOCADOS
@@ -1111,136 +1215,17 @@ function mostrarProductos(lista) {
 
             }
 
-
-            /* =================================================
-               TARJETA
-            ================================================= */
-
-            const tarjeta =
-    document.createElement("article");
-
-tarjeta.classList.add(
-    "producto"
-);
-
-
-/* =================================================
-   CLASE INDIVIDUAL PARA COMPLEMENTOS
-   Permite modificar su tamaño desde CSS
-   sin afectar al resto de secciones.
-================================================= */
-
-if (
-    producto.categoria === "complementos"
-) {
-
-    tarjeta.classList.add(
-        "producto-complemento"
-    );
-
-}
-
-
-            const enlaceWhatsApp =
-                crearEnlaceWhatsApp(
-                    producto
-                );
-
-
-            tarjeta.innerHTML = `
-
-                <div class="producto-imagen">
-
-                    <img
-                        src="${producto.imagen}"
-                        alt="${producto.nombre}"
-                        loading="lazy"
-                    >
-
-                </div>
-
-
-                <div class="producto-info">
-
-                    <h3>
-                        ${producto.nombre}
-                    </h3>
-
-
-                    ${
-                        producto.categoria === "buquesR" &&
-                        producto.descripcion
-                        ? `
-                            <p class="producto-descripcion">
-                                ${producto.descripcion}
-                            </p>
-                        `
-                        : ""
-                    }
-
-
-                    <div class="producto-precio">
-
-                        <span
-                            class="${
-                                producto.mensaje
-                                    ? "texto-consultar"
-                                    : ""
-                            }"
-                        >
-                            ${
-                                producto.mensaje ||
-                                producto.precio + " €"
-                            }
-                        </span>
-
-                    </div>
-
-
-                    <a
-                        class="contactar-whatsapp"
-                        href="${enlaceWhatsApp}"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-
-                        <i class="bi bi-whatsapp"></i>
-
-                        Me interesa
-
-                    </a>
-
-                </div>
-
-            `;
-
-
-            productosGrid.appendChild(
-                tarjeta
-            );
-
-
-            const imagenProducto =
-                tarjeta.querySelector(
-                    ".producto-imagen img"
-                );
-
-
-            imagenProducto.addEventListener(
-                "click",
-                () => {
-
-                    abrirImagen(
-                        imagenProducto
-                    );
-
-                }
+            crearTarjetaProducto(
+                producto
             );
 
         }
     );
 
-}/* =====================================================
+}
+
+
+/* =====================================================
    MOSTRAR TODOS SEPARADOS POR CATEGORÍA
 ===================================================== */
 
@@ -1249,30 +1234,37 @@ function mostrarTodosSeparados() {
     productosGrid.innerHTML = "";
 
     const categorias = [
+
         {
             categoria: "ramos",
             titulo: "Ramos"
         },
+
         {
             categoria: "buquesR",
             titulo: "Bouquets de rosas"
         },
+
         {
             categoria: "florSeca",
             titulo: "Flor seca y preservada"
         },
+
         {
             categoria: "centros-florales",
             titulo: "Centros Florales"
         },
+
         {
             categoria: "ramosN",
             titulo: "Ramos de novia y tocados"
         },
+
         {
             categoria: "complementos",
             titulo: "Complementos"
         }
+
     ];
 
 
@@ -1290,7 +1282,9 @@ function mostrarTodosSeparados() {
             if (
                 productosCategoria.length === 0
             ) {
+
                 return;
+
             }
 
 
@@ -1304,7 +1298,6 @@ function mostrarTodosSeparados() {
             separador.className =
                 "separador-todos";
 
-
             separador.innerHTML = `
                 <span></span>
 
@@ -1314,7 +1307,6 @@ function mostrarTodosSeparados() {
 
                 <span></span>
             `;
-
 
             productosGrid.appendChild(
                 separador
@@ -1328,131 +1320,13 @@ function mostrarTodosSeparados() {
             productosCategoria.forEach(
                 (producto) => {
 
-                    const tarjeta =
-                        document.createElement(
-                            "article"
-                        );
+                    /*
+                        La creación de la tarjeta se
+                        realiza mediante la función común.
+                    */
 
-
-                    tarjeta.classList.add(
-                        "producto"
-                    );
-
-
-                    /* =================================================
-                       COMPLEMENTOS
-                    ================================================= */
-
-                    if (
-                        producto.categoria ===
-                        "complementos"
-                    ) {
-
-                        tarjeta.classList.add(
-                            "producto-complemento"
-                        );
-
-                    }
-
-
-                    const enlaceWhatsApp =
-                        crearEnlaceWhatsApp(
-                            producto
-                        );
-
-
-                    tarjeta.innerHTML = `
-
-                        <div class="producto-imagen">
-
-                            <img
-                                src="${producto.imagen}"
-                                alt="${producto.nombre}"
-                                loading="lazy"
-                            >
-
-                        </div>
-
-
-                        <div class="producto-info">
-
-                            <h3>
-                                ${producto.nombre}
-                            </h3>
-
-
-                            ${
-                                producto.categoria === "buquesR" &&
-                                producto.descripcion
-                                    ? `
-                                        <p class="producto-descripcion">
-                                            ${producto.descripcion}
-                                        </p>
-                                    `
-                                    : ""
-                            }
-
-
-                            <div class="producto-precio">
-
-                                <span
-                                    class="${
-                                        producto.mensaje
-                                            ? "texto-consultar"
-                                            : ""
-                                    }"
-                                >
-                                    ${
-                                        producto.mensaje ||
-                                        producto.precio + " €"
-                                    }
-                                </span>
-
-                            </div>
-
-
-                            <a
-                                class="contactar-whatsapp"
-                                href="${enlaceWhatsApp}"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-
-                                <i class="bi bi-whatsapp"></i>
-
-                                Me interesa
-
-                            </a>
-
-                        </div>
-
-                    `;
-
-
-                    productosGrid.appendChild(
-                        tarjeta
-                    );
-
-
-                    /* =================================================
-                       VISOR DE IMAGEN
-                    ================================================= */
-
-                    const imagenProducto =
-                        tarjeta.querySelector(
-                            ".producto-imagen img"
-                        );
-
-
-                    imagenProducto.addEventListener(
-                        "click",
-                        () => {
-
-                            abrirImagen(
-                                imagenProducto
-                            );
-
-                        }
+                    crearTarjetaProducto(
+                        producto
                     );
 
                 }
@@ -1462,6 +1336,8 @@ function mostrarTodosSeparados() {
     );
 
 }
+
+
 /* =====================================================
    ESTILOS SEPARADORES "TODOS"
 ===================================================== */
@@ -1645,7 +1521,6 @@ filtros.forEach(
             "click",
             () => {
 
-
                 filtros.forEach(
                     (boton) => {
 
@@ -1670,6 +1545,7 @@ filtros.forEach(
                     categoria
                 );
 
+
                 actualizarSubfiltros(
                     categoria
                 );
@@ -1680,13 +1556,14 @@ filtros.forEach(
                 ================================================= */
 
                 if (
-    categoria === "todos"
-) {
+                    categoria === "todos"
+                ) {
 
-    mostrarTodosSeparados();
+                    mostrarTodosSeparados();
 
-    return;
-}
+                    return;
+
+                }
 
 
                 /*

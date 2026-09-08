@@ -17,112 +17,76 @@ const menuDesplegable =
 
 if (menuBtn && menuDesplegable) {
 
-    menuBtn.addEventListener("click", () => {
-
-        const abierto =
-            menuDesplegable.classList.toggle(
-                "abierto"
-            );
-
-        menuBtn.setAttribute(
-            "aria-expanded",
-            abierto
-        );
-
-    });
-
-
-    const enlaces =
+    const enlacesMenu =
         menuDesplegable.querySelectorAll("a");
 
 
-    enlaces.forEach(enlace => {
+    function cerrarMenu() {
 
-        enlace.addEventListener("click", () => {
+        menuDesplegable.classList.remove(
+            "abierto"
+        );
 
-            menuDesplegable.classList.remove(
-                "abierto"
-            );
+        menuBtn.setAttribute(
+            "aria-expanded",
+            "false"
+        );
 
-            menuBtn.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-        });
-
-    });
+    }
 
 
-    window.addEventListener("resize", () => {
-
-        if (window.innerWidth > 768) {
-
-            menuDesplegable.classList.remove(
-                "abierto"
-            );
-
-            menuBtn.setAttribute(
-                "aria-expanded",
-                "false"
-            );
-
-        }
-
-    });
-
-}
-
-
-/* =====================================================
-   SCROLL SUAVE
-===================================================== */
-
-document.querySelectorAll(
-    'a[href^="#"]'
-).forEach(enlace => {
-
-    enlace.addEventListener(
+    menuBtn.addEventListener(
         "click",
-        function (evento) {
+        () => {
 
-            const destino =
-                this.getAttribute("href");
-
-            if (
-                !destino ||
-                destino === "#"
-            ) {
-                return;
-            }
-
-            const elemento =
-                document.querySelector(
-                    destino
+            const abierto =
+                menuDesplegable.classList.toggle(
+                    "abierto"
                 );
 
-            if (!elemento) {
-                return;
-            }
-
-            evento.preventDefault();
-
-            elemento.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
+            menuBtn.setAttribute(
+                "aria-expanded",
+                String(abierto)
+            );
 
         }
     );
 
-});
+
+    enlacesMenu.forEach(
+        enlace => {
+
+            enlace.addEventListener(
+                "click",
+                cerrarMenu
+            );
+
+        }
+    );
+
+
+    window.addEventListener(
+        "resize",
+        () => {
+
+            if (window.innerWidth > 768) {
+                cerrarMenu();
+            }
+
+        },
+        {
+            passive: true
+        }
+    );
+
+}
 
 
 /* =====================================================
    ANIMACIONES AL HACER SCROLL
 ===================================================== */
 
-const elementos =
+const elementosAnimados =
     document.querySelectorAll(
         ".story-content, " +
         ".story-image, " +
@@ -134,24 +98,28 @@ const elementos =
     );
 
 
-elementos.forEach(elemento => {
+elementosAnimados.forEach(
+    elemento => {
 
-    elemento.classList.add(
-        "animacion-scroll"
-    );
+        elemento.classList.add(
+            "animacion-scroll"
+        );
 
-});
+    }
+);
 
 
-const observador =
+const observadorScroll =
     new IntersectionObserver(
         (entradas, observer) => {
 
-            entradas.forEach(entrada => {
+            entradas.forEach(
+                entrada => {
 
-                if (
-                    entrada.isIntersecting
-                ) {
+                    if (!entrada.isIntersecting) {
+                        return;
+                    }
+
 
                     entrada.target.classList.add(
                         "visible"
@@ -162,8 +130,7 @@ const observador =
                     );
 
                 }
-
-            });
+            );
 
         },
         {
@@ -172,22 +139,26 @@ const observador =
     );
 
 
-elementos.forEach(elemento => {
+elementosAnimados.forEach(
+    elemento => {
 
-    observador.observe(elemento);
+        observadorScroll.observe(
+            elemento
+        );
 
-});
+    }
+);
 
 
 /* =====================================================
    ESTILOS DE ANIMACIÓN
 ===================================================== */
 
-const estilos =
+const estilosAnimacion =
     document.createElement("style");
 
 
-estilos.textContent = `
+estilosAnimacion.textContent = `
 
     .animacion-scroll {
 
@@ -214,36 +185,29 @@ estilos.textContent = `
 
 
     .value-card:nth-child(2) {
-
         transition-delay: .08s;
-
     }
 
 
     .value-card:nth-child(3) {
-
         transition-delay: .16s;
-
     }
 
 
     .value-card:nth-child(4) {
-
         transition-delay: .24s;
-
     }
 
 `;
 
 
 document.head.appendChild(
-    estilos
+    estilosAnimacion
 );
 
 
 /* =====================================================
-   PARALLAX MUY SUTIL DEL HERO
-   PC + IPAD + MÓVIL
+   PARALLAX SUTIL DEL HERO
 ===================================================== */
 
 const heroImage =
@@ -252,64 +216,86 @@ const heroImage =
     );
 
 
-window.addEventListener(
-    "scroll",
-    () => {
+if (heroImage) {
 
-        if (!heroImage) {
-            return;
-        }
+    let parallaxPendiente = false;
+
+
+    function actualizarParallax() {
 
         const scroll =
             window.scrollY;
+
 
         if (scroll < 700) {
 
             heroImage.style.transform =
                 `scale(1.01) translateY(${scroll * 0.05}px)`;
 
+        } else {
+
+            heroImage.style.transform =
+                "scale(1.01)";
+
         }
 
+
+        parallaxPendiente = false;
+
     }
-);
+
+
+    window.addEventListener(
+        "scroll",
+        () => {
+
+            if (parallaxPendiente) {
+                return;
+            }
+
+
+            parallaxPendiente = true;
+
+
+            requestAnimationFrame(
+                actualizarParallax
+            );
+
+        },
+        {
+            passive: true
+        }
+    );
+
+}
 
 
 /* =====================================================
-   ANIMACIÓN ORGÁNICA — USTEDES / NOSOTROS
+   ANIMACIÓN DEL ENCABEZADO DE VALORES
 ===================================================== */
 
-document.addEventListener("DOMContentLoaded", () => {
+const valuesHeader =
+    document.querySelector(
+        ".values-header"
+    );
 
-    const valuesHeader =
-        document.querySelector(
-            ".values-header"
-        );
 
-    if (!valuesHeader) {
-        return;
-    }
+if (valuesHeader) {
 
-    const observer =
+    const observadorValores =
         new IntersectionObserver(
-            (entries) => {
+            entradas => {
 
-                entries.forEach((entry) => {
+                entradas.forEach(
+                    entrada => {
 
-                    if (entry.isIntersecting) {
-
-                        valuesHeader.classList.add(
-                            "visible"
-                        );
-
-                    } else {
-
-                        valuesHeader.classList.remove(
-                            "visible"
+                        valuesHeader.classList.toggle(
+                            "visible",
+                            entrada.isIntersecting
                         );
 
                     }
-
-                });
+                );
 
             },
             {
@@ -317,33 +303,33 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         );
 
-    observer.observe(
+
+    observadorValores.observe(
         valuesHeader
     );
 
-});
+}
+
 
 /* =====================================================
    NAVBAR STICKY
 ===================================================== */
 
-const navbar = document.querySelector("nav");
+const navbar =
+    document.querySelector("nav");
+
 
 if (navbar) {
 
     function actualizarNavbar() {
 
-        if (window.scrollY > 0) {
-
-            navbar.classList.add("navbar-scroll");
-
-        } else {
-
-            navbar.classList.remove("navbar-scroll");
-
-        }
+        navbar.classList.toggle(
+            "navbar-scroll",
+            window.scrollY > 0
+        );
 
     }
+
 
     window.addEventListener(
         "scroll",
@@ -352,5 +338,8 @@ if (navbar) {
             passive: true
         }
     );
+
+
+    actualizarNavbar();
 
 }
