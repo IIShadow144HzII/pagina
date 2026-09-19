@@ -3812,11 +3812,42 @@ button {
 }
 
 
-@media (max-width: 412px){
+@media (min-width: 427px){
 
     .filtros{
         margin-bottom: 20px;
         padding: 17px;
+    }
+
+}
+
+@media (min-width: 412px), (max-width:924){
+
+    .filtros{
+        margin-bottom: 20px;
+        padding: 17px;
+    }
+
+}
+
+@media (min-width: 440px){
+
+    .filtros{
+        margin-bottom: 20px;
+        padding: 7px;
+    }
+
+}
+
+@media (max-width: 375px){
+
+    #filtros{
+        padding-top:0;
+        padding-bottom: 13px;
+        margin-bottom: 0px;
+    }
+    .separador-todos{
+        margin-bottom: 9px;
     }
 
 }
