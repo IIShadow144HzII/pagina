@@ -3474,7 +3474,10 @@ nav.navbar-scroll {
 @media (max-width: 440px){
 
     .catalogo-confianza span{
-        visibility: hidden;
+        display: none;
+    }
+    .productos-cabecera{
+        margin-bottom: 9px;
     }
 
 }
