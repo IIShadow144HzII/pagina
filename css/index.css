@@ -3553,3 +3553,125 @@ nav.navbar-scroll {
 .footer-bottom {
     font-family: "Lora", serif;
 }
+
+
+/* =========================================
+   BARRA DE ENTREGA
+   ========================================= */
+
+.delivery-bar {
+    width: 100%;
+    height: 36px;
+    background: #75444e;
+    color: #f8f3ed;
+    overflow: hidden;
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.delivery-track {
+    display: flex;
+    width: max-content;
+    animation: deliveryScroll 28s linear infinite;
+}
+
+.delivery-content {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-right: 24px;
+    flex-shrink: 0;
+}
+
+.delivery-content span {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    line-height: 1;
+}
+
+.delivery-content span:first-child {
+    font-size: 14px;
+    letter-spacing: 0;
+}
+
+.delivery-content span:nth-child(3),
+.delivery-content span:nth-child(5),
+.delivery-content span:nth-child(7),
+.delivery-content span:nth-child(9) {
+    font-size: 9px;
+    opacity: 0.75;
+}
+
+/* Movimiento infinito */
+@keyframes deliveryScroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+
+/* =========================================
+   MÓVIL
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    .delivery-bar {
+        height: 34px;
+    }
+
+    .delivery-content {
+        gap: 18px;
+        padding-right: 18px;
+    }
+
+    .delivery-content span {
+        font-size: 10px;
+        letter-spacing: 1.4px;
+    }
+
+    .delivery-content span:first-child {
+        font-size: 13px;
+    }
+
+    .delivery-content span:nth-child(3),
+    .delivery-content span:nth-child(5),
+    .delivery-content span:nth-child(7),
+    .delivery-content span:nth-child(9) {
+        font-size: 8px;
+    }
+
+    .delivery-track {
+        animation-duration: 22s;
+    }
+}
+
+/* =====================================================
+   AJUSTE MENÚ MÓVIL CON BARRA DE ENTREGA
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    /* Mientras estamos arriba de la página:
+       barra entrega (36px) + navbar (78px) = 114px */
+    .menu-d {
+        top: 112px;
+        height: calc(100dvh - 114px);
+        max-height: calc(100dvh - 114px);
+    }
+
+    .menu-backdrop {
+        top: 114px;
+        height: calc(100dvh - 114px);
+    }
+
+}
