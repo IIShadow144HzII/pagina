@@ -3471,7 +3471,13 @@ nav.navbar-scroll {
     }
 }
 
+@media (max-width: 440px){
 
+    .catalogo-confianza span{
+        visibility: hidden;
+    }
+
+}
 /* =====================================================
    PRECIO — ETIQUETA CENTRADA DEFINITIVA
 ===================================================== */
