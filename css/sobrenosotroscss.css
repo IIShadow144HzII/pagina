@@ -1894,3 +1894,175 @@ nav.navbar-scroll {
         aspect-ratio: 4 / 5;
     }
 }
+
+
+/* =========================================
+   BARRA DE ENTREGA
+   ========================================= */
+
+.delivery-bar {
+    width: 100%;
+    height: 36px;
+    background: #75444e;
+    color: #f8f3ed;
+    overflow: hidden;
+    position: relative;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.delivery-track {
+    display: flex;
+    width: max-content;
+    animation: deliveryScroll 28s linear infinite;
+}
+
+.delivery-content {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding-right: 24px;
+    flex-shrink: 0;
+}
+
+.delivery-content span {
+    font-family: "Cormorant Garamond", Georgia, serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.8px;
+    line-height: 1;
+}
+
+.delivery-content span:first-child {
+    font-size: 14px;
+    letter-spacing: 0;
+}
+
+.delivery-content span:nth-child(3),
+.delivery-content span:nth-child(5),
+.delivery-content span:nth-child(7),
+.delivery-content span:nth-child(9) {
+    font-size: 9px;
+    opacity: 0.75;
+}
+
+/* Movimiento infinito */
+@keyframes deliveryScroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+/* =========================================
+   ELIMINAR ANIMACIÓN DEL NAVBAR EN MÓVIL
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    nav {
+        transition: none !important;
+    }
+
+    nav.navbar-scroll {
+        animation: none !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+}
+
+/* =========================================
+   MÓVIL — BARRA + NAVBAR FIJOS
+   ========================================= */
+
+@media (max-width: 768px) {
+
+    /* Barra de entrega */
+    .delivery-bar {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 36px !important;
+        z-index: 10000 !important;
+    }
+
+    /* Navbar */
+    nav,
+    nav.navbar-scroll {
+        position: fixed !important;
+        top: 36px !important;
+        left: 0 !important;
+        width: 100% !important;
+        z-index: 9999 !important;
+
+        animation: none !important;
+        transition: none !important;
+        transform: none !important;
+    }
+
+    /* Evita que el contenido quede debajo de ambos */
+    body {
+        padding-top: 114px !important;
+    }
+
+    /* Menú lateral */
+    .menu-d {
+        top: 114px !important;
+        height: calc(100dvh - 114px) !important;
+        max-height: calc(100dvh - 114px) !important;
+    }
+}
+
+
+/* =========================================
+   MÓVILES PEQUEÑOS
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    nav,
+    nav.navbar-scroll {
+        top: 36px !important;
+        height: 76px !important;
+    }
+
+    body {
+        padding-top: 112px !important;
+    }
+
+    .menu-d {
+        top: 112px !important;
+        height: calc(100dvh - 112px) !important;
+        max-height: calc(100dvh - 112px) !important;
+    }
+}
+
+
+/* =========================================
+   MÓVILES MUY PEQUEÑOS
+   ========================================= */
+
+@media (max-width: 360px) {
+
+    nav,
+    nav.navbar-scroll {
+        top: 36px !important;
+        height: 74px !important;
+    }
+
+    body {
+        padding-top: 110px !important;
+    }
+
+    .menu-d {
+        top: 110px !important;
+        height: calc(100dvh - 110px) !important;
+        max-height: calc(100dvh - 110px) !important;
+    }
+}
