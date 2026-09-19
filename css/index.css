@@ -3810,3 +3810,13 @@ button {
         animation: none !important;
     }
 }
+
+
+@media (max-width: 412px){
+
+    .filtros{
+        margin-bottom: 20px;
+        padding: 17px;
+    }
+
+}
