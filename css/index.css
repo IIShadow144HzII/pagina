@@ -3481,6 +3481,15 @@ nav.navbar-scroll {
     }
 
 }
+
+@media (max-width: 393px){
+
+.productos-cabecera{
+        margin-bottom: 29.5px;
+    }
+
+
+}
 /* =====================================================
    PRECIO — ETIQUETA CENTRADA DEFINITIVA
 ===================================================== */
