@@ -1180,7 +1180,7 @@ nav {
 
 .subfiltros-ramos.visible {
     max-height: 100px;
-    margin-top: -14px;
+    margin-top: -38px;
     margin-bottom: 28px;
     opacity: 1;
     transform: translateY(0);
@@ -3830,11 +3830,21 @@ button {
 
 }
 
-@media (min-width: 440px){
+
+
+@media (min-width: 339px), (max-width:440){
 
     .filtros{
-        margin-bottom: 20px;
-        padding: 7px;
+        margin-bottom: 28px;
+        padding: 8px;
+    }
+
+}
+@media (min-width:1920px){
+
+    .filtros{
+        margin-bottom: 70px;
+        padding: 8px;
     }
 
 }
@@ -3851,3 +3861,4 @@ button {
     }
 
 }
+
