@@ -3862,3 +3862,599 @@ button {
 
 }
 
+/* =====================================================
+   RESEÑAS — PRUEBA SOCIAL / CONVERSIÓN
+===================================================== */
+
+.resenas {
+    position: relative;
+    width: 100%;
+    padding: 115px 30px 120px;
+    background: var(--marfil);
+    overflow: hidden;
+}
+
+
+/* ---------- Decoración sutil ---------- */
+
+.resenas::before {
+    content: "❀";
+    position: absolute;
+    left: -35px;
+    top: 70px;
+
+    color: rgba(185, 130, 130, .10);
+
+    font-size: 190px;
+    line-height: 1;
+
+    pointer-events: none;
+}
+
+
+.resenas::after {
+    content: "✦";
+    position: absolute;
+    right: 70px;
+    bottom: 65px;
+
+    color: rgba(199, 167, 123, .20);
+
+    font-size: 55px;
+
+    pointer-events: none;
+}
+
+
+/* ---------- Contenedor ---------- */
+
+.resenas-contenido {
+    position: relative;
+    z-index: 2;
+
+    width: min(1180px, 100%);
+    margin: 0 auto;
+}
+
+
+/* ---------- Cabecera ---------- */
+
+.resenas-cabecera {
+    max-width: 720px;
+    margin: 0 auto 35px;
+
+    text-align: center;
+}
+
+
+.resenas-cabecera .seccion-etiqueta {
+    display: block;
+
+    margin-bottom: 14px;
+
+    color: var(--borgona);
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+
+.resenas-cabecera h2 {
+    margin: 0 0 16px;
+
+    color: var(--negro);
+
+    font-size: clamp(34px, 4vw, 48px);
+    font-weight: 500;
+    line-height: 1.12;
+
+    letter-spacing: -.5px;
+}
+
+
+.resenas-cabecera p {
+    max-width: 610px;
+
+    margin: 0 auto;
+
+    color: var(--gris);
+
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+
+/* ---------- Resumen ---------- */
+
+.resenas-resumen {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    width: fit-content;
+
+    margin: 0 auto 48px;
+    padding: 14px 22px;
+
+    background: rgba(232, 211, 208, .28);
+
+    border: 1px solid rgba(110, 65, 72, .10);
+
+    box-shadow: 0 8px 25px rgba(110, 65, 72, .04);
+}
+
+
+.resenas-estrellas,
+.resena-estrellas {
+    color: var(--champagne);
+
+    font-family: Arial, sans-serif;
+
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+
+.resenas-nota {
+    display: flex;
+    align-items: baseline;
+    gap: 2px;
+
+    color: var(--borgona);
+}
+
+
+.resenas-nota strong {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+
+.resenas-nota span {
+    color: var(--gris);
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+
+.resenas-verificadas {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    padding-left: 18px;
+
+    border-left: 1px solid var(--linea);
+
+    color: var(--gris);
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+}
+
+
+.resenas-verificadas i {
+    color: var(--borgona);
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   GRID
+===================================================== */
+
+.resenas-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 18px;
+}
+
+
+/* ---------- Tarjeta ---------- */
+
+.resena-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 315px;
+
+    padding: 27px 25px 24px;
+
+    background: rgba(255, 255, 255, .68);
+
+    border: 1px solid rgba(110, 65, 72, .11);
+
+    box-shadow:
+        0 10px 30px rgba(36, 32, 31, .045);
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        border-color .3s ease;
+}
+
+
+.resena-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(110, 65, 72, .20);
+
+    box-shadow:
+        0 18px 42px rgba(110, 65, 72, .12);
+}
+
+
+/* ---------- Parte superior ---------- */
+
+.resena-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 25px;
+}
+
+
+.resena-google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 28px;
+    height: 28px;
+
+    color: var(--borgona);
+
+    font-size: 13px;
+
+    opacity: .72;
+}
+
+
+/* ---------- Texto ---------- */
+
+.resena-card blockquote {
+    position: relative;
+
+    margin: 0;
+
+    color: var(--negro);
+
+    font-size: 15px;
+    line-height: 1.75;
+    font-style: italic;
+
+    flex: 1;
+}
+
+
+.resena-card blockquote::before {
+    content: "“";
+
+    display: block;
+
+    height: 22px;
+
+    color: var(--rosa);
+
+    font-family: Georgia, serif;
+    font-size: 45px;
+    font-style: normal;
+    line-height: .75;
+
+    opacity: .55;
+}
+
+
+/* ---------- Autor ---------- */
+
+.resena-autor {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+
+    margin-top: 25px;
+    padding-top: 18px;
+
+    border-top: 1px solid var(--linea);
+}
+
+
+.resena-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+
+    flex: 0 0 34px;
+
+    border-radius: 50%;
+
+    color: var(--marfil);
+    background: var(--borgona);
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+.resena-autor div {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+
+.resena-autor strong {
+    color: var(--negro);
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+
+.resena-autor small {
+    color: var(--gris);
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+}
+
+
+/* =====================================================
+   CTA DE RESEÑAS
+===================================================== */
+
+.resenas-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    margin-top: 42px;
+
+    text-align: center;
+}
+
+
+.resenas-cta p {
+    margin: 0;
+
+    color: var(--gris);
+
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+}
+
+
+.resenas-boton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    min-height: 44px;
+
+    padding: 11px 19px;
+
+    color: var(--marfil);
+    background: var(--borgona);
+
+    border: 1px solid var(--borgona);
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: .2px;
+
+    transition:
+        transform .25s ease,
+        background-color .25s ease,
+        box-shadow .25s ease;
+}
+
+
+.resenas-boton:hover {
+    color: var(--marfil);
+    background: var(--borgona-oscuro);
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 10px 25px rgba(110, 65, 72, .18);
+}
+
+
+.resenas-boton i {
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 1050px) {
+
+    .resenas {
+        padding: 95px 25px 100px;
+    }
+
+    .resenas-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .resena-card {
+        min-height: 290px;
+    }
+
+}
+
+
+/* =====================================================
+   MÓVIL
+===================================================== */
+
+@media (max-width: 768px) {
+
+    .resenas {
+        padding: 10px 18px 85px;
+    }
+
+    .resenas::before {
+        left: -60px;
+        top: 45px;
+        font-size: 130px;
+    }
+
+    .resenas::after {
+        right: 25px;
+        bottom: 35px;
+        font-size: 35px;
+    }
+
+
+    .resenas-cabecera {
+        margin-bottom: 28px;
+    }
+
+
+    .resenas-cabecera h2 {
+        font-size: 34px;
+    }
+
+
+    .resenas-cabecera p {
+        max-width: 340px;
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+
+    /* Resumen móvil */
+
+    .resenas-resumen {
+        flex-wrap: wrap;
+
+        gap: 10px 14px;
+
+        width: 100%;
+        max-width: 350px;
+
+        margin-bottom: 35px;
+        padding: 14px 15px;
+    }
+
+
+    .resenas-verificadas {
+        width: 100%;
+
+        justify-content: center;
+
+        padding: 8px 0 0;
+
+        border-left: 0;
+        border-top: 1px solid var(--linea);
+    }
+
+
+    /* Carrusel horizontal */
+
+    .resenas-grid {
+        display: flex;
+
+        gap: 14px;
+
+        overflow-x: auto;
+
+        margin-right: -18px;
+        padding-right: 18px;
+        padding-bottom: 12px;
+
+        scroll-snap-type: x mandatory;
+
+        scrollbar-width: none;
+
+        -webkit-overflow-scrolling: touch;
+    }
+
+
+    .resenas-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .resena-card {
+        min-width: 82vw;
+        max-width: 82vw;
+        min-height: 300px;
+
+        padding: 24px 21px;
+
+        scroll-snap-align: center;
+    }
+
+
+    .resena-card blockquote {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+
+    /* CTA */
+
+    .resenas-cta {
+        flex-direction: column;
+
+        gap: 13px;
+
+        margin-top: 28px;
+    }
+
+}
+
+
+/* =====================================================
+   MÓVIL PEQUEÑO
+===================================================== */
+
+@media (max-width: 400px) {
+
+    .resenas {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+
+    .resenas-grid {
+        margin-right: -15px;
+        padding-right: 15px;
+    }
+
+
+    .resena-card {
+        min-width: 86vw;
+        max-width: 86vw;
+    }
+
+
+    .resenas-cabecera h2 {
+        font-size: 31px;
+    }
+
+}
