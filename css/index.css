@@ -4313,7 +4313,7 @@ button {
 @media (max-width: 768px) {
 
     .resenas {
-        padding: 10px 18px 85px;
+        padding: 20px 18px 85px;
     }
 
     .resenas::before {
