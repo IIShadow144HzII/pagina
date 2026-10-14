@@ -4470,3 +4470,135 @@ button {
     }
 
 }
+
+
+
+/* =====================================================
+   CORRECCIÓN DEL MENÚ MÓVIL
+   El panel se posiciona respecto a la navbar, no como fixed
+   dentro de una navbar animada/filtrada (causaba el panel aplastado).
+===================================================== */
+@media (max-width: 768px) {
+    .delivery-bar {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 36px !important;
+        z-index: 5000 !important;
+    }
+
+    nav,
+    nav.navbar-scroll {
+        position: fixed !important;
+        top: 36px !important;
+        left: 0 !important;
+        right: 0 !important;
+        width: 100% !important;
+        height: 78px !important;
+        z-index: 4000 !important;
+        overflow: visible !important;
+        transform: none !important;
+        animation: none !important;
+    }
+
+    .menu,
+    nav .menu {
+        position: static !important;
+        overflow: visible !important;
+    }
+
+    #menuDesplegable.menu-d {
+        position: absolute !important;
+        top: 78px !important;
+        bottom: auto !important;
+        left: 0 !important;
+        right: auto !important;
+        width: min(84vw, 350px) !important;
+        height: calc(100vh - 114px) !important;
+        height: calc(100dvh - 114px) !important;
+        max-height: calc(100vh - 114px) !important;
+        max-height: calc(100dvh - 114px) !important;
+        box-sizing: border-box !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        justify-content: flex-start !important;
+        gap: 0 !important;
+        padding: 22px 22px max(22px, env(safe-area-inset-bottom)) !important;
+        margin: 0 !important;
+        overflow-x: hidden !important;
+        overflow-y: auto !important;
+        overscroll-behavior: contain;
+        -webkit-overflow-scrolling: touch;
+        background: var(--marfil, #faf8f4) !important;
+        box-shadow: 12px 0 35px rgba(36, 32, 31, .14) !important;
+        z-index: 6000 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        transform: translateX(-105%) !important;
+        transition: transform .3s cubic-bezier(.22, .61, .36, 1), visibility .3s !important;
+    }
+
+    #menuDesplegable.menu-d.abierto {
+        visibility: visible !important;
+        pointer-events: auto !important;
+        transform: translateX(0) !important;
+    }
+
+    #menuDesplegable.menu-d a {
+        display: flex !important;
+        flex: 0 0 auto !important;
+        align-items: center !important;
+        width: 100% !important;
+        min-height: 52px !important;
+        box-sizing: border-box !important;
+        padding: 15px 4px !important;
+        border-bottom: 1px solid rgba(110, 65, 72, .12) !important;
+        font-size: 16px !important;
+        color: var(--negro, #24201f) !important;
+    }
+
+    #menuDesplegable.menu-d a::after {
+        display: none !important;
+    }
+
+    #menuBtn {
+        position: relative !important;
+        z-index: 6002 !important;
+    }
+
+    .menu-backdrop {
+        position: fixed !important;
+        top: 114px !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: calc(100vh - 114px) !important;
+        height: calc(100dvh - 114px) !important;
+        z-index: 5500 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    #menuDesplegable.menu-d {
+        width: min(88vw, 340px) !important;
+    }
+}
+
+/* Recuperar la posición original del icono del menú en móvil */
+@media (max-width: 768px) {
+    nav .menu {
+        position: static !important;
+    }
+
+    nav #menuBtn {
+        position: absolute !important;
+        left: 9px !important;
+        top: 18px !important;
+        right: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+        margin: 0 !important;
+        z-index: 6002 !important;
+    }
+}
