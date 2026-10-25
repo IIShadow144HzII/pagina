@@ -101,7 +101,7 @@ const productos = [
         imagen: "ramos/0b1a97fc-3de8-4430-a930-cf52c33d4f0a_11zon.webp",
         categoria: "ramos",
         tipo: "buques",
-        precio: 30
+        precio: 35
     },
 
     {
